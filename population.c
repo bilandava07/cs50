@@ -25,6 +25,6 @@ int main(void)
         m = m - start/4;
         years = years + 1;
     }
-    while ( m < e );
-    printf("The population is going to reach the desired number of llamas in %i years \n", years );
+    while ( m < end );
+    printf("Years: %i \n", years );
 }
