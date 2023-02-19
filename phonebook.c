@@ -10,5 +10,7 @@ int main(void)
 {
     // ask for a name (str)//
     string name = get_string("What is your name? ");
-    printf("%s \n", name); 
+    int age = get_int("How old are you? ");
+    int number = get_int("What is your telephone number ")
+    printf("%s \n", name);
 }
