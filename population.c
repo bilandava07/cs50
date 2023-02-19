@@ -21,9 +21,7 @@ int main(void)
 
     do
     {
-        m = start/3 + start;
-        m = m - start/4;
-        years = years + 1;
+        
     }
     while ( m < end );
     printf("Years: %i \n", years );
