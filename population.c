@@ -5,26 +5,24 @@ int main(void)
 {
     int m;
     int years = 0;
-    // ask the user for a starting number of llamas
     int start;
     do
     {
-        start = get_int("How many llamas are there? ");
+        start = get_int("Start size? ");
     }
-    while ( n < 9 );
+    while ( start < 9 );
     int end;
     do
     {
-        end = get_int("How many llamas are there? ");
+        end = get_int("End size? ");
 
     }
-    while ( start > end )
-    // ask the user for a goal number of llamas
-    int e = get_int("How many llamas should be there? ");
+    while ( start > end );
+
     do
     {
-        m = n/3 + n;
-        m = m - n/4;
+        m = start/3 + start;
+        m = m - start/4;
         years = years + 1;
     }
     while ( m < e );
