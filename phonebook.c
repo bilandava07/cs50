@@ -11,6 +11,10 @@ int main(void)
     // ask for a name (str)//
     string name = get_string("What is your name? ");
     int age = get_int("How old are you? ");
-    int number = get_int("What is your telephone number ");
-    printf("%s \n", name);
+    long number = get_long("What is your telephone number ");
+    printf("%s \n%i \n%li \n", name, age, number);
 }
+
+
+//    printf("%i \n", age);
+//    printf("%li \n", number);
