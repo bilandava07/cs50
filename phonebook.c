@@ -9,5 +9,6 @@
 int main(void)
 {
     // ask for a name (str)//
-    string name = get_string("What is your name?)
+    string name = get_string("What is your name? ");
+    printf("%s \n", name); 
 }
