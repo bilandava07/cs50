@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int m = ;
+    int m;
     // ask the user for a starting number of llamas
     int n = get_int("How many llamas are there? ");
     // ask the user for a goal number of llamas
