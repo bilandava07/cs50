@@ -4,6 +4,7 @@
 int main(void)
 {
     int m;
+    int years = 0;
     // ask the user for a starting number of llamas
     int n = get_int("How many llamas are there? ");
     // ask the user for a goal number of llamas
@@ -12,7 +13,8 @@ int main(void)
     {
         m = n/3 + n;
         m = m - n/4;
+        years = years + 1;
     }
     while ( m < e );
-    printf("The population is going to reach the desired number of llamas in %i years \n",  );
+    printf("The population is going to reach the desired number of llamas in %i years \n", years );
 }
