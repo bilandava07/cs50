@@ -9,12 +9,13 @@ int main(void)
     int e = get_int("How many llamas should be there? ");
 
     do
-    //add llamas every year
-    n = n + n/3
-    // substract llamas every year
-    n = n - n/4
-    // end of the loop
-    while ( n )
+
+    n = n + n/3;
+
+    n = n - n/4;
+    
+    while ( n < e )
+    printf("The population is going to reach the desired number of llamas in %i years \n, n );
 
 
 }
