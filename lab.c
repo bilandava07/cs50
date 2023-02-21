@@ -10,11 +10,17 @@ int main(void)
         n = get_int("Starting number? ");
     }
     while ( n < 9 );
+
+    //ending number
     int e;
     do
     {
         e = get_int("Ending number? ");
 
     }
-    while ( )
+    while ( n > e );
+
+    //the math
+    
+
 }
