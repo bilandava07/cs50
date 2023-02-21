@@ -21,6 +21,9 @@ int main(void)
     while ( n > e );
 
     //the math
-    
+    while ( n < e)
+    {
+        n = n + n/3 - n/4
+    }
 
 }
