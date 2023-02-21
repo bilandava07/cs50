@@ -9,7 +9,7 @@ int main(void)
     {
         n = get_int("Starting number? ");
     }
-    while ( n < 9 );
+    while ( n <= 9 );
 
     //ending number
     int e;
@@ -28,5 +28,7 @@ int main(void)
         n = n + n/3 - n/4;
         years++;
     }
+    printf("Years: %i)
+
 
 }
