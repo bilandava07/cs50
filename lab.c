@@ -22,10 +22,11 @@ int main(void)
 
     //the math
     // iniate years
-    int years = ()
+    int years = 0;
     while ( n < e)
     {
-        n = n + n/3 - n/4
+        n = n + n/3 - n/4;
+        years++;
     }
 
 }
