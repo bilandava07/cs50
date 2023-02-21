@@ -7,21 +7,23 @@ int main(void)
     float bill;
     do
     {
-        float bill = get_float("Bill before taxes and tip: ");
+        bill = get_float("Bill before taxes and tip: ");
     }
     while ( bill < 0 );
 
     // ask for sale tax percent
+    float tax;
     do
     {
-        float tax = get_float("Sale Tax Percent: ");
+         tax = get_float("Sale Tax Percent: ");
     }
     while ( tax < 0 );
 
     // ask for tip percent
+    int tip;
     do
     {
-        int tip = get_int("Tip percent: ");
+        tip = get_int("Tip percent: ");
     }
     while ( tip < 0 );
 
