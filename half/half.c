@@ -3,5 +3,6 @@
 
 int main(void)
 {
-    
+    //bill before input float
+    float bill = get_float("Bill before taxes and tip? ");
 }
