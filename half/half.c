@@ -4,6 +4,7 @@
 int main(void)
 {
     //ask for bill before input float
+    float bill;
     do
     {
         float bill = get_float("Bill before taxes and tip: ");
