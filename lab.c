@@ -9,5 +9,12 @@ int main(void)
     {
         n = get_int("Starting number? ");
     }
-    while ( n > 9 )
+    while ( n < 9 );
+    int e;
+    do
+    {
+        e = get_int("Ending number? ");
+
+    }
+    while ( )
 }
