@@ -27,10 +27,10 @@ int main(void)
     }
     while ( tip < 0 );
     //math
-    float bill_tax;
+    int bill_tax;
 
     bill_tax = bill + (bill * (tax/100));
 
-    printf(" %f", bill_tax);
+    printf(bill_tax);
 
 }
