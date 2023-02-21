@@ -28,9 +28,13 @@ int main(void)
     while ( tip < 0 );
     //math
     float bill_tax;
+    float end;
 
     bill_tax = bill + (bill * (tax/100));
 
-    printf(" %f \n", bill_tax);
+    end = bill_tax + ( bill_tax * (tip/100));
+
+
+    printf("%f \n", end);
 
 }
