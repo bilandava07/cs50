@@ -21,6 +21,8 @@ int main(void)
     while ( n > e );
 
     //the math
+    // iniate years
+    int years = ()
     while ( n < e)
     {
         n = n + n/3 - n/4
