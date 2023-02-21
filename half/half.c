@@ -31,6 +31,6 @@ int main(void)
 
     bill_tax = bill + (bill * (tax/100));
 
-    printf(bill_tax)
+    printf(bill_tax);
 
 }
