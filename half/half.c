@@ -26,5 +26,11 @@ int main(void)
         tip = get_int("Tip percent: ");
     }
     while ( tip < 0 );
+    //math
+    float bill_tax;
+
+    bill_tax = bill + (bill * (tax/100));
+
+    printf(bill_tax)
 
 }
