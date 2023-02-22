@@ -13,7 +13,7 @@ int main(void)
     // print a vertical row H
     switch(h)
     {
-        case h:
+        case 8: h = 8;
         printf("#");
     }
 }
