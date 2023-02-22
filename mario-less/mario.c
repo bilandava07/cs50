@@ -5,6 +5,7 @@ int main(void)
 {
     // ask for the height input int ( h = height )from 1 to 8 inclusively
     int h;
+    char #;
     do
     {
         h = get_int("Height: ");
@@ -13,6 +14,6 @@ int main(void)
     // print a vertical row H
     for (int i = 0; i < h; i++)
     {
-        printf("Y\n");
+        printf(\n);
     }
 }
