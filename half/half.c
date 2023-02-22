@@ -37,6 +37,6 @@ int main(void)
 
     //end = end / 2;
 
-    printf("%f \n", end);
+    printf("You will owe %f each!\n", end);
 
 }
