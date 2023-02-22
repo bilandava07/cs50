@@ -11,5 +11,8 @@ int main(void)
     }
     while ( h < 1 || h > 8 );
     // print a vertical row H
-    
+    for (int i = 0; i < h; i++)
+    {
+        printf("Y\n");
+    }
 }
