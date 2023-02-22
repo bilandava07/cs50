@@ -11,11 +11,8 @@ int main(void)
     }
     while ( h < 1 || h > 8 );
     // print a vertical row H
-    switch(h)
+    switch (h)
     {
-        case 8: if(h==8)
-        {
-            printf("#");
-        }
+        case
     }
 }
