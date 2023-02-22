@@ -9,7 +9,7 @@ int main(void)
     {
         bill = get_float("Bill before taxes and tip: ");
     }
-    while ( bill < 0 );
+    while ( bill <= 0 );
 
     // ask for sale tax percent
     float tax;
