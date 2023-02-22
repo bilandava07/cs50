@@ -33,7 +33,7 @@ int main(void)
 
     bill_tax = bill + (bill * (tax/100));
 
-    end = tip/100;
+    end = bill_tax + (bill_tax * ((float) tip/100));
 
     //end = end / 2;
 
