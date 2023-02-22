@@ -3,12 +3,11 @@
 
 int main(void)
 {
-    // ask for the height input int ( h = height )form 1 to 8 inclusively
+    // ask for the height input int ( h = height )from 1 to 8 inclusively
+    int h;
     do
     {
-        int h = get_int("Height: ");
+        h = get_int("Height: ");
     }
-    while
-
-
+    while ( h < 1 || h > 8 );
 }
