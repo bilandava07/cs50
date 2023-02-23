@@ -15,8 +15,7 @@ int main(void)
     for ( int column = 0; column < h; column ++)
     {
         printf("#");
-        rows++
-        printf()
+        
 
     }
     printf("\n");
