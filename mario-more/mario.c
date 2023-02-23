@@ -11,7 +11,10 @@ int main(void)
     }
     while ( h < 1 || h > 8);
 
-    // build the pyramids 
+    // build the pyramids
+
+    int rows = h;
+    
 
 
 }
