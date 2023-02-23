@@ -4,11 +4,12 @@
 int main(void)
 {
     string n = "#";
+    string n2 = "#";
 
     for ( int i = 0; i < 8; i++)
     {
-        printf("%s \n", n );
-        n += "#";
+        p
+
 
     }
 
