@@ -12,14 +12,19 @@ int main(void)
     while ( h < 1 || h > 8 );
     // printing out (loops)
     int rows =  h;
-    int col = h;
+    int col = 0;
     for ( int i = 0; i < h; i++)
     {
         rows--;
+        col++;
         for ( int j = 0; j < rows; j++)
         {
-            printf(".");
+            printf(" ");
         }
-        for ( int k = 0; k )
+        for ( int k = 0; k < col; k++)
+        {
+            printf("#");
+        }
+        printf("\n");
     }
 }
