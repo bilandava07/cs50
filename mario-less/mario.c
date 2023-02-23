@@ -10,7 +10,7 @@ int main(void)
         h = get_int("Height: ");
     }
     while ( h < 1 || h > 8 );
-    // printing out (loops)
+    // printing out ( nesting loops )
     int rows =  h;
     int col = 0;
     for ( int i = 0; i < h; i++)
