@@ -9,5 +9,6 @@ int main(void)
         cents = get_int("Change owed: ");
     }
     while ( cents < 0);
+    
 
 }
