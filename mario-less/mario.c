@@ -15,9 +15,9 @@ int main(void)
     for ( int i = 0; i < h; i++)
     {
         rows--;
-        for ( int j = 0; j < rows; j--)
+        for ( int j = 0; j < rows; j++)
         {
-            printf(". ");
+            printf(".");
         }
         printf("#\n");
     }
