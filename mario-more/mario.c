@@ -13,8 +13,18 @@ int main(void)
 
     // build the pyramids
 
-    int rows = h;
-    
+    int ind = h;
+    for ( int i = 0; i < h; i++)
+    {
+        ind--;
+        for ( int j = 0; j < ind; j++)
+        {
+            printf(".");
+        }
+        printf("\n");
+    }
+    printf("\n");
+
 
 
 }
