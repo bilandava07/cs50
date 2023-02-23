@@ -12,19 +12,27 @@ int main(void)
     while ( h < 1 || h > 8);
 
     // build the pyramids
+    // ind - indent; fc = first column;
 
     int ind = h;
+    int fc = 0;
     for ( int i = 0; i < h; i++)
     {
         ind--;
+        fc++;
         for ( int j = 0; j < ind; j++)
         {
-            printf(".");
+            printf(" ");
+        }
+        for ( int j = 0; j < fc; j++)
+        {
+            printf("#");
+        }
+        printf("  ");
+        for ( int j = 0; j < fc; j++)
+        {
+            printf("#");
         }
         printf("\n");
     }
-    printf("\n");
-
-
-
 }
