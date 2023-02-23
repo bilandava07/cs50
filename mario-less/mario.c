@@ -13,7 +13,7 @@ int main(void)
     // printing out (loops)
     for ( int column = 0; column < h; column ++)
     {
-        printf("#");
+       for ( int row = 0; rows < h; rows++) printf("#");
     }
     printf("\n");
     }
