@@ -10,9 +10,6 @@ int main(void)
         h = get_int("Height: ");
     }
     while ( h < 1 || h > 8 );
-    // 
-    switch (h)
-    {
-        case
-    }
+    // printing out (loops)
+    for ( )
 }
