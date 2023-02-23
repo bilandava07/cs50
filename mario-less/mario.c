@@ -12,6 +12,7 @@ int main(void)
     while ( h < 1 || h > 8 );
     // printing out (loops)
     int rows =  h;
+    int col = h;
     for ( int i = 0; i < h; i++)
     {
         rows--;
@@ -19,6 +20,6 @@ int main(void)
         {
             printf(".");
         }
-        printf("#\n");
+        for ( int k = 0; k )
     }
 }
