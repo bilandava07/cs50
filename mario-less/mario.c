@@ -11,5 +11,9 @@ int main(void)
     }
     while ( h < 1 || h > 8 );
     // printing out (loops)
-    for ( )
-}
+    for ( int column = 0; column < h; column ++)
+    {
+        printf("#");
+    }
+    printf("\n");
+    }
