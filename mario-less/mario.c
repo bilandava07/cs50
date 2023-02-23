@@ -11,12 +11,13 @@ int main(void)
     }
     while ( h < 1 || h > 8 );
     // printing out (loops)
-    int rows = 0;
-    for ( int column = 0; column < h; column ++)
+    for ( int i = 0; i < h; i++)
     {
-        printf("#");
-        
-
+        for ( int j = 0; j < h; j++)
+        {
+            printf("#");
+        }
+        printf("\n");
     }
-    printf("\n");
+
     }
