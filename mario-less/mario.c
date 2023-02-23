@@ -16,7 +16,7 @@ int main(void)
     {
         printf("#");
         rows++
-        printf
+        for ( int quantity = 0; quantity < h; quantity++)
 
     }
     printf("\n");
