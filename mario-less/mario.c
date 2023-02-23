@@ -11,11 +11,11 @@ int main(void)
     }
     while ( h < 1 || h > 8 );
     // printing out (loops)
-    int rows -= h;
+    int rows =  h - 1;
     for ( int i = 0; i < h; i++)
     {
         rows--;
-        for ( int j = 0; j > rows; j++)
+        for ( int j = 0; j > rows; j--)
         {
             printf(" ");
         }
