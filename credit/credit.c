@@ -3,6 +3,7 @@
 
 int main(void)
 {
-    //promt for input 
+    //promt for input
+    long
 
 }
