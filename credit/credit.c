@@ -48,7 +48,8 @@ int main(void)
 
         printf("%i %i %i %i %i %i %i %i \n", d1,d2,d3,d4,d5,d6,d7,d8 );
 
-         d8 *=2;
+
+         d1 *=2; d2 *=2; d3 *=2; d4 *=2; d5 *=2; d6 *=2; d7 *=2; d8 *=2;
 
         printf("%i %i %i %i %i %i %i %i \n", d1,d2,d3,d4,d5,d6,d7,d8 );
 
