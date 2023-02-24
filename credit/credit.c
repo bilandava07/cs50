@@ -13,7 +13,8 @@ int main(void)
     else
     {
         //calculate the checksum
-        mod
+        int mod = 0;
+        
     }
 
 }
