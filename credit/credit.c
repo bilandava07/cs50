@@ -12,7 +12,7 @@ int main(void)
     }
     else // calculate the checksum
     {
-        int mod = 0;
+        int mod = 10;
         int d1;
         int d2;
         int d3;
@@ -23,7 +23,7 @@ int main(void)
         int d8;
 
         d1 = card % mod;
-        mod= mod *2;
+        mod = mod *2;
         d2 = card % mod;
 
         printf(" %i %i \n", d1, d2);
