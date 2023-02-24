@@ -28,7 +28,25 @@ int main(void)
         card = card / 10;
         d2 = card % 10;
 
-        printf("%i %i", d1,d2 );
+        card = card / 10;
+        d3 = card % 10;
+
+        card = card / 10;
+        d4 = card % 10;
+
+        card = card / 10;
+        d5 = card % 10;
+
+        card = card / 10;
+        d6 = card % 10;
+
+        card = card / 10;
+        d7 = card % 10;
+
+        card = card / 10;
+        d8 = card % 10;
+
+        printf("%i %i %i %i %i %i %i %i \n", d1,d2,d3,d4,d5,d6,d7,d8 );
 
     }
 }
