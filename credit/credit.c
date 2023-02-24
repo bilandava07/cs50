@@ -12,7 +12,7 @@ int main(void)
     }
     else // calculate the checksum
     {
-        int mod = 10;
+        int mod = 100;
         int d1;
         int d2;
         int d3;
