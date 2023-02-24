@@ -22,10 +22,10 @@ int main(void)
         int d7;
         int d8;
 
-        d1 = card % mod;
-        mod = mod *2;
+        card
 
-        d2 = card % mod;
+        d1 =
+
 
         printf(" %i %i \n", d1, d2);
 
