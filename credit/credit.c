@@ -4,7 +4,11 @@
 int main(void)
 {
     //promt for input
-    int card;
-    card = get_int("Number: ");
+    do
+    {
+        long card;
+        card = get_long("Number: ");
+    }
+    while ( card)
 
 }
