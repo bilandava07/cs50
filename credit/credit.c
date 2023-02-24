@@ -53,6 +53,14 @@ int main(void)
 
         printf("%i %i %i %i %i %i %i %i \n", d1,d2,d3,d4,d5,d6,d7,d8 );
 
+        if ( d6 > 9)
+        {
+            int d61 = d6 % 10 ;
+            int d62 = d1 / 10;
+        }
+        printf("%i %i \n", d61, d62 );
+
+
 
 
     }
