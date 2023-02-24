@@ -25,25 +25,25 @@ int main(void)
         card = card / 10;
         d1 = card % 10;
 
-        card = card / 10;
+        card = card / 100;
         d2 = card % 10;
 
-        card = card / 10;
+        card = card / 100;
         d3 = card % 10;
 
-        card = card / 10;
+        card = card / 100;
         d4 = card % 10;
 
-        card = card / 10;
+        card = card / 100;
         d5 = card % 10;
 
-        card = card / 10;
+        card = card / 100;
         d6 = card % 10;
 
-        card = card / 10;
+        card = card / 100;
         d7 = card % 10;
 
-        card = card / 10;
+        card = card / 100;
         d8 = card % 10;
 
         printf("%i %i %i %i %i %i %i %i \n", d1,d2,d3,d4,d5,d6,d7,d8 );
