@@ -53,14 +53,32 @@ int main(void)
 
         printf("%i %i %i %i %i %i %i %i \n", d1,d2,d3,d4,d5,d6,d7,d8 );
 
-        if ( d6 > 9)
+
+        int d11 = 0; int d12 = 0; int d21 = 0; int d22 = 0; int d31 = 0; int d32 = 0;int d41 = 0;int d42 = 0;int d51 = 0;int d52 = 0;int d61 = 0;int d62 = 0;int d71 = 0;int d71 = 0;int d81 = 0;int d82 = 0;
+
+
+        if ( d1 > 9)
         {
-            d61 = d6 % 10 ;
-            d62 = d6 / 10;
-            printf("%i %i \n", d61, d62 );
+
+            d11 = d1 % 10 ;
+            d12 = d1 / 10;
+            printf("%i %i \n", d11, d12 );
         }
-        int rslt;
-        d61 + d62 = rslt;
-        printf("%i", rslt);
+
+        if ( d2 > 9)
+        {
+
+            d21 = d2 % 10 ;
+            d22 = d2 / 10;
+            printf("%i %i \n", d21, d22 );
+        }
+
+        if ( d3 > 9)
+        {
+
+            d31 = d3 % 10 ;
+            d32 = d3 / 10;
+            printf("%i %i \n", d31, d32 );
+        }
     }
 }
