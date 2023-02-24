@@ -4,6 +4,7 @@
 int main(void)
 {
     //promt for input
-    long
+    int card;
+    card = get_int("Number: ");
 
 }
