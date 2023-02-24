@@ -14,7 +14,11 @@ int main(void)
     {
         //calculate the checksum
         int mod = 0;
-        
+        for ( int i = 0; i > 16; i++)
+        {
+            card = 
+
+        }
     }
 
 }
