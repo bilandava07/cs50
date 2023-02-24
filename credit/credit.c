@@ -24,7 +24,7 @@ int main(void)
 
         d1 = card % mod;
         mod = mod *2;
-        d2 = card % mod;
+        d2 = d1 % mod;
 
         printf(" %i %i \n", d1, d2);
 
