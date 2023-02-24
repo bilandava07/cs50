@@ -4,11 +4,15 @@
 int main(void)
 {
     //promt for input
-    do
-    {
         long card;
         card = get_long("Number: ");
+    if ( card < 1000000000000 || card > 9999999999999999)
+    {
+        printf("INVALID \n");
     }
-    while ( card < 1000000000000 || card > 9999999999999999);
+    else
+    {
+        printf("VALID \n");
+    }
 
 }
