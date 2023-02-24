@@ -22,12 +22,13 @@ int main(void)
         int d7;
         int d8;
 
-        card
+        card = card / 10;
+        d1 = card % 10;
 
-        d1 =
+        card = card / 10;
+        d2 = card % 10;
 
-
-        printf(" %i %i \n", d1, d2);
+        printf("%i %i", d1,d2 );
 
     }
 }
