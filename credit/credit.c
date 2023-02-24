@@ -12,7 +12,8 @@ int main(void)
     }
     else
     {
-        printf("VALID \n");
+        //calculate the checksum
+        mod
     }
 
 }
