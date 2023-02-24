@@ -55,13 +55,12 @@ int main(void)
 
         if ( d6 > 9)
         {
-            int d61 = d6 % 10 ;
-            int d62 = d1 / 10;
+            d61 = d6 % 10 ;
+            d62 = d6 / 10;
+            printf("%i %i \n", d61, d62 );
         }
-        printf("%i %i \n", d61, d62 );
-
-
-
-
+        int rslt;
+        d61 + d62 = rslt;
+        printf("%i", rslt);
     }
 }
