@@ -170,7 +170,7 @@ int main(void)
         int checksum;
         checksum = sum % 10;
 
-        printf("checksum: %i \n", checksum);
+        printf("checksum: %i \n", checksum);2
 
         if ( checksum == 0)
         {
