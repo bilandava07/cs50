@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int n
+    int n;
     do
     {
         n = get_int("Size: ");
@@ -17,5 +17,10 @@ int main(void)
     for (i = 1; i < n; i++)
     {
         array[i] = array[i-1] * 2;
+    }
+
+    for (p = 0; p < n; p++)
+    {
+        printf("%i \n, array[p]);
     }
 }
