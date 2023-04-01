@@ -3,11 +3,14 @@
 
 int main(void)
 {
-    int lenght
+    int n
     do
     {
-        lenght = get_int("Length: ");
+        n = get_int("Size: ");
 
     }
-    while (lenght < 1);
+    while (n < 1);
+
+    int array[n];
+    
 }
