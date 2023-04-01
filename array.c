@@ -11,6 +11,9 @@ int main(void)
     }
     while (n < 1);
 
-    int array[n];
-    
+    int array[n] = {1};
+    for (i = 0; i < n; i++)
+    {
+        array[i] *= 2;
+    }
 }
