@@ -14,8 +14,8 @@ int main(void)
     int array[n];
     array[0] = 1;
 
-    for (i = 0; i < n; i++)
+    for (i = 1; i < n; i++)
     {
-        array[i] *= 2;
+        array[i] = array[i-1] * 2;
     }
 }
