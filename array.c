@@ -17,10 +17,6 @@ int main(void)
     for (int i = 1; i < n; i++)
     {
         array[i] = array[i-1] * 2;
-    }
-
-    for (int p = 0; p < n; p++)
-    {
-        printf("%i \n", array[p]);
+        printf("%i \n", array[i]);
     }
 }
