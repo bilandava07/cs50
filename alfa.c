@@ -3,6 +3,7 @@
 #include <string.h>
 
 bool lower;
+int lenght;
 
 int main(void)
 {
@@ -10,7 +11,7 @@ int main(void)
     {
         string word = get_string("Word: ");
 
-        int lenght = strlen(word);
+        lenght = strlen(word);
         for (int i = 0; i < lenght; i++)
         {
             lower = true;
