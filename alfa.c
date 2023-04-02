@@ -7,9 +7,10 @@ int lenght;
 
 int main(void)
 {
+    string word;
     do
     {
-        string word = get_string("Word: ");
+        word = get_string("Word: ");
 
         lenght = strlen(word);
         for (int i = 0; i < lenght; i++)
@@ -25,9 +26,8 @@ int main(void)
     while (lower == false);
     printf("lower indeed \n");
 
-    for (int i = 0; i < lenght; i++)
-
     bool alphabet = true;
+    for (int i = 0; i < lenght; i++)
     {
         if (word[i] > word[i++])
         {
