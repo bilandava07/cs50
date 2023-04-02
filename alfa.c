@@ -4,20 +4,19 @@
 
 int main(void)
 {
+    bool lower = true;
     do
     {
         string word = get_string("Word: ");
-    }
-    while ( )
 
-    int lenght = strlen(word);
-
-    for (int i = 0; i < lenght; i++)
-    {
-        if (word[i] < 97 && > 122)
+        int lenght = strlen(word);
+        for (int i = 0; i < lenght; i++)
         {
-            break
-        }
+            if (word[i] < 97 || > 122)
+            {
+                lower = false;
+            }
 
-    }
+        }
+    while ( lower = false)
 }
