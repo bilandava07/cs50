@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <cs50.h>
-#include 
+#include <stirng.h>
 
 int main(void)
 {
     string word = get_string("Word: ");
 
-    int lenght =
+    int lenght = strlen(word);
 
-    for (int i = 0; i < )
+    for (int i = 0; i < lenght; i++)
+    {
+        
+    }
 }
