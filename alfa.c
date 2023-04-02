@@ -20,5 +20,5 @@ int main(void)
         }
     }
     while (lower == false);
-    printf("lower indeed");
+    printf("lower indeed \n");
 }
