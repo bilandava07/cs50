@@ -14,6 +14,6 @@ int main(void)
 
     for (int i = 0; i < lenght; i++)
     {
-        word[i] < word[i++]
+        word[i] < 97 && > 122
     }
 }
