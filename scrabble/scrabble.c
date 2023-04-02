@@ -31,15 +31,13 @@ int compute_score(string word)
     {
         if (isupper(word[i]))
         {
-            score = score + 
+            score = score + POINTS[word[i] - 65] ;
         }
-        int score = POINTS[word[i] - 65] ;
-
-        printf("%i ", score);
-
+        else if (islower(word[i]))
+        {
+            score = score + POINTS[word[i] - 97];
+        }
     }
-    printf("\n");
-    return 0;
 
-
+    return score; 
 }
