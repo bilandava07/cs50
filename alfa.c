@@ -23,4 +23,17 @@ int main(void)
     }
     while (lower == false);
     printf("lower indeed \n");
+
+    for (int i = 0; i < lenght; i++)
+    {
+        if (word[i] > word[i++])
+        {
+            printf("No \n");
+            break";
+        }
+    }
+    
+
+
+
 }
