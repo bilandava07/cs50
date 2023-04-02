@@ -29,9 +29,9 @@ int compute_score(string word)
     {
         printf("%i ", word[i]);
 
-        int score = word[i - 65];
+        int score = POINTS[word[i] - 65] ;
 
-        printf("%i ", word[i]);
+        printf("%i ", score);
 
     }
     printf("\n");
