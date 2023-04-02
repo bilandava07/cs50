@@ -18,6 +18,7 @@ int main(void)
             }
 
         }
-    while ( lower = false)
+    }
+    while (lower == false);
     printf("lower indeed");
 }
