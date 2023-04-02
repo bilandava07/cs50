@@ -27,7 +27,7 @@ int main(void)
     printf("lower indeed \n");
 
     bool alphabet = true;
-    for (int i = 0; i < lenght; i++)
+    for (int i = 0; i < lenght - 1; i++)
     {
         if (word[i] > word[i+1])
         {
