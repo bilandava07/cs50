@@ -17,6 +17,7 @@ int main(void)
             if (word[i] < 97 || word[i] > 122)
             {
                 lower = false;
+                break;
             }
         }
     }
