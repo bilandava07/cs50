@@ -26,23 +26,15 @@ int main(void)
     while (lower == false);
     printf("lower indeed \n");
 
-    bool alphabet = true;
     for (int i = 0; i < lenght - 1; i++)
     {
         if (word[i] > word[i+1])
         {
-            alphabet = false;
-            break;
+            printf("No \n");
+            return 0;
         }
     }
 
-    if (alphabet == false)
-    {
-        printf("No\n");
-    }
-    else
-    {
-        printf("Yes\n");
-    }
-
+    printf("Yes\n");
+    return 0;
 }
