@@ -31,12 +31,12 @@ int main(void)
     {
         if (word[i] > word[i++])
         {
-            aplhabet = false;
+            alphabet = false;
             break;
         }
     }
 
-    if alphabet == false;
+    if (alphabet == false)
     {
         printf("No\n");
     }
