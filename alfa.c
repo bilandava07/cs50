@@ -26,13 +26,14 @@ int main(void)
 
     for (int i = 0; i < lenght; i++)
     {
-
+        bool alphabet = true;
         if (word[i] > word[i++])
         {
-            printf("No \n");
+            aplhabet = false;
             break";
         }
     }
+
 
 
 
