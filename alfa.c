@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <cs50.h>
-#include <stirng.h>
+#include <string.h>
 
 int main(void)
 {
@@ -12,11 +12,12 @@ int main(void)
         int lenght = strlen(word);
         for (int i = 0; i < lenght; i++)
         {
-            if (word[i] < 97 || > 122)
+            if (word[i] < 97 || word[i] > 122)
             {
                 lower = false;
             }
 
         }
     while ( lower = false)
+    printf("lower indeed");
 }
