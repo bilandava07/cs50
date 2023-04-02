@@ -29,7 +29,7 @@ int main(void)
     bool alphabet = true;
     for (int i = 0; i < lenght; i++)
     {
-        if (word[i] > word[i++])
+        if (word[i] > word[i+1])
         {
             alphabet = false;
             break;
