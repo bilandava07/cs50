@@ -29,6 +29,10 @@ int compute_score(string word)
 
     for (int i = 0; i < length; i++)
     {
+        if (isupper(word[i]))
+        {
+            score = score + 
+        }
         int score = POINTS[word[i] - 65] ;
 
         printf("%i ", score);
