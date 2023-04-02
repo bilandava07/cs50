@@ -4,7 +4,11 @@
 
 int main(void)
 {
-    string word = get_string("Word: ");
+    do
+    {
+        string word = get_string("Word: ");
+    }
+    while ( )
 
     int lenght = strlen(word);
 
