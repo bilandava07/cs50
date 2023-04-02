@@ -28,7 +28,7 @@ int main(void)
 
     for (int i = 0; i < lenght - 1; i++)
     {
-        if (word[i] > word[i+1])
+        if (word[i] > word[i + 1])
         {
             printf("No \n");
             return 0;
