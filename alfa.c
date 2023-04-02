@@ -4,7 +4,7 @@
 
 int main(void)
 {
-    bool lower = true;
+    bool lower = false;
     do
     {
         string word = get_string("Word: ");
@@ -12,11 +12,10 @@ int main(void)
         int lenght = strlen(word);
         for (int i = 0; i < lenght; i++)
         {
-            if (word[i] < 97 || word[i] > 122)
+            if (word[i] > 97 || word[i] < 122)
             {
-                lower = false;
+                lower = true;
             }
-
         }
     }
     while (lower == false);
