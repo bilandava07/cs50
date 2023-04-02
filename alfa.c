@@ -2,9 +2,10 @@
 #include <cs50.h>
 #include <string.h>
 
+bool lower;
+
 int main(void)
 {
-    bool lower = true;
     do
     {
         string word = get_string("Word: ");
@@ -12,6 +13,7 @@ int main(void)
         int lenght = strlen(word);
         for (int i = 0; i < lenght; i++)
         {
+            lower = true;
             if (word[i] < 97 || word[i] > 122)
             {
                 lower = false;
