@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    float number = 2.1;
+    float number = 2.6;
 
 
 
