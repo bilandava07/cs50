@@ -13,7 +13,7 @@ int main(void)
     string text = get_string("Text: ");
 
     length = strlen(text);
-    printf("The text is %i letters long \n", length);
+    printf("The string is %i charachters long \n", length);
 
     //printf("Text: %s \n", text);
 }
