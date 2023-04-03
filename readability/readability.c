@@ -32,7 +32,7 @@ int main(void)
 
     float grade = 0.0588 * avrg_l - 0.296 * avrg_s - 15.8;
 
-    printf("Grades: %f \n", grade);
+    printf("Grades: %i \n", (int) round(grade));
 
 }
 
