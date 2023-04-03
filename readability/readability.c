@@ -35,8 +35,21 @@ int main(void)
     float grade = 0.0588 * avrg_l - 0.296 * avrg_s - 15.8;
 
     printf("Grades: %f \n", grade);
-    printf("Grades rounded: %i \n", (int) round(grade));
 
+    if ((int) round(grade) >= 16)
+    {
+        printf("Grade 16+ \n");
+        return 0;
+    }
+    else if ((int) round(grade) < 1)
+    {
+        printf("Before Grade 1 \n");
+
+    }
+    else
+    {
+        printf("Grades rounded: %i \n", (int) round(grade));
+    }
 }
 
 int count_letters(string text_f)
