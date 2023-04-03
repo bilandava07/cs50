@@ -67,7 +67,7 @@ int count_sent(string text_f)
 
     for (int i = 0; i < str_length; i++)
     {
-        if (text_f[i] == '!' || text_f[i] == '.' || text_f[i == '?'])
+        if (text_f[i] == '!' || text_f[i] == '.' || text_f[i] == '?')
             {
                 sent++;
             }
