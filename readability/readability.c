@@ -7,10 +7,12 @@ int count_letters(string text)
 int main(void)
 {
     string text = get_string("Text: ");
-    int letters = count_letters()
+    int letters = count_letters(text);
+    printf
 }
 
 int count_letters(string text)
 {
+    
 
 }
