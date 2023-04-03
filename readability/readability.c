@@ -17,13 +17,10 @@ int main(void)
     printf("The string is %i charachters long \n", str_length);
 
     int num_letters = count_letters(text);
-
     printf ("The text contains %i letters \n", num_letters);
 
-
-
-
-
+    int num_words = count_words(text);
+    printf ("The text contains %i words \n", num_words);
 
 }
 
@@ -47,9 +44,15 @@ int count_letters(string text_f)
 
 int count_words(string text_f)
 {
-    int words = 0;
+    int spaces = 0;
+    int words;
     for (int i = 0; i < str_length; i++)
     {
-        if
+        if (isspace(text_f[i]))
+        {
+            spaces++;
+        }
     }
+    words = spaces + 1;
+    return words;
 }
