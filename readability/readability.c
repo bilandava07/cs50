@@ -26,8 +26,8 @@ int main(void)
     int num_sent = count_sent(text);
     printf("The text contains %i sentences \n", num_sent);
 
-    int avrg_l = num_letters / num_words * 100;
-    int avrg_s = num_sent / num_words * 100;
+    float avrg_l = num_letters / num_words * 100;
+    float avrg_s = num_sent / num_words * 100;
 
     float grade = 0.0588 * avrg_l - 0.296 * avrg_s - 15.8;
 
