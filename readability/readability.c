@@ -61,13 +61,16 @@ int count_words(string text_f)
     return words;
 }
 
-int count_sent(text_f)
+int count_sent(string text_f)
 {
     int sent = 0;
 
-    if (text_f[i] == '!' && text_f[i] == '.' && text_f[i == '?'])
+    for (int i = 0; i < str_length; i++)
     {
-        sent++;
+        if (text_f[i] == '!' || text_f[i] == '.' || text_f[i == '?'])
+            {
+                sent++;
+            }
     }
     return sent;
 }
