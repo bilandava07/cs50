@@ -8,6 +8,7 @@ int str_length;
 
 int count_letters(string text_f);
 int count_words(string text_f);
+int count_sent(string text_f);
 
 int main(void)
 {
@@ -21,6 +22,9 @@ int main(void)
 
     int num_words = count_words(text);
     printf ("The text contains %i words \n", num_words);
+
+    int num_sent = count_sent(text);
+    printf("The text contains %i sentences \n", num_sent);
 
 }
 
@@ -56,3 +60,9 @@ int count_words(string text_f)
     words = spaces + 1;
     return words;
 }
+
+int count_sent(text_f)
+{
+    
+}
+
