@@ -47,5 +47,9 @@ int count_letters(string text_f)
 
 int count_words(string text_f)
 {
-    
+    int words = 0;
+    for (int i = 0; i < str_length; i++)
+    {
+        if
+    }
 }
