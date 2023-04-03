@@ -16,25 +16,18 @@ int main(void)
     string text = get_string("Text: ");
 
     str_length = strlen(text);
-    printf("The string is %i charachters long \n", str_length);
 
     int num_letters = count_letters(text);
-    printf ("The text contains %i letters \n", num_letters);
 
     int num_words = count_words(text);
-    printf ("The text contains %i words \n", num_words);
 
     int num_sent = count_sent(text);
-    printf("The text contains %i sentences \n", num_sent);
 
     float avrg_l = (float)num_letters / (float)num_words * 100;
-    printf("L: %f \n", avrg_l);
+
     float avrg_s = (float)num_sent / (float)num_words * 100;
-    printf("S: %f \n", avrg_s);
 
     float grade = 0.0588 * avrg_l - 0.296 * avrg_s - 15.8;
-
-    printf("Grades: %f \n", grade);
 
     if ((int) round(grade) >= 16)
     {
@@ -48,7 +41,7 @@ int main(void)
     }
     else
     {
-        printf("Grades rounded: %i \n", (int) round(grade));
+        printf("Grades: %i \n", (int) round(grade));
     }
 }
 
