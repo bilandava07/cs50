@@ -2,17 +2,13 @@
 #include <stdio.h>
 
 
-int count_letters(string text)
+int count_letters(string text);
 
 int main(void)
 {
     string text = get_string("Text: ");
-    int letters = count_letters(text);
-    printf
+
+    printf("Text: %s \n", text);
 }
 
-int count_letters(string text)
-{
-    
-
-}
+//int count_letters(string text)
