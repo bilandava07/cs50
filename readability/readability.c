@@ -28,7 +28,7 @@ int count_letters(string text)
 {
     for (int i = 0; i < length; i++)
     {
-        text
+        if ()
     }
     return 0;
 
