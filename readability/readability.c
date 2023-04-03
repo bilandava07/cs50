@@ -6,7 +6,8 @@
 
 int str_length;
 
-int count_letters(string text);
+int count_letters(string text_f);
+int count_words(string text_f);
 
 int main(void)
 {
@@ -23,23 +24,28 @@ int main(void)
 
 
 
-    //printf("Text: %s \n", text);
+
 }
 
-int count_letters(string text)
+int count_letters(string text_f)
 {
     int letters = 0;
     for (int i = 0; i < str_length; i++)
     {
-        if (islower(text[i]))
+        if (islower(text_f[i]))
         {
             letters++;
         }
-        else if (isupper(text[i]))
+        else if (isupper(text_f[i]))
         {
             letters++;
         }
     }
     return letters;
 
+}
+
+int count_words(string text_f)
+{
+    
 }
