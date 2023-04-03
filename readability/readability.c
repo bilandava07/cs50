@@ -29,9 +29,9 @@ int main(void)
     int avrg_l = num_letters / num_words * 100;
     int avrg_s = num_sent / num_words * 100;
 
-    int grade = 0.0588 * avrg_l - 0.296 * avrg_s - 15.8;
+    float grade = 0.0588 * avrg_l - 0.296 * avrg_s - 15.8;
 
-    printf("Grades: %i \n", grade);
+    printf("Grades: %f \n", grade);
 
 }
 
