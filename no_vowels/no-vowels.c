@@ -16,12 +16,11 @@ int main(int argc, string argv[])
     {
         printf("Usage: ./no-vowels word \n");
         return 1;
-        length = strlen(argv[1]);
-        string word = replace(argv[1]);
-
-        printf("%s \n", word);
-
     }
+    
+    length = strlen(argv[1]);
+    string word = replace(argv[1]);
+    printf("%s \n", word);
 }
 
 string replace(string word)
