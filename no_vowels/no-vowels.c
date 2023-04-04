@@ -26,7 +26,7 @@ string replace(string word)
 {
     for (int i = 0; i < length; i++)
     {
-        char n = word[1];
+        int n = word[1];
         switch(n)
         {
             case 1:
