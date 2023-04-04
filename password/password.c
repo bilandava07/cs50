@@ -12,9 +12,10 @@ int str_len;
 
 int main(void)
 {
+    string password;
     do
     {
-        string password = get_string("Enter your password: ");
+        password = get_string("Enter your password: ");
         str_len = strlen(password);
 
         if (!valid(password))
@@ -23,8 +24,9 @@ int main(void)
 
         }
     }
-    while (!valid(password))
+    while (!valid(password));
     printf("Your password is valid!\n");
+}
 
 bool valid(string password)
 {
