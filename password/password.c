@@ -65,5 +65,5 @@ bool valid(string password)
     {
         return true;
     }
-    return false;
+    return 0;
 }
