@@ -20,13 +20,13 @@ int main(void)
 
         if (!valid(password))
         {
-            printf("Your password needs at least one uppercase letter, lowercase letter, number and symbol\n");
+            printf("Your password needs at least one uppercase letter, lowercase letter, number and symbol without any spaces.\n");
 
         }
     }
     while (!valid(password));
 
-    
+
     printf("Your password is valid!\n");
 }
 
@@ -55,6 +55,10 @@ bool valid(string password)
         if (ispunct(password[i]))
         {
             symbol = true;
+        }
+        if (isspace(password[i]))
+        {
+            return false;
         }
     }
     if ( upper == true && lower == true && number == true && symbol == true )
