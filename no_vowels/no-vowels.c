@@ -31,16 +31,16 @@ string replace(string word)
         switch(n)
         {
             case 101:
-                word[i] = 3;
+                word[i] = 51;
                  break;
             case 97:
-                word[i] = 6;
+                word[i] = 54;
                 break;
             case 105:
-                word[i] = 1;
+                word[i] = 49;
                 break;
             case 111:
-                word[i] = 0;
+                word[i] = 48;
                 break;
         }
     }
