@@ -12,19 +12,20 @@ int str_len;
 
 int main(void)
 {
-    string password = get_string("Enter your password: ");
-    str_len = strlen(password);
-    if (valid(password))
+    do
     {
-        printf("Your password is valid!\n");
-    }
-    else
-    {
-        printf("Your password needs at least one uppercase letter, lowercase letter, number and symbol\n");
-    }
-}
+        string password = get_string("Enter your password: ");
+        str_len = strlen(password);
 
-// TODO: Complete the Boolean function below
+        if (!valid(password))
+        {
+            printf("Your password needs at least one uppercase letter, lowercase letter, number and symbol\n");
+
+        }
+    }
+    while (!valid(password))
+    printf("Your password is valid!\n");
+
 bool valid(string password)
 {
     bool upper = false;
