@@ -24,8 +24,8 @@ int main(void)
     printf("%.1f hours\n", calc_hours(hours, weeks, output));
 }
 
-// TODO: complete the calc_hours function
+
 float calc_hours(int hours[], int weeks, char output)
 {
-
+    return 0;
 }
