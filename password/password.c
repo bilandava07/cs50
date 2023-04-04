@@ -38,7 +38,6 @@ bool valid(string password)
         if (isupper(password[i]))
         {
             upper = true;
-
         }
         if (islower(password[i]))
         {
@@ -48,8 +47,14 @@ bool valid(string password)
         {
             number = true;
         }
-        if (is)
+        if (ispunct(password[i]))
+        {
+            symbol = true;
+        }
     }
-
+    if ( upper = true && lower = true && number = true && symbol = true && )
+    {
+        return true;
+    }
     return false;
 }
