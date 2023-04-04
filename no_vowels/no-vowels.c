@@ -26,9 +26,10 @@ string replace(string word)
 {
     for (int i = 0; i < length; i++)
     {
-        switch(word[i])
+        char n = word[1];
+        switch(n)
         {
-            case e:
+            case 1:
                 word[i] = 3;
             case a:
                 word[i] = 6;
