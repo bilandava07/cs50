@@ -25,6 +25,8 @@ int main(void)
         }
     }
     while (!valid(password));
+
+    
     printf("Your password is valid!\n");
 }
 
