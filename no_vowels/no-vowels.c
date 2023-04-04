@@ -29,14 +29,18 @@ string replace(string word)
         int n = word[1];
         switch(n)
         {
-            case 1:
+            case 101:
                 word[i] = 3;
-            case a:
+                 break;
+            case 97:
                 word[i] = 6;
-            case i:
+                break;
+            case 105:
                 word[i] = 1;
-            case o:
+                break;
+            case 111:
                 word[i] = 0;
+                break;
         }
     }
     return word;
