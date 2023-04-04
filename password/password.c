@@ -5,7 +5,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
-#include <strlen.h>
+#include <string.h>
 
 bool valid(string password);
 int str_len;
@@ -52,7 +52,7 @@ bool valid(string password)
             symbol = true;
         }
     }
-    if ( upper = true && lower = true && number = true && symbol = true && )
+    if ( upper == true && lower == true && number == true && symbol == true )
     {
         return true;
     }
