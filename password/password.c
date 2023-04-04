@@ -5,12 +5,15 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <strlen.h>
 
 bool valid(string password);
+int str_len;
 
 int main(void)
 {
     string password = get_string("Enter your password: ");
+    str_len = strlen(password);
     if (valid(password))
     {
         printf("Your password is valid!\n");
@@ -24,5 +27,20 @@ int main(void)
 // TODO: Complete the Boolean function below
 bool valid(string password)
 {
+    bool upper = false;
+    bool lower = false;
+    bool number = false;
+    bool symbol = false;
+
+
+    for (int i = 0; i < str_len; i++)
+    {
+        if (isupper(password[i]))
+        {
+            upper = true;
+
+        }
+    }
+
     return false;
 }
