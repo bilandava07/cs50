@@ -27,20 +27,19 @@ string replace(string word)
 {
     for (int i = 0; i < length; i++)
     {
-        int n = word[i];
-        switch(n)
+        switch(word[i])
         {
-            case 101:
-                word[i] = 51;
+            case 'e':
+                word[i] = '3';
                  break;
-            case 97:
-                word[i] = 54;
+            case 'a':
+                word[i] = '6';
                 break;
-            case 105:
-                word[i] = 49;
+            case 'i':
+                word[i] = '1';
                 break;
-            case 111:
-                word[i] = 48;
+            case 'o':
+                word[i] = '0';
                 break;
         }
     }
