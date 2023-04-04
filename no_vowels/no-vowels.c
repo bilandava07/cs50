@@ -17,7 +17,7 @@ int main(int argc, string argv[])
         printf("Usage: ./no-vowels word \n");
         return 1;
     }
-    
+
     length = strlen(argv[1]);
     string word = replace(argv[1]);
     printf("%s \n", word);
@@ -27,7 +27,7 @@ string replace(string word)
 {
     for (int i = 0; i < length; i++)
     {
-        int n = word[1];
+        int n = word[i];
         switch(n)
         {
             case 101:
