@@ -19,9 +19,7 @@ int main(int argc, string argv[])
     }
 
     length = strlen(argv[1]);
-    replace(argv[1]);
-
-    replaced_word
+    string word = replace(argv[1]);
     printf("%s \n", word);
 }
 
