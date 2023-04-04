@@ -40,6 +40,15 @@ bool valid(string password)
             upper = true;
 
         }
+        if (islower(password[i]))
+        {
+            lower = true;
+        }
+        if (isdigit(password[i]))
+        {
+            number = true;
+        }
+        if (is)
     }
 
     return false;
