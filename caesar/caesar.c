@@ -29,7 +29,6 @@ bool only_digits (string key)
             break
         }
         start++;
-
     }
     return false;
 }
