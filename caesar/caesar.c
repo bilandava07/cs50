@@ -3,11 +3,11 @@
 
 int main(int argc, string argv[])
 {
-    do
+
     {
         return 1;
         printf("Usage: ./ caesar key \n");
     }
-    while ( argc != 1);
+    while ( argc != 2);
 
 }
