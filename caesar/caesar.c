@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 bool only_digits (string key);
 
@@ -18,6 +19,9 @@ int main(int argc, string argv[])
         return 1;
     }
     printf("Succes \n");
+
+    int key_int = atoi(argv[1]);
+    printf("%i \n", key_int);
 }
 
 bool only_digits (string key)
