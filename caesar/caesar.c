@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 bool only_digits (string key);
 
@@ -23,6 +24,10 @@ bool only_digits (string key)
 {
     for (int i = 0; i < strlen(key); i++)
     {
-        
+        if (!isdigit(key[i]))
+        {
+            return false;
+        }
     }
+    return true;
 }
