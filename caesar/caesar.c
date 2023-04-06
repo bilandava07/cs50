@@ -21,12 +21,11 @@ int main(int argc, string argv[])
 bool only_digits (string key)
 {
     int start = 49;
-    for (int i = 0; i < 9; i++)
+    for (int i = 0; i < 8; i++)
     {
         if ( key == start)
         {
             return true;
-            break
         }
         start++;
     }
