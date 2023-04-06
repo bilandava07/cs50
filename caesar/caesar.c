@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 bool only_digits (string key);
 
@@ -21,6 +22,12 @@ int main(int argc, string argv[])
 
 bool only_digits (string key)
 {
+    int length = strlen(key);
+    if (length != 1)
+    {
+        return false;
+    }
+
     int start = 49;
     for (int i = 0; i < 8; i++)
     {
