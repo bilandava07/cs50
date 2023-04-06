@@ -24,6 +24,12 @@ bool only_digits (string key)
     for (int i = 0; i < 9; i++)
     {
         if ( key == start)
+        {
+            return true;
+            break
+        }
+        start++;
 
     }
+    return false;
 }
