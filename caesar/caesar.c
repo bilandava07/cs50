@@ -13,14 +13,14 @@ int main(int argc, string argv[])
     bool check = only_digits(argv[1]);
     if ( check == false)
     {
-        printf("Usage: ./ caesar key \n");
+        printf(" function exit \n");
         return 1;
     }
 }
 
 bool only_digits (string key)
 {
-    string start = "49";
+    char start = "49";
     for (int i = 0; i < 8; i++)
     {
         if ( key == start)
