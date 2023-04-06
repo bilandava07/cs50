@@ -14,7 +14,7 @@ int main(int argc, string argv[])
     }
     if ( only_digits(argv[1]) == false)
     {
-        printf(" function exit \n");
+        printf("Usage: ./ caesar key \n");
         return 1;
     }
     printf("Succes \n");
