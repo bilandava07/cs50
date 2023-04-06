@@ -16,14 +16,15 @@ int main(int argc, string argv[])
         printf(" function exit \n");
         return 1;
     }
+    printf("Succes \n");
 }
 
 bool only_digits (string key)
 {
-    char start = "49";
+    int start = 49;
     for (int i = 0; i < 8; i++)
     {
-        if ( key == start)
+        if ( key[0] == start)
         {
             return true;
         }
