@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 bool only_digits (string key);
+char rotate (int key, char char);
 
 int main(int argc, string argv[])
 {
@@ -23,7 +24,14 @@ int main(int argc, string argv[])
     int key_int = atoi(argv[1]);
     printf("%i \n", key_int);
 
-    string plaintext = get_string("plaintext: ");
+    string ptext = get_string("plaintext: ");
+
+    string ctext;
+
+    for (int i = 0; i < strlen(ptext); i++)
+    {
+        ctext[i] = rotate(argv[1], ptext[i])
+    }
 }
 
 bool only_digits (string key)
@@ -36,4 +44,14 @@ bool only_digits (string key)
         }
     }
     return true;
+}
+
+char rotate (int key, char char)
+{
+    if (!isaplha(char))
+    {
+        return char;
+    }
+
+    if (isupper(char))
 }
