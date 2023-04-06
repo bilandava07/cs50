@@ -21,19 +21,8 @@ int main(int argc, string argv[])
 
 bool only_digits (string key)
 {
-    if (strlen(key) != 1)
+    for (int i = 0; i < strlen(key); i++)
     {
-        return false;
+        
     }
-
-    int start = 49;
-    for (int i = 0; i < 9; i++)
-    {
-        if ( key[0] == start)
-        {
-            return true;
-        }
-        start++;
-    }
-    return false;
 }
