@@ -27,7 +27,7 @@ bool only_digits (string key)
     }
 
     int start = 49;
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < 9; i++)
     {
         if ( key[0] == start)
         {
