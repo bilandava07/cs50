@@ -22,6 +22,8 @@ int main(int argc, string argv[])
 
     int key_int = atoi(argv[1]);
     printf("%i \n", key_int);
+
+    string plaintext = get_string("plaintext: ");
 }
 
 bool only_digits (string key)
