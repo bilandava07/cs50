@@ -23,7 +23,7 @@ int main(int argc, string argv[])
 
     string ptext = get_string("plaintext: ");
 
-    string ctext [strlen(ptext)];
+    string ctext = "";
 
     printf("ciphertext: ");
 
