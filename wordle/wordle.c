@@ -153,6 +153,15 @@ int check_word(string guess, int wordsize, int status[], string choice)
         // keep track of the total score by adding each individual letter's score from above
     for (int i = 0; i < wordsize; i++)
     {
+        switch (guess[i])
+        {
+            case choice[i]
+            status[i] = EXACT;
+            break;
+
+            case choice
+
+        }
         if (guess[i] == choice[i])
         {
             status[i] = EXACT;
