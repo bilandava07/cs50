@@ -174,8 +174,13 @@ void print_word(string guess, int wordsize, int status[])
     {
         if (status[i] == 2)
         {
-            printf(GREEN")
+            printf(GREEN"%c"RESET, guess[0][i]);
         }
+        if (status[i] == 1)
+        {
+            printf(YELLOW"%c"RESET, gues[0][i]);
+        }
+        if (status[i] )
     }
 
     printf("\n");
