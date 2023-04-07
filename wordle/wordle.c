@@ -115,7 +115,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        printf("The word was: %s)
+        printf("The word was: %s ", choice);
     }
 
     // that's all folks!
