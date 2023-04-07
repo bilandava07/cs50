@@ -27,10 +27,11 @@ int main(int argc, string argv[])
     string ptext = get_string("plaintext: ");
 
     string ctext [strlen(ptext)];
+    printf("%c %c \n", ctext[0][0], ctext[0][1]);
 
     for (int i = 0; i < strlen(ptext); i++)
     {
-        ctext[i] = rotate(key_int, ptext[i]);
+        ctext[0] = rotate(key_int, ptext[i]);
     }
 
     printf("cyphertext: %s \n", ctext);
