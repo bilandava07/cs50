@@ -25,7 +25,7 @@ int main(int argc, string argv[])
 
     string ctext [strlen(ptext)];
 
-    printf("cyphertext: ");
+    printf("ciphertext: ");
 
     for (int i = 0; i < strlen(ptext); i++)
     {
