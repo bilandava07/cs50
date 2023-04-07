@@ -54,4 +54,7 @@ char rotate (int key, char char)
     }
 
     if (isupper(char))
+    {
+        
+    }
 }
