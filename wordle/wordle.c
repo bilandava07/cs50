@@ -37,7 +37,7 @@ int main(int argc, string argv[])
 
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
-    if (argv[1] != 5, != 6, != 7, != 8)
+    if (argv[1] != "5", != "6", != "7", != "8")
     {
         printf("Error: wordsize must be either 5, 6, 7, or 8 \n");
         return 1;
@@ -56,6 +56,7 @@ int main(int argc, string argv[])
 
     // load word file into an array of size LISTSIZE
     char options[LISTSIZE][wordsize + 1];
+
     for (int i = 0; i < LISTSIZE; i++)
     {
         fscanf(wordlist, "%s", options[i]);
