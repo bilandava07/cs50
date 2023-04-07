@@ -32,6 +32,8 @@ int main(int argc, string argv[])
     {
         ctext[i] = rotate(argv[1], ptext[i])
     }
+
+    printf("cyphertext: %s \n", ctext);
 }
 
 bool only_digits (string key)
@@ -67,6 +69,12 @@ char rotate (int key, char char)
 
     if(islower(char))
     {
-        int converted = char
+        int converted = char - 97;
+
+        int cypher = ( converted + key) % 26;
+
+        cypher += 97;
+
+        return cypher;
     }
 }
