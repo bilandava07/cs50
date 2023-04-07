@@ -158,7 +158,11 @@ int check_word(string guess, int wordsize, int status[], string choice)
                 break;
             }
         }
-    }
+     }
+     for (int s = 0; s < wordsize; s++)
+     {
+        score += status[s];
+     }
 
     return score;
 }
