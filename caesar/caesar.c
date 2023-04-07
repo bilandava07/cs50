@@ -4,17 +4,17 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-bool only_digits (string key);
-char rotate (int key, char char1);
+bool only_digits(string key);
+char rotate(int key, char char1);
 
 int main(int argc, string argv[])
 {
-    if ( argc != 2)
+    if (argc != 2)
     {
         printf("Usage: ./ caesar key \n");
         return 1;
     }
-    if ( only_digits(argv[1]) == false)
+    if (only_digits(argv[1]) == false)
     {
         printf("Usage: ./ caesar key \n");
         return 1;
@@ -37,7 +37,7 @@ int main(int argc, string argv[])
     printf("cyphertext: %s \n", ctext[0]);
 }
 
-bool only_digits (string key)
+bool only_digits(string key)
 {
     for (int i = 0; i < strlen(key); i++)
     {
@@ -49,7 +49,7 @@ bool only_digits (string key)
     return true;
 }
 
-char rotate (int key, char char1)
+char rotate(int key, char char1)
 {
     if (!isalpha(char1))
     {
@@ -60,7 +60,7 @@ char rotate (int key, char char1)
     {
         int converted = char1 - 65;
 
-        int cypher = ( converted + key ) % 26;
+        int cypher = (converted + key) % 26;
 
         cypher += 65;
 
@@ -68,11 +68,11 @@ char rotate (int key, char char1)
 
     }
 
-    if(islower(char1))
+    if (islower(char1))
     {
         int converted_lower = char1 - 97;
 
-        int cypher = ( converted_lower + key) % 26;
+        int cypher = (converted_lower + key) % 26;
 
         cypher += 97;
 
