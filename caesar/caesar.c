@@ -69,9 +69,9 @@ char rotate (int key, char char1)
 
     if(islower(char1))
     {
-        int converted = char1 - 97;
+        int converted_lower = char1 - 97;
 
-        int cypher = ( converted + key) % 26;
+        int cypher = ( converted_lower + key) % 26;
 
         cypher += 97;
 
