@@ -27,7 +27,6 @@ void print_word(string guess, int wordsize, int status[]);
 int main(int argc, string argv[])
 {
     // ensure proper usage
-    // TODO #1
     if (argc != 2)
     {
         printf("Usage: ./wordle wordsize \n");
@@ -37,7 +36,6 @@ int main(int argc, string argv[])
     int wordsize = 0;
 
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
-    // TODO #2
     wordsize = atoi(argv[1]);
     if (wordsize != 5 && wordsize != 6 && wordsize != 7 && wordsize != 8)
     {
@@ -85,7 +83,6 @@ int main(int argc, string argv[])
         int status[wordsize];
 
         // set all elements of status array initially to 0, aka WRONG
-        // TODO #4
         for (int s = 0; s < wordsize; s++)
         {
             status[s] = 0;
@@ -108,8 +105,7 @@ int main(int argc, string argv[])
     }
 
     // Print the game's result
-    // TODO #7
-    if ( won == true)
+    if (won == true)
     {
         printf("You won! \n");
     }
@@ -127,12 +123,11 @@ string get_guess(int wordsize)
     string guess = "";
 
     // ensure users actually provide a guess that is the correct length
-    // TODO #3
     do
     {
         guess = get_string("Input a %i-letter word: ", wordsize);
     }
-    while ( strlen(guess) != wordsize);
+    while (strlen(guess) != wordsize);
 
     return guess;
 }
@@ -142,15 +137,6 @@ int check_word(string guess, int wordsize, int status[], string choice)
     int score = 0;
 
     // compare guess to choice and score points as appropriate, storing points in status
-    // TODO #5
-
-    // HINTS
-    // iterate over each letter of the guess
-        // iterate over each letter of the choice
-            // compare the current guess letter to the current choice letter
-                // if they're the same position in the word, score EXACT points (green) and break so you don't compare that letter further
-                // if it's in the word, but not the right spot, score CLOSE point (yellow)
-        // keep track of the total score by adding each individual letter's score from above
     for (int i = 0; i < wordsize; i++)
     {
         if (guess[i] == choice[i])
@@ -180,21 +166,20 @@ int check_word(string guess, int wordsize, int status[], string choice)
 void print_word(string guess, int wordsize, int status[])
 {
     // print word character-for-character with correct color coding, then reset terminal font to normal
-    // TODO #6
     for (int i = 0; i < strlen(guess); i++)
     {
-        switch(status[i])
+        switch (status[i])
         {
             case 2:
-            printf(GREEN"%c"RESET, guess[i]);
-            break;
+                printf(GREEN"%c"RESET, guess[i]);
+                break;
 
             case 1:
-            printf(YELLOW"%c"RESET, guess[i]);
-            break;
+                printf(YELLOW"%c"RESET, guess[i]);
+                break;
 
             case 0:
-            printf("%c", guess[i]);
+                printf("%c", guess[i]);
         }
     }
 
