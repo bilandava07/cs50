@@ -146,6 +146,15 @@ int check_word(string guess, int wordsize, int status[], string choice)
     for (int i = 0; i < wordsize; i++)
     {
         if (guess[i] == choice[i])
+        {
+            status[i] = EXACT;
+            break;
+        }
+        for (int c = i + 1; c < wordsize - i; c++)
+        {
+            guess[i] == choice[c]
+
+        }
     }
 
     return score;
