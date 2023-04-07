@@ -157,7 +157,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
         {
             status[i] = EXACT;
         }
-        else if
+        else
         {
             for (int c = 0; c < wordsize; c++)
             {
