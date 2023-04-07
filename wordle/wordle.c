@@ -175,15 +175,15 @@ void print_word(string guess, int wordsize, int status[])
         switch(status[i])
         {
             case 2:
-            printf(GREEN"%c"RESET, guess[0][i]);
+            printf(GREEN"%c"RESET, guess[i]);
             break;
 
             case 1:
-            printf(YELLOW"%c"RESET, gues[0][i]);
+            printf(YELLOW"%c"RESET, guess[i]);
             break;
 
             case 0:
-            printf("%c", gues[0][i]);
+            printf("%c", guess[i]);
         }
     }
 
