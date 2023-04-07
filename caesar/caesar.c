@@ -26,7 +26,7 @@ int main(int argc, string argv[])
 
     string ptext = get_string("plaintext: ");
 
-    string ctext = 0;
+    string ctext [];
 
     for (int i = 0; i < strlen(ptext); i++)
     {
