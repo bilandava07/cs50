@@ -56,7 +56,6 @@ int main(int argc, string argv[])
 
     // load word file into an array of size LISTSIZE
     char options[LISTSIZE][wordsize + 1];
-
     for (int i = 0; i < LISTSIZE; i++)
     {
         fscanf(wordlist, "%s", options[i]);
