@@ -19,19 +19,19 @@ int main(int argc, string argv[])
         printf("Usage: ./ caesar key \n");
         return 1;
     }
-    printf("Succes \n");
-
     int key_int = atoi(argv[1]);
-    printf("%i \n", key_int);
 
     string ptext = get_string("plaintext: ");
 
     string ctext [strlen(ptext)];
 
+    printf("cyphertext: ");
+
     for (int i = 0; i < strlen(ptext); i++)
     {
-        printf("cyphertext: %c \n", rotate(key_int, ptext[i]));
+         printf("%c", rotate(key_int, ptext[i]));
     }
+    printf("\n");
 
 }
 
