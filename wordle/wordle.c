@@ -27,7 +27,16 @@ int main(int argc, string argv[])
 {
     // ensure proper usage
     // TODO #1
-    if (argc != )
+    if (argc != 2)
+    {
+        printf("Usage: ./wordle wordsize \n");
+        return 1;
+    }
+    if (argv[1] != 5, != 6, != 7, != 8)
+    {
+        printf("Error: wordsize must be either 5, 6, 7, or 8 \n");
+        return 1;
+    }
 
     int wordsize = 0;
 
