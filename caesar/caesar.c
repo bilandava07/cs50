@@ -34,7 +34,7 @@ int main(int argc, string argv[])
         ctext[0][i] = rotate(key_int, ptext[i]);
     }
 
-    printf("cyphertext: %s \n", ctext);
+    printf("cyphertext: %s \n", ctext[0]);
 }
 
 bool only_digits (string key)
