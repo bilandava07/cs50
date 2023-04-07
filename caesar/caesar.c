@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 bool only_digits (string key);
-char rotate (int key, char char);
+char rotate (int key, char char1);
 
 int main(int argc, string argv[])
 {
@@ -30,7 +30,7 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < strlen(ptext); i++)
     {
-        ctext[i] = rotate(argv[1], ptext[i])
+        ctext[i] = rotate(key_int, ptext[i]);
     }
 
     printf("cyphertext: %s \n", ctext);
@@ -48,11 +48,11 @@ bool only_digits (string key)
     return true;
 }
 
-char rotate (int key, char char)
+char rotate (int key, char char1)
 {
-    if (!isaplha(char))
+    if (!isaplha(char1))
     {
-        return char;
+        return char1;
     }
 
     if (isupper(char))
