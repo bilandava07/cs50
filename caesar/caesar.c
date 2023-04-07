@@ -31,7 +31,7 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < strlen(ptext); i++)
     {
-        ctext[0] = rotate(key_int, ptext[i]);
+        ctext[0][i] = rotate(key_int, ptext[i]);
     }
 
     printf("cyphertext: %s \n", ctext);
