@@ -153,7 +153,9 @@ int check_word(string guess, int wordsize, int status[], string choice)
         for (int c = i + 1; c < wordsize - i; c++)
         {
             if (guess[i] == choice[c])
-
+            {
+                status[i] = CLOSE;
+            }
         }
     }
 
