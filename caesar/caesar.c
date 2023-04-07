@@ -50,14 +50,14 @@ bool only_digits (string key)
 
 char rotate (int key, char char1)
 {
-    if (!isaplha(char1))
+    if (!isalpha(char1))
     {
         return char1;
     }
 
-    if (isupper(char))
+    if (isupper(char1))
     {
-        int converted = char - 65;
+        int converted = char1 - 65;
 
         int cypher = ( converted + key ) % 26;
 
@@ -67,9 +67,9 @@ char rotate (int key, char char1)
 
     }
 
-    if(islower(char))
+    if(islower(char1))
     {
-        int converted = char - 97;
+        int converted = char1 - 97;
 
         int cypher = ( converted + key) % 26;
 
@@ -77,4 +77,5 @@ char rotate (int key, char char1)
 
         return cypher;
     }
+    return 1;
 }
