@@ -55,6 +55,18 @@ char rotate (int key, char char)
 
     if (isupper(char))
     {
-        
+        int converted = char - 65;
+
+        int cypher = ( converted + key ) % 26;
+
+        cypher += 65;
+
+        return cypher;
+
+    }
+
+    if(islower(char))
+    {
+        int converted = char
     }
 }
