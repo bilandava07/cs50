@@ -2,7 +2,6 @@
 #include <cs50.h>
 
 int collatz(int n);
-int steps = 0;
 
 int main(void)
 {
@@ -18,13 +17,11 @@ int collatz(int n)
 
     else if(n % 2 == 0)
     {
-        collatz(n/2);
-        steps++;
+        return 1 + collatz(n/2);
     }
     else
     {
-        collatz(n*3 + 1);
-        steps++;
+        return 1 + collatz(n*3 + 1);
+
     }
-    return steps;
 }
