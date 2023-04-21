@@ -12,10 +12,16 @@ candidate get_candidate(string prompt);
 
 int main(void)
 {
-    candidate candidates_array[3];
+    candidate candidates[3];
     for (int i = 0; i < 3; i++)
     {
-        candidates_arrat[i] = get_candidate("Enter a candidate: ");
+        candidates[i] = get_candidate("Enter a candidate: ");
+    }
+    for (int i = 0; i < 3; i++)
+    {
+        printf("%s\n", candidates[i].name);
+        printf("%i\n", candidates[i].votes);
+
     }
 }
 
