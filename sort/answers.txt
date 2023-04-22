@@ -3,14 +3,16 @@ sort1 uses: Bubble Sort
 How do you know?:
 
 The Bubble Sort is the only algorithm whose "big O" and "omega" differ.
-In the course of timing and analyzing I determined the "sort1" to be the only one whose
+In the course of the timing and analysis I found the "sort1" to be the only one whose
 "big O" and "omega" indeed do not match.
+Also the Bubble sort is supposed to be the most fastest in the best-case scenario and so is the "sort1".
 
 sort2 uses: Merge Sort
 
 How do you know?:
 
-Merge Sort is considered to be the fastest. In the course of timing and analyzing 
+The Merge Sort is considered to be the fastest in random and worst scenarios. In the course of the timing and analysis I
+determined the "sort2" to be the fastest in those particular cases.
 
 sort3 uses: Selection Sort
 
