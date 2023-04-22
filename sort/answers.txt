@@ -19,7 +19,7 @@ How do you know?:
 
 The Selection sort as well as the Merge Sort is supposed to have consistent runnning time in all of the possible cases.
 The "sort2" and the "sort3" have turned out to be the two which do indeed have the same results in all of three lists of numbers
-(reversed, sorted and random) after the running time tests. Therefore knowing the Merge Sort is the fastest one, I have
+(reversed, sorted and random) after the running time tests. Therefore, knowing the Merge Sort is the fastest one, I have
 compared the two and hence chose the "sort3" to be the Selection Sort.
 
-Also, the exclusion method after solving the "sort1" and "sort2" came in handy. 
+Also, the exclusion method after solving the "sort1" and "sort2" came in handy.
