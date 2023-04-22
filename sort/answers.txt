@@ -1,4 +1,9 @@
-sort1 uses: TODO
+sort1 uses: Bubble Sort
+
+The Bubble Sort is the only algorithm whose "big O" and "omega" differ.
+In the course of timing and analyzing I determined the "sort1" to be the onlt one whose
+"big O" and "omega" do not match.
+
 
 How do you know?: TODO
 
