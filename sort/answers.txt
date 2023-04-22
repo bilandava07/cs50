@@ -17,4 +17,4 @@ sort3 uses: Selection Sort
 
 How do you know?:
 
-
+By the method if exclusion 
