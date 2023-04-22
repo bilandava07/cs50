@@ -11,6 +11,11 @@ int main(void)
 
 int factorial(int number)
 {
+    // base case
+    if (number == 1)
+    {
+        return 1;
+    }
     
 
 }
