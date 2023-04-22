@@ -1,15 +1,16 @@
 sort1 uses: Bubble Sort
 
+How do you know?:
+
 The Bubble Sort is the only algorithm whose "big O" and "omega" differ.
 In the course of timing and analyzing I determined the "sort1" to be the only one whose
 "big O" and "omega" indeed do not match.
 
-
-How do you know?: TODO
-
 sort2 uses: Merge Sort
 
-How do you know?: TODO
+How do you know?:
+
+Merge Sort is considered to be the fastest. In the course of timing and analyzing 
 
 sort3 uses: Selection Sort
 
