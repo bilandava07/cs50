@@ -1,16 +1,16 @@
 sort1 uses: Bubble Sort
 
 The Bubble Sort is the only algorithm whose "big O" and "omega" differ.
-In the course of timing and analyzing I determined the "sort1" to be the onlt one whose
-"big O" and "omega" do not match.
+In the course of timing and analyzing I determined the "sort1" to be the only one whose
+"big O" and "omega" indeed do not match.
 
 
 How do you know?: TODO
 
-sort2 uses: TODO
+sort2 uses: Merge Sort
 
 How do you know?: TODO
 
-sort3 uses: TODO
+sort3 uses: Selection Sort
 
 How do you know?: TODO
