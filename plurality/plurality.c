@@ -82,7 +82,7 @@ void print_winner(void)
 {
         printf("%i %i %i\n", candidates[0].votes, candidates[1].votes, candidates[2].votes);
     int winner = candidates[0].votes;
-    
+
     for (int i = 0; i < candidate_count; i++)
     {
         if (winner < candidates[i+1].votes)
