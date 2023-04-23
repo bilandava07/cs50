@@ -156,7 +156,7 @@ void tabulate(void)
             while (candidates[preferences[i][j]].eliminated == true);
         }
         candidates[preferences[i][j]].votes++;
-        printf("%i\n",candidates[preferences[i][j]].votes);
+        printf("%i\n", candidates[preferences[i][j]].votes);
     }
     return;
 }
@@ -164,7 +164,15 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    // TODO
+    int majority = voter_count / 2;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes >= majority)
+        {
+            printf("The winner is: %s\n",candidates[i].name);
+            return true;
+        }
+    }
     return false;
 }
 
