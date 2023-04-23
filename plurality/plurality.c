@@ -67,7 +67,7 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // use "strcmp" to check if the input and the name match
-    //
+    // increment the number of votes of the respective candidate if the input and the name of the candidate match
     for (int i = 0; i < candidate_count; i++)
     {
         if (strcmp(candidates[i].name, name) == 0)
