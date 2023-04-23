@@ -145,9 +145,12 @@ void tabulate(void)
 {
     for (int i = 0; i < voter_count; i++)
     {
-        if (candidates[i].eliminated == false)
         {
-            if (preferences[i])
+            for (int j = 0; j < candidate_counter; j++)
+            {
+                if (preferences[j])
+
+            }
         }
 
     }
