@@ -66,6 +66,8 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
+    // use "strcmp" to check if the input and the name match
+    //
     for (int i = 0; i < candidate_count; i++)
     {
         if (strcmp(candidates[i].name, name) == 0)
@@ -82,6 +84,8 @@ void print_winner(void)
 {
     int winner = candidates[0].votes;
 
+    // find what the greatest amount of votes (using variable "winner" to keep track)
+
     for (int i = 0; i < candidate_count; i++)
     {
         if (winner < candidates[i + 1].votes)
@@ -89,6 +93,8 @@ void print_winner(void)
             winner = candidates[i + 1].votes;
         }
     }
+
+    // Compare the greatest amount of votes with the number of votes of all of the candidates and print the names of those candidates out
 
     for (int j = 0; j < candidate_count; j++)
     {
