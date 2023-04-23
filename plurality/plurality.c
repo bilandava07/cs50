@@ -84,7 +84,7 @@ void print_winner(void)
     {
         if (candidates[i].votes > candidates[i+1].votes)
         {
-            candidate[i]
+            candidates[i].votes = candidates[i+1].votes
 
         }
     }
