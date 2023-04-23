@@ -51,6 +51,7 @@ int main(int argc, string argv[])
     for (int i = 0; i < voter_count; i++)
     {
         string name = get_string("Vote: ");
+        printf("%s\n", candidates[i].name);
 
         // Check for invalid vote
         if (!vote(name))
