@@ -59,7 +59,7 @@ int main(int argc, string argv[])
         }
     }
 
-    // Display winner of election
+    // Display winner of the election
     print_winner();
 }
 
@@ -84,9 +84,9 @@ void print_winner(void)
 
     for (int i = 0; i < candidate_count; i++)
     {
-        if (winner < candidates[i+1].votes)
+        if (winner < candidates[i + 1].votes)
         {
-            winner = candidates[i+1].votes;
+            winner = candidates[i + 1].votes;
         }
     }
 
