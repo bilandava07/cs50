@@ -167,7 +167,7 @@ bool print_winner(void)
     {
         if (candidates[i].votes > voter_count / 2)
         {
-            printf("The winner is: %s\n",candidates[i].name);
+            printf("The winner is: %s\n", candidates[i].name);
             return true;
         }
     }
@@ -207,7 +207,7 @@ bool is_tie(int min)
     {
         if (candidates[i].eliminated == false)
         {
-            if ( candidates[i].votes != min)
+            if (candidates[i].votes != min)
             {
                 return false;
             }
