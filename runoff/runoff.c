@@ -179,11 +179,23 @@ bool print_winner(void)
 int find_min(void)
 {
     int min;
+    int j = 0;
+        do
+        {
+            if (candidates[j].eliminated == false);
+            {
+                min = candidates[j].votes;
+                break;
+            }
+            else
+            {
+                j++;
+            }
+        }
+        while (candidates[j - 1].eliminated == true);
+
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].eliminated == false)
-        {
-            min = candidates[i].votes;
             if (candidates[i + 1].votes < min)
             {
                 min = candidates[i + 1].votes;
@@ -200,7 +212,7 @@ bool is_tie(int min)
     for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].eliminated == false)
-        { 
+        {
 
         }
 
