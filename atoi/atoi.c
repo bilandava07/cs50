@@ -36,7 +36,7 @@ int convert(string input)
             int to_ten = (input[i] - 48);
             int temp = to_ten * (10 * x);
             ret = temp + ret;
-            x++;
+            x *=10;
 
         }
 
