@@ -25,15 +25,17 @@ int main(void)
 
 int convert(string input)
 {
+
     if (i >= 0)
     {
         return  //
     }
 
-    int length = strlen(input);
-    int last = input[length - 1] - 48;
+    int array [strlen(input)];
 
-    int ret = last
+    int last = input[strlen(input) - 1] - 48;
+
+    int ret = last;
 
     input[length - 1] = '\0';
 
