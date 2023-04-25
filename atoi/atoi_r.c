@@ -25,7 +25,7 @@ int main(void)
 
 int convert(string input)
 {
-    if (strlen(input) == 0)
+    if (strlen(input) == 1)
     {
         int first = input[0];
 
