@@ -26,5 +26,8 @@ int main(void)
 int convert(string input)
 {
     for (int i = 0, n = strlen(input); i < n; i++)
-
+    {
+        printf("%c ", input[i]);
+    }
+    return 1;
 }
