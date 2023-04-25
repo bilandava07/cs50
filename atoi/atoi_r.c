@@ -29,7 +29,12 @@ int convert(string input)
     {
         return  //
     }
-    
+
+    int length = strlen(input);
+    int last = input[length - 1] - 48;
+
+    input[length - 1] = \0;
+
 
 
 }
