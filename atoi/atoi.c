@@ -26,7 +26,8 @@ int main(void)
 int convert(string input)
 {
     int length = strlen(input);
-    int ret = input[length - 1];
+    char base_char = input[length - 1];
+    int ret =
     if (length > 2)
     {
         for (int i = length - 2; i >= 0; i--)
