@@ -25,21 +25,11 @@ int main(void)
 
 int convert(string input)
 {
-    int length = strlen(input);
-    int last = input[length - 1] - 48;
-    int ret = last;
-    if (length > 1)
+    if (i >= 0)
     {
-        int x = 1;
-        for (int i = length - 2; i >= 0; i--)
-        {
-            int to_ten = (input[i] - 48);
-            int temp = to_ten * (10 * x);
-            ret = temp + ret;
-            x *=10;
-
-        }
-
+        return  //
     }
-    return ret;
+    
+
+
 }
