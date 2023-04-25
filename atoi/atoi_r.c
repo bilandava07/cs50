@@ -33,7 +33,9 @@ int convert(string input)
     int length = strlen(input);
     int last = input[length - 1] - 48;
 
-    input[length - 1] = \0;
+    int ret = last
+
+    input[length - 1] = '\0';
 
 
 
