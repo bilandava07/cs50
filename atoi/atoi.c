@@ -25,13 +25,16 @@ int main(void)
 
 int convert(string input)
 {
-     int ret = input[strlen(input) - 1];
-    for (int i = strlen(input) - 1; i >= 0; i--)
+    int length = strlen(input);
+    int ret = input[length - 1];
+    if (length > 2)
     {
-        do
+        for (int i = length - 2; i >= 0; i--)
         {
-            int ret = input[i];
+            int to_ten = input[i];
+            ret += to_ten + 10;
         }
+
     }
-    return 1;
+    return ret;
 }
