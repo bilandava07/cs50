@@ -32,7 +32,8 @@ int convert(string input)
         for (int i = length - 2; i >= 0; i--)
         {
             int to_ten = input[i];
-            ret += to_ten + 10;
+            to_ten += 10;
+            ret += to_ten;
         }
 
     }
