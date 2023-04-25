@@ -25,9 +25,13 @@ int main(void)
 
 int convert(string input)
 {
-    for (int i = 0, n = strlen(input) + 1; i < n; i++)
+     int ret = input[strlen(input) - 1];
+    for (int i = strlen(input) - 1; i >= 0; i--)
     {
-        printf("%i ", input[i]);
+        do
+        {
+            int ret = input[i];
+        }
     }
     return 1;
 }
