@@ -27,7 +27,7 @@ int convert(string input)
 {
     if (strlen(input) == 1)
     {
-        int first = input[0];
+        int first = input[0] - 48;
 
         return first;
     }
