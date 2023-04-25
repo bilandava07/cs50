@@ -27,9 +27,9 @@ int convert(string input)
 {
     int length = strlen(input);
     int ret = input[length - 1] - 48;
-    if (length > 2)
+    if (length > 1)
     {
-        for (int i = length - 2; i >= 0; i--)
+        for (int i = length - 1; i >= 0; i--)
         {
             int to_ten = input[i] - 48;
             to_ten += 10;
