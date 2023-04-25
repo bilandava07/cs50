@@ -20,14 +20,14 @@ int main(void)
     }
 
     // Convert string to int
-    printf("%i\n", convert(input));
+    printf("\n %i\n", convert(input));
 }
 
 int convert(string input)
 {
-    for (int i = 0, n = strlen(input); i < n; i++)
+    for (int i = 0, n = strlen(input) + 1; i < n; i++)
     {
-        printf("%c ", input[i]);
+        printf("%i ", input[i]);
     }
     return 1;
 }
