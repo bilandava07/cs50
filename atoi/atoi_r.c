@@ -25,19 +25,24 @@ int main(void)
 
 int convert(string input)
 {
+    int ret;
 
-    if (i >= 0)
+    if (strlen(input) <= 0)
     {
-        return  //
+        return ret;
     }
+    else
+    {
+        int array [strlen(input)];
 
-    int array [strlen(input)];
+        int last = input[strlen(input) - 1] - 48;
 
-    int last = input[strlen(input) - 1] - 48;
+        ret = last;
 
-    int ret = last;
+        input[strlen(input) - 1] = '\0';
 
-    input[length - 1] = '\0';
+        return 
+    }
 
 
 
