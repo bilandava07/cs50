@@ -39,6 +39,6 @@ int convert(string input)
 
         input[strlen(input) - 1] = '\0';
 
-        return 10 * convert(input);
+        return last + convert(input) * 10;
     }
 }
