@@ -30,7 +30,7 @@ int convert(string input)
     int ret = last;
     if (length > 1)
     {
-        for (int i = length - 1; i >= 0; i--)
+        for (int i = length - 2; i >= 0; i--)
         {
             int to_ten *= (input[i] - 48);
             int temp = to_ten * (10 * x);
