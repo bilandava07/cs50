@@ -27,14 +27,14 @@ int convert(string input)
 {
     int length = strlen(input);
     int last = input[length - 1] - 48;
-    int ret = 0;
+    int ret = last;
     if (length > 1)
     {
         for (int i = length - 1; i >= 0; i--)
         {
             int to_ten *= (input[i] - 48);
             int temp = to_ten * (10 * x);
-            ret = temp + last;
+            ret = temp + ret;
             x++;
 
         }
