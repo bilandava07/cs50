@@ -25,8 +25,6 @@ int main(void)
 
 int convert(string input)
 {
-    int ret;
-
     if (strlen(input) <= 0)
     {
         return ret;
@@ -41,7 +39,7 @@ int convert(string input)
 
         input[strlen(input) - 1] = '\0';
 
-        return convert( input);
+        return convert(input);
     }
 
 
