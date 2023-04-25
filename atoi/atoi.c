@@ -20,19 +20,18 @@ int main(void)
     }
 
     // Convert string to int
-    printf("\n %i\n", convert(input));
+    printf("%i\n", convert(input));
 }
 
 int convert(string input)
 {
     int length = strlen(input);
-    char base_char = input[length - 1];
-    int ret =
+    int ret = input[length - 1] - 48;
     if (length > 2)
     {
         for (int i = length - 2; i >= 0; i--)
         {
-            int to_ten = input[i];
+            int to_ten = input[i] - 48;
             to_ten += 10;
             ret += to_ten;
         }
