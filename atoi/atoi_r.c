@@ -26,9 +26,7 @@ int main(void)
 int convert(string input)
 {
     if (strlen(input) == 1)
-    {
         return input[0] - 48;
-    }
     else
     {
         int last = input[strlen(input) - 1] - 48;
