@@ -33,8 +33,9 @@ int convert(string input)
         for (int i = length - 1; i >= 0; i--)
         {
             int to_ten *= (input[i] - 48);
-            int temp = last + to_ten;
-            ret = temp;
+            int temp = to_ten * (10 * x);
+            ret = temp + last;
+            x++;
 
         }
 
