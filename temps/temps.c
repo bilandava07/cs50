@@ -104,8 +104,8 @@ void sort_cities(void)
         place.name = temps[i].city;
 
 
-        temps[i].temp = min;
-        temps[i].city = min_name;
+        temps[i].temp = min.min;
+        temps[i].city = min.name;
 
         temps[min.index].temps = place.degree;
         temps[min.index].city = place.name;
