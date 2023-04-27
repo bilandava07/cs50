@@ -53,7 +53,7 @@ int main(void)
 
     printf("\nAverage July Temperatures by City\n\n");
 
-    for (int i = 0; i < NUM_CITIES; i++)
+    for (int i = NUM_CITIES - 1; i >= 0; i--)
     {
         printf("%s: %i\n", temps[i].city, temps[i].temp);
     }
@@ -82,10 +82,6 @@ void sort_cities(void)
     minimal min;
     place_holder place;
 
-
-
-
-    int index;
     for (int i = 0; i < n - 1; i++)
     {
         min.min = temps[i].temp;
