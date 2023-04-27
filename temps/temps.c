@@ -70,7 +70,7 @@ void sort_cities(void)
         int index;
         string name;
     }
-    min;
+    minimal;
 
     typedef struct
     {
@@ -79,9 +79,12 @@ void sort_cities(void)
     }
     place_holder;
 
-    min min.min = temps[0].temp;
-    min min.name = temps[0].city;
-    min min.index = 0;
+    minimal min;
+    place_holder place;
+
+    min.min = temps[0].temp;
+    min.name = temps[0].city;
+    min.index = 0;
 
 
     int index;
@@ -97,15 +100,15 @@ void sort_cities(void)
             }
         }
 
-        place_holder.degree = temps[i]temp;
-        place_holder.name = temps[i].city;
+        place.degree = temps[i]temp;
+        place.name = temps[i].city;
 
 
         temps[i].temp = min;
         temps[i].city = min_name;
 
-        temps[min.index].temps = place_holder.degree;
-        temps[min.index].city = place_holder.name;
+        temps[min.index].temps = place.degree;
+        temps[min.index].city = place.name;
 
     }
 }
