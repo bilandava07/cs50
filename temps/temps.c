@@ -63,16 +63,35 @@ int main(void)
 void sort_cities(void)
 {
     int n = NUM_CITIES;
-    int min = temps[0];
+
+    typedef struct
+    {
+        int min;
+        int index;
+        string name;
+    }
+    min;
+
+    min.min = temps[0].temp;
+    min.name = temps[0].city;
+    min.index = 0;
+
+
+    int index;
     for (int i = 0; i < n - 1; i++)
     {
         for (int j = 1; j < n; j++)
         {
-            if (temps[j] < min)
+            if (temps[j].temp < min.min)
             {
-                min = temps[i];
+                min.min = temps[j].temp;
+                min.name = temps[j].city;
+                min.index = j;
             }
         }
-        int place_holder = 
+
+
+        temps[i].temp = min;
+        temps[i].city = min_name;
     }
 }
