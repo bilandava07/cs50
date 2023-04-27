@@ -79,9 +79,9 @@ void sort_cities(void)
     }
     place_holder;
 
-    min.min = temps[0].temp;
-    min.name = temps[0].city;
-    min.index = 0;
+    min min.min = temps[0].temp;
+    min min.name = temps[0].city;
+    min min.index = 0;
 
 
     int index;
