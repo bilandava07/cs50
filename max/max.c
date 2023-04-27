@@ -31,7 +31,9 @@ int max(int array[], int n)
     for (int i = 1; i < n; i++)
     {
         if (array [i] > max)
+        {
             max = array [i];
+        }
     }
     return max;
 }
