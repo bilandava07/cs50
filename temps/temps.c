@@ -64,7 +64,7 @@ void sort_cities(void)
 {
     int n = NUM_CITIES;
     int min = temps[0];
-    for (int i = 1; i < n; i++)
+    for (int i = 0; i < n - 1; i++)
     {
         for (int j = 1; j < n; j++)
         {
@@ -72,7 +72,7 @@ void sort_cities(void)
             {
                 min = temps[i];
             }
-            
         }
+        int place_holder = 
     }
 }
