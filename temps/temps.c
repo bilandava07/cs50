@@ -82,14 +82,15 @@ void sort_cities(void)
     minimal min;
     place_holder place;
 
-    min.min = temps[0].temp;
-    min.name = temps[0].city;
-    min.index = 0;
+
 
 
     int index;
     for (int i = 0; i < n - 1; i++)
     {
+        min.min = temps[i].temp;
+        min.name = temps[i].city;
+        min.index = i;
         for (int j = 1; j < n; j++)
         {
             if (temps[j].temp < min.min)
