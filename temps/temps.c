@@ -100,14 +100,14 @@ void sort_cities(void)
             }
         }
 
-        place.degree = temps[i]temp;
+        place.degree = temps[i].temp;
         place.name = temps[i].city;
 
 
         temps[i].temp = min.min;
         temps[i].city = min.name;
 
-        temps[min.index].temps = place.degree;
+        temps[min.index].temp = place.degree;
         temps[min.index].city = place.name;
 
     }
