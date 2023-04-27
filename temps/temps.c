@@ -91,7 +91,7 @@ void sort_cities(void)
         min.min = temps[i].temp;
         min.name = temps[i].city;
         min.index = i;
-        for (int j = 1; j < n; j++)
+        for (int j = i + 1; j < n; j++)
         {
             if (temps[j].temp < min.min)
             {
