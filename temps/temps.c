@@ -63,8 +63,15 @@ int main(void)
 void sort_cities(void)
 {
     int n = NUM_CITIES;
-    for (int i = 0; i < n - 1; i++)
+    int min = temps[0];
+    for (int i = 1; i < n - 1; i++)
     {
-        int min = 
+        for (int j = 1; j < n - 1; j++)
+        {
+            if (temps[j] < min)
+            {
+                min = temps[i];
+            }
+        }
     }
 }
