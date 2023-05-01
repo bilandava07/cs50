@@ -28,11 +28,11 @@ int main(void)
 int max(int array[], int n)
 {
     int max = array[0];
-    for (int i = 1; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
-        if (array [i] > max)
+        if (array [i + 1] > max)
         {
-            max = array [i];
+            max = array [i + 1];
         }
     }
     return max;
