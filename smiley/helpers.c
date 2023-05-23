@@ -2,5 +2,5 @@
 
 void colorize(int height, int width, RGBTRIPLE image[height][width])
 {
-    RGBTRIPLE pixel
+    RGBTRIPLE pixel1 = image[]
 }
