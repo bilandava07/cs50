@@ -45,7 +45,8 @@ int main(int argc, char *argv[])
     while((ch = fgetc(input)) != EOF)
     {
         fread(&buffer, sizeof(int16_t),1, input);
-        buffer *=
+        buffer *= factor;
+        fwrite(&buffer, sizeof(int16_t),1, output);
     }
 
 
