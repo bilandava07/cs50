@@ -38,6 +38,14 @@ int main(int argc, char *argv[])
     fread(arr_header, sizeof(uint8_t), HEADER_SIZE, input);
     fwrite(arr_header,sizeof(uint8_t), HEADER_SIZE, output);
 
+    uint8_t x;
+    while ((x = fgetc(input) != EOF))
+    {
+        printf("%i", x);
+    }
+
+
+
 
     // TODO: Read samples from input file and write updated data to output file
 
