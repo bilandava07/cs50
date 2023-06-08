@@ -25,8 +25,9 @@ int main(int argc, char *argv[])
         buffer[6] = '\0';
 
         // Save plate number in array
-        
-        plates[idx] = buffer[0];
+
+        plates[idx] = malloc(strlen(buffer))
+        if
         for (int i = 0; i < 8; i++)
         {
             printf("%s\n", plates[i]);
