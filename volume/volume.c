@@ -40,8 +40,13 @@ int main(int argc, char *argv[])
 
 
 
+    char ch;
     int16_t buffer;
-    fread(&buffer, sizeof(int16_t),1, input)
+    while((ch = fgetc(input)) != EOF)
+    {
+        fread(&buffer, sizeof(int16_t),1, input);
+        buffer *=
+    }
 
 
 
