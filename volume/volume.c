@@ -40,7 +40,6 @@ int main(int argc, char *argv[])
 
 
 
-    char ch;
     int16_t buffer;
     while((ch = fgetc(input)) != EOF)
     {
