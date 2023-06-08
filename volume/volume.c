@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
     fwrite(header,sizeof(uint8_t), HEADER_SIZE, output);
 
     int16_t buffer;
+    while (f)
     fread(&buffer, sizeof(int16_t),)
 
 
