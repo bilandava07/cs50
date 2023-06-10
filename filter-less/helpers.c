@@ -22,20 +22,22 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     {
         for(int j = 0; j < width; j++)
         {
-            int sepiaRed = (image[i][j].rgbtRed * 0.393 + image[i][j].rgbtGreen * 0.769 + image[i][j].rgbtBlue * 0.189);
+            float sepiaRed = (image[i][j].rgbtRed * 0.393 + image[i][j].rgbtGreen * 0.769 + image[i][j].rgbtBlue * 0.189);
             image[i][j].rgbtRed = (int) round(sepiaRed);
             if (image[i][j].rgbtRed > 255)
             {
                 image[i][j].rgbtRed = 255;
             }
 
-            image[i][j].rgbtGreen = (int) round(image[i][j].rgbtRed * 0.349 + image[i][j].rgbtGreen * 0.686 + image[i][j].rgbtBlue * 0.168);
+            float sepiaGreen  = (int) round(image[i][j].rgbtRed * 0.349 + image[i][j].rgbtGreen * 0.686 + image[i][j].rgbtBlue * 0.168);
+            image[i][j].rgbtGreen = (int) round(sepiaGreen);
             if (image[i][j].rgbtGreen > 255)
             {
                 image[i][j].rgbtGreen = 255;
             }
 
-            image[i][j].rgbtBlue = (int) round(image[i][j].rgbtRed * 0.272 + image[i][j].rgbtGreen * 0.534 + image[i][j].rgbtBlue * 0.131);
+            float sepiaBlue = (int) round(image[i][j].rgbtRed * 0.272 + image[i][j].rgbtGreen * 0.534 + image[i][j].rgbtBlue * 0.131);
+            image[i][j].rgbtBlue = (int) round(sepiaBlue);
             if (image[i][j].rgbtBlue > 255)
             {
                 image[i][j].rgbtBlue = 255;
