@@ -114,13 +114,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for(int j = 1; j < width - 1; j++)
         {
-            float blur.Red = (copy[i-1][j-1].rgbtRed + copy[i-1][j-].rgbtRed + copy[i+1][j+1].rgbtRed + copy[i-1][j-1].rgbtRed + copy[i][j].rgbtRed + copy[i][j+1].rgbtRed + copy[i+1][j-1].rgbtRed + copy[i+1][j].rgbtRed + copy[i+1][j+1].rgbtRed) / 9;
-            float blur.Green = (copy[i-1][j-1].rgbtGreen + copy[i-1][j-].rgbtGreen + copy[i+1][j+1].rgbtGreen + copy[i-1][j-1].rgbtGreen + copy[i][j].rgbtGreen + copy[i][j+1].rgbtGreen + copy[i+1][j-1].rgbtGreen + copy[i+1][j].rgbtGreen + copy[i+1][j+1].rgbtGreen) / 9;
-            float blur.Blue = (copy[i-1][j-1].rgbtBlue + copy[i-1][j-].rgbtBlue + copy[i+1][j+1].rgbtBlue + copy[i-1][j-1].rgbtBlue + copy[i][j].rgbtBlue + copy[i][j+1].rgbtBlue + copy[i+1][j-1].rgbtBlue + copy[i+1][j].rgbtBlue + copy[i+1][j+1].rgbtBlue) / 9;
+            float blurRed = (copy[i-1][j-1].rgbtRed + copy[i-1][j-].rgbtRed + copy[i+1][j+1].rgbtRed + copy[i-1][j-1].rgbtRed + copy[i][j].rgbtRed + copy[i][j+1].rgbtRed + copy[i+1][j-1].rgbtRed + copy[i+1][j].rgbtRed + copy[i+1][j+1].rgbtRed) / 9;
+            float blurGreen = (copy[i-1][j-1].rgbtGreen + copy[i-1][j-].rgbtGreen + copy[i+1][j+1].rgbtGreen + copy[i-1][j-1].rgbtGreen + copy[i][j].rgbtGreen + copy[i][j+1].rgbtGreen + copy[i+1][j-1].rgbtGreen + copy[i+1][j].rgbtGreen + copy[i+1][j+1].rgbtGreen) / 9;
+            float blurBlue = (copy[i-1][j-1].rgbtBlue + copy[i-1][j-].rgbtBlue + copy[i+1][j+1].rgbtBlue + copy[i-1][j-1].rgbtBlue + copy[i][j].rgbtBlue + copy[i][j+1].rgbtBlue + copy[i+1][j-1].rgbtBlue + copy[i+1][j].rgbtBlue + copy[i+1][j+1].rgbtBlue) / 9;
 
-            image[i][j].rgbtRed = (int) round(blur.Red);
-            image[i][j].rgbtGreen = (int) round(blur.Green);
-            image[i][j].rgbtBlue = (int) round(blur.Blue);
+            image[i][j].rgbtRed = (int) round(blurRed);
+            image[i][j].rgbtGreen = (int) round(blurGreen);
+            image[i][j].rgbtBlue = (int) round(blurBlue);
         }
     }
     return;
