@@ -114,9 +114,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for(int j = 1; j < width - 1; j++)
         {
-            image[i][j].rgbtRed = copy[i][j]rgbtRed 
-            image[i][j].rgbtGreen = copy[i][j]rgbtRed
-            image[i][j].rgbtBlue = copy[i][j]rgbtRed
+            float blur.Red = [i-1][j-1].rgbtRed + copy[i-1][j-].rgbtRed + copy[i+1][j+1].rgbtRed + copy[i-1][j-1].rgbtRed + copy[i][j].rgbtRed + copy[i][j+1].rgbtRed + copy[i+1][j-1].rgbtRed + copy[i+1][j].rgbtRed + copy[i+1][j+1].rgbtRed / 9;
+            float blur.Green = [i-1][j-1].rgbtGreen + copy[i-1][j-].rgbtGreen + copy[i+1][j+1].rgbtGreen + copy[i-1][j-1].rgbtGreen + copy[i][j].rgbtGreen + copy[i][j+1].rgbtGreen + copy[i+1][j-1].rgbtGreen + copy[i+1][j].rgbtGreen + copy[i+1][j+1].rgbtGreen / 9;
+            float blur.Blue = [i-1][j-1].rgbtBlue + copy[i-1][j-].rgbtBlue + copy[i+1][j+1].rgbtBlue + copy[i-1][j-1].rgbtBlue + copy[i][j].rgbtBlue + copy[i][j+1].rgbtBlue + copy[i+1][j-1].rgbtBlue + copy[i+1][j].rgbtBlue + copy[i+1][j+1].rgbtBlue / 9;
+
+            image[i][j].rgbtRed = (int) round(blur.Red);
+            image[i][j].rgbtGreen = (int) round(blur.Green);
+            image[i][j].rgbtBlue = (int) round(blur.Blue);
         }
     }
     return;
