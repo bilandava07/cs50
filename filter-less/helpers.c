@@ -98,7 +98,15 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     //create the copy of the 2D array "image"
+    RGBTRIPLE copy[height][width];
 
-    
+    for(int i = 0; i < height; i++)
+    {
+        for(int j = 0; j < width; j++)
+        {
+            copy[i][j] = image[i][j];
+        }
+
+
     return;
 }
