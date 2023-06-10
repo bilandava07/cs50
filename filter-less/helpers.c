@@ -47,7 +47,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                 image[i][j].rgbtGreen = (int) round(sepiaGreen);
             }
 
-            if ((int) round(sepiaBlue) > 255)
+            if ((int) round(sepiaBlue ) > 255)
             {
                 image[i][j].rgbtBlue = 255;
             }
@@ -64,6 +64,12 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
+    
+    for(int i = 0; i < height; i++)
+    {
+
+    }
+
     return;
 }
 
