@@ -48,6 +48,8 @@ int main(int argc, char *argv[])
                 //close the previous file
                 fclose(j);
 
+                
+
                 sprintf(filename, "%03i.jpg", counter);
 
             }
