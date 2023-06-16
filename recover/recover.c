@@ -40,6 +40,7 @@ int main(int argc, char *argv[])
                     return 1;
                 }
                 sprintf(filename, "%03i.jpg", counter);
+                counter++;
                 FILE *j = fopen(filename, "w");
                 fwrite(buffer, 1, BLOCK_SIZE; j);
             }
@@ -48,19 +49,13 @@ int main(int argc, char *argv[])
                 //close the previous file
                 fclose(j);
 
-                
-
                 sprintf(filename, "%03i.jpg", counter);
 
+                FILE *j = fopen(filename, "w");
+                fwrite(buffer, 1, BLOCK_SIZE; j);
+
             }
-
-            sprintf(filename, "%03i.jpg", counter);
-            counter++;
-
-            FILE *j = fopen(filename, "w");
-            fwrite(buffer, 1, BLOCK_SIZE; j);
         }
-        fwrite(buffer, 1, BLOCK_SIZE; j);
 
     }
 
