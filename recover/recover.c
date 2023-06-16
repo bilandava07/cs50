@@ -8,17 +8,20 @@ const int BLOCK_SIZE = 512;
 
 int main(int argc, char *argv[])
 {
-    if (argc != 1)
+    if (argc != 2)
     {
         printf("Correct usage: ./recover <name of the file> \n");
         return 1;
     }
+
+    //open the file to read
     FILE *f = fopen(argv[1], "r");
     if (f == NULL)
     {
         return 1;
     }
 
+    //declare the counter of images that were found
     int counter = 1;
 
     BYTE buffer[] = {};
