@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <cs50.h>
 
 typedef uint8_t BYTE;
 const int BLOCK_SIZE = 512;
@@ -20,7 +21,7 @@ int main(int argc, char *argv[])
 
     int counter = 1;
 
-    BYTE buffer =;
+    BYTE buffer [];
 
     while (fread(buffer, 1, BLOCK_SIZE, argv[1]) == BLOCK_SIZE)
     {
