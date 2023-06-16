@@ -3,7 +3,7 @@
 #include <stdint.h>
 
 typedef uint8_t BYTE;
-int BLOCK_SIZE = BYTE * 512;
+int const BLOCK_SIZE = 512;
 
 int main(int argc, char *argv[])
 {
@@ -20,9 +20,10 @@ int main(int argc, char *argv[])
 
     int counter = 1;
 
+    BYTE buffer = [];
+
     while (fread(buffer, 1, BLOCK_SIZE, argv[1]) == BLOCK_SIZE)
     {
-        BYTE buffer = [];
         fread(buffer, 1, BLOCK_SIZE, argv[1]);
 
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && (buffer[3] & 0xf0) == 0xe0)
