@@ -43,7 +43,16 @@ int main(int argc, char *argv[])
             }
             else
             {
-                
+                //close the previous file
+                fclose(filename);
+
+                char *filename = malloc(16);
+                if (filename == NULL)
+                {
+                    return 1;
+                }
+                sprintf(filename, "%03i.jpg", counter);
+
             }
 
             sprintf(filename, "%03i.jpg", counter);
