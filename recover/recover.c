@@ -43,16 +43,11 @@ int main(int argc, char *argv[])
                 counter++;
                 FILE *j = fopen(filename, "w");
                 fwrite(buffer, 1, BLOCK_SIZE, j);
-                fclose(j);
             }
-            else
-            {
-                //close the previous file
-
-                FILE *j = fopen(filename, "w");
-                fwrite(buffer, 1, BLOCK_SIZE; j);
-
-            }
+        }
+        else
+        {
+            fwrite(buffer, 1, BLOCK_SIZE, j);
         }
 
     }
