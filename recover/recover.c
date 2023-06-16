@@ -43,8 +43,8 @@ int main(int argc, char *argv[])
 
             FILE *j = fopen(filename, "w");
             fwrite(buffer, 1, BLOCK_SIZE; j);
-
         }
+        fwrite(buffer, 1, BLOCK_SIZE; j);
 
     }
 
