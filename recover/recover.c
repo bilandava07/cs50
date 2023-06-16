@@ -40,12 +40,14 @@ int main(int argc, char *argv[])
                     return 1;
                 }
                 sprintf(filename, "%03i.jpg", counter);
+                FILE *j = fopen(filename, "w");
+                fwrite(buffer, 1, BLOCK_SIZE; j);
             }
             else
             {
                 //close the previous file
-                fclose(filename);
-                
+                fclose(j);
+
                 sprintf(filename, "%03i.jpg", counter);
 
             }
