@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 typedef uint8_t BYTE;
-BLOCK_SIZE = 512;
+BLOCK_SIZE = BYTE * 512;
 
 int main(int argc, char *argv[])
 {
@@ -15,8 +15,9 @@ int main(int argc, char *argv[])
 
     BYTE buffer = [];
 
-    while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+    while (fread(buffer, 1, BLOCK_SIZE, argv[1]) == BLOCK_SIZE)
     {
+        fread(buffer, 1, BLOCK_SIZE, argv[1]);
 
     }
 
