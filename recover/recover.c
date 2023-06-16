@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     }
 
     //declare the counter of images that were found
-    int counter = 1;
+    int counter = 0;
 
     BYTE buffer[] = {};
 
