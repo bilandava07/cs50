@@ -12,7 +12,10 @@ int main(int argc, char *argv[])
         return 1;
     }
     FILE *f = fopen(argv[1], "r");
-    
+    if (f == NULL)
+    {
+        return 1;
+    }
 
     while (fread(buffer, 1, BLOCK_SIZE, argv[1]) == BLOCK_SIZE)
     {
