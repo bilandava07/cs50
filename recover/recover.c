@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 {
     if (argc != 1)
     {
-        printf("Correct usage: ./recover <name of the file>");
+        printf("Correct usage: ./recover <name of the file> \n");
         return 1;
     }
     FILE *f = fopen(argv[1], "r");
@@ -23,9 +23,9 @@ int main(int argc, char *argv[])
 
     BYTE buffer[] = {};
 
-    while (fread(buffer, 1, BLOCK_SIZE, argv[1]) == BLOCK_SIZE)
+    while (fread(buffer, 1, BLOCK_SIZE, f) == BLOCK_SIZE)
     {
-        fread(buffer, 1, BLOCK_SIZE, argv[1]);
+        fread(buffer, 1, BLOCK_SIZE, f);
 
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && (buffer[3] & 0xf0) == 0xe0)
         {
