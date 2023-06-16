@@ -3,7 +3,7 @@
 #include <stdint.h>
 
 typedef uint8_t BYTE;
-int const BLOCK_SIZE = 512;
+const int BLOCK_SIZE = 512;
 
 int main(int argc, char *argv[])
 {
