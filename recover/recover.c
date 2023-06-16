@@ -34,13 +34,16 @@ int main(int argc, char *argv[])
         {
             if (counter == 0)
             {
-                
-
+                char *filename = malloc(16);
+                if (filename == NULL)
+                {
+                    return 1;
+                }
+                sprintf(filename, "%03i.jpg", counter);
             }
-            char *filename = malloc(16);
-            if (filename == NULL)
+            else
             {
-                return 1;
+                
             }
 
             sprintf(filename, "%03i.jpg", counter);
