@@ -22,6 +22,11 @@ int main(int argc, char *argv[])
         BYTE buffer = [];
         fread(buffer, 1, BLOCK_SIZE, argv[1]);
 
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && (buffer[3] & 0xf0) == 0xe0)
+        {
+            
+        }
+
     }
 
 
