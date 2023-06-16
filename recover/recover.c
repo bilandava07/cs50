@@ -26,7 +26,11 @@ int main(int argc, char *argv[])
 
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && (buffer[3] & 0xf0) == 0xe0)
         {
-            *char *filename = malloc(12)
+            *char *filename = malloc(16);
+            if (filename == NULL)
+            {
+                return 1;
+            }
             sprintf(filename, "%03i.jpg", counter);
 
         }
