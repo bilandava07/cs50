@@ -17,6 +17,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    int counter = 0;
+
     while (fread(buffer, 1, BLOCK_SIZE, argv[1]) == BLOCK_SIZE)
     {
         BYTE buffer = [];
@@ -24,7 +26,7 @@ int main(int argc, char *argv[])
 
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && (buffer[3] & 0xf0) == 0xe0)
         {
-            
+
         }
 
     }
