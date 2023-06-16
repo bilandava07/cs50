@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
     int counter = 1;
 
-    BYTE buffer = [];
+    BYTE buffer =;
 
     while (fread(buffer, 1, BLOCK_SIZE, argv[1]) == BLOCK_SIZE)
     {
