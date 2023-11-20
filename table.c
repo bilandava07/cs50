@@ -17,13 +17,14 @@ int hash(string phrase);
 
 int main(void)
 {
+    
 
 }
 
 
 int hash(string phrase)
 {
-    return phrase[0] - 'A';
+    return toupper(phrase[0] - 'A');
     // A = 65
     // A - A = 0
     // B - A = 1
