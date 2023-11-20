@@ -5,12 +5,15 @@
 
 #define LIST_SIZE 2
 
+
 typedef struct node
 {
     string phrase;
     struct node *next;
 }
 node;
+
+void unload(node *list);
 
 int main(void)
 {
@@ -44,6 +47,6 @@ void unload(node *list)
         free(list);
         list = ptr;
 
-    } 
+    }
 
 }
