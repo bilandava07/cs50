@@ -21,6 +21,11 @@ int main(void)
         string phrase = get_string("Enter a new phrase: ");
 
         node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            printf("Memory allocation failed");
+            return 1;
+        }
         n->phrase = phrase;
         n->next = list;
 
