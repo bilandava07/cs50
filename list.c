@@ -44,6 +44,6 @@ void unload(node *list)
         free(list);
         list = ptr;
 
-    }
+    } 
 
 }
