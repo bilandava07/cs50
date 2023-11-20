@@ -32,4 +32,12 @@ int main(void)
         list = n;
 
     }
+
+    unload(list);
+}
+
+void unload(node *list)
+{
+    
+
 }
