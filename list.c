@@ -20,6 +20,11 @@ int main(void)
     {
         string phrase = get_string("Enter a new phrase: ");
 
-        node *n = malloc(sizeof(node))
+        node *n = malloc(sizeof(node));
+        n->phrase = phrase;
+        n->next = NULL;
+
+        list = n;
+
     }
 }
