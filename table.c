@@ -23,5 +23,5 @@ int main(void)
 
 int hash(string phrase)
 {
-    
+    return phrase[0]
 }
