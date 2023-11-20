@@ -23,5 +23,9 @@ int main(void)
 
 int hash(string phrase)
 {
-    return phrase[0]
+    return phrase[0] - 'A';
+    // A = 65
+    // A - A = 0
+    // B - A = 1
+    // Z - A = 25
 }
