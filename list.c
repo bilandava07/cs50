@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define LIST_SIZE 2
+
 typedef struct node
 {
     string phrase;
@@ -10,4 +12,13 @@ typedef struct node
 }
 node;
 
+int main(void)
+{
+    node *list = NULL;
 
+    for(int i = 0; i < LIST_SIZE; i++)
+    {
+        string phrase = get_string("Enter a new phrase: ");
+        
+    }
+}
