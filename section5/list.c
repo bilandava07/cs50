@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define LIST_SIZE 2
+#define LIST_SIZE 3
 
 
 typedef struct node
