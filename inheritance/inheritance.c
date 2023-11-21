@@ -33,7 +33,7 @@ int main(void)
 
     // Free memory
     free_family(p);
-c}
+}
 
 // Create a new individual with `generations`
 person *create_family(int generations)
