@@ -50,7 +50,7 @@ void unload(node *list)
         //free(list);
         //list = ptr;
     //}
-    if (list->next == NULL)
+    if (list == NULL)
     {
         return;
     }
