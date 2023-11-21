@@ -41,12 +41,12 @@ int main(void)
 
 void unload(node *list)
 {
-    while (list != NULL)
-    {
-        node *ptr = list->next;
-        free(list);
-        list = ptr;
-
-    }
+    //while (list != NULL)
+    //{
+        //node *ptr = list->next;
+        //free(list);
+        //list = ptr;
+    //}
+    if ()
 
 }
