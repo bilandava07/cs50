@@ -56,9 +56,9 @@ void unload(node *list)
     }
 
     unload(list->next);
+
     free(list);
 
-    
 }
 
 void visualize(node *list)
