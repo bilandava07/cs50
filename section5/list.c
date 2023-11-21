@@ -14,6 +14,7 @@ typedef struct node
 node;
 
 void unload(node *list);
+void visualize(node *list);
 
 int main(void)
 {
@@ -36,6 +37,8 @@ int main(void)
 
     }
 
+    visualize(list);
+
     unload(list);
 }
 
@@ -55,4 +58,17 @@ void unload(node *list)
     unload(list->next);
     free(list);
 
+}
+
+void visualize(node *list)
+{
+    printf("\n+-- List Visualizer --+\n\n");
+    while (list != NULL)
+    {
+        printf("Location %p\n", list);
+        printf("Phrase: \"%s\"\n", list->phrase);
+        printf("Next: %p\n\n", list->next);
+        list = list->next;
+    }
+    printf("+---------------------+\n\n");
 }
