@@ -47,6 +47,12 @@ void unload(node *list)
         //free(list);
         //list = ptr;
     //}
-    if ()
+    if (list->next == NULL)
+    {
+        return;
+    }
+
+    unload(list->next);
+    free(list);
 
 }
