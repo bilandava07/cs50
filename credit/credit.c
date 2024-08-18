@@ -52,7 +52,7 @@ int main (void)
                 printf("AMEX\n");
             }
         }
-        if (length == 16)
+        else if (length == 16)
         {
             int test2 = number_copy / pow(10,14);
             if (test2 / 10 == 5)
@@ -67,7 +67,7 @@ int main (void)
                 printf("VISA\n");
             }
         }
-        if (length == 13)
+        else if (length == 13)
         {
              int test4 = number_copy / pow (10,12);
              if (test4 == 4)
@@ -75,6 +75,9 @@ int main (void)
                 printf("VISA\n");
              }
         }
+        else
+            printf("INVALID\n");
+
 
     }
     else
