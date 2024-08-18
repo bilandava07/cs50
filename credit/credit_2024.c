@@ -18,6 +18,7 @@ int main (void)
         {
             int tmp_other = number % 10;
             number = number / 10;
+            counter++;
             tmp_other *= 2;
 
             if (tmp_other > 9)          // (10-18)
