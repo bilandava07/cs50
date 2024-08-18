@@ -59,8 +59,10 @@ int main (void)
             if (test2 / 10 == 5)
             {
                 if (test2 % 10 >= 1 && test2 % 10 <=5)
-                printf("MASTERCARD\n");
-                return 0;
+                {
+                    printf("MASTERCARD\n");
+                    return 0;
+                }
             }
 
             int test3 = number_copy / pow(10,15);
