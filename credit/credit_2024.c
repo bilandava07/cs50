@@ -55,8 +55,9 @@ int main (void)
         if (length == 16)
         {
             int test2 = number_copy / pow(10,14);
-            if (test2 in (51,52,53,54,55))
+            if (test2 / 10 == 5)
             {
+                if (test2 % 10 >= 1 && test2 % 10 <=5)
                 printf("MASTERCARD\n");
             }
         }
