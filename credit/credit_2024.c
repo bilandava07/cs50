@@ -5,6 +5,7 @@ int main (void)
 {
     int length = 0;
     long number = get_long("Number: ");
+    int number_copy = number;
 
     int right_most = 0;
     int other = 0;
@@ -41,7 +42,12 @@ int main (void)
 
     if (sum % 10 == 0)
     {
-        printf("The card is valid!\n");
+        if (length == 15)
+        {
+            int test1 = number_copy / 10000000000000;
+            printf("%i\n",test1);
+
+        }
     }
 
 }
