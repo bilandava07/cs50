@@ -45,7 +45,7 @@ int main (void)
     {
         if (length == 15)
         {
-            int test1 = number_copy / (10 );
+            int test1 = number_copy / (10 ^ 13);
             if (test1 == 34 || test1 == 37)
             {
                 printf("AMEX\n");
