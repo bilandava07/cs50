@@ -77,6 +77,8 @@ int main (void)
         }
 
     }
-    
+    else
+        printf("INVALID\n");
+
 
 }
