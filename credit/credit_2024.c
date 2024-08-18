@@ -46,10 +46,18 @@ int main (void)
     {
         if (length == 15)
         {
-            int test1 = number_copy / (10 ^ 13);
+            int test1 = number_copy / pow(10,13);
             if (test1 == 34 || test1 == 37)
             {
                 printf("AMEX\n");
+            }
+        }
+        if (length == 16)
+        {
+            int test2 = number_copy / pow(10,14);
+            if (test2 in (51,52,53,54,55))
+            {
+                printf("MASTERCARD\n");
             }
         }
     }
