@@ -3,18 +3,17 @@
 
 int main (void)
 {
-    sumcheck = False;
-    int counter;
-    long number = get_long number("Number: ");
+    int counter = 0;
+    long number = get_long("Number: ");
 
-    int right_most;
-    int other;
+    int right_most = 0;
+    int other = 0;
     while (number != 0)
     {
         right_most += (number % 10);
         number = number / 10;
 
-        tmp_other = number % 10;
+        int tmp_other = number % 10;
         number = number / 10;
         tmp_other *= 2;
 
@@ -30,11 +29,8 @@ int main (void)
         }
 
     }
-    sum = rigth_most + other;
+    int sum = right_most + other;
 
-    if ((sum % 10) = 0)
-    {
-        
-    }
+    printf("%i", sum);
 
 }
