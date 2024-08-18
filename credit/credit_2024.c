@@ -39,4 +39,9 @@ int main (void)
     printf("sum = %i\n", sum);
     printf("The number is %i digits long.\n", length);
 
+    if (sum % 10 == 0)
+    {
+        printf("The card is valid!\n");
+    }
+
 }
