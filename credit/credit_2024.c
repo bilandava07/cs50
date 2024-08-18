@@ -3,7 +3,7 @@
 
 int main (void)
 {
-    int counter = 0;
+    int length = 0;
     long number = get_long("Number: ");
 
     int right_most = 0;
@@ -12,13 +12,13 @@ int main (void)
     {
         right_most += (number % 10);
         number = number / 10;
-        counter++;
+        length++;
 
         if (number !=0)
         {
             int tmp_other = number % 10;
             number = number / 10;
-            counter++;
+            length++;
             tmp_other *= 2;
 
             if (tmp_other > 9)          // (10-18)
@@ -37,6 +37,6 @@ int main (void)
     int sum = right_most + other;
 
     printf("sum = %i\n", sum);
-    printf("The number is %i digits long.\n", counter);
+    printf("The number is %i digits long.\n", length);
 
 }
