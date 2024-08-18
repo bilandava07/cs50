@@ -3,6 +3,7 @@
 
 int main (void)
 {
+    sumcheck = False;
     int counter;
     long number = get_long number("Number: ");
 
@@ -30,6 +31,10 @@ int main (void)
 
     }
     sum = rigth_most + other;
-    
+
+    if ((sum % 10) = 0)
+    {
+        
+    }
 
 }
