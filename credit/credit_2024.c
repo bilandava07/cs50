@@ -60,7 +60,14 @@ int main (void)
                 if (test2 % 10 >= 1 && test2 % 10 <=5)
                 printf("MASTERCARD\n");
             }
+
+            int test3 = number_copy / pow(10,15);
+            if (test3 == 4)
+            {
+                printf("VISA\n");
+            }
         }
+
     }
 
 }
