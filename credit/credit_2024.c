@@ -14,6 +14,7 @@ int main (void)
         number = number / 10;
 
         tmp_other = number % 10;
+        number = number / 10;
         tmp_other *= 2;
 
         if (tmp_other > 9)          // (10-18)
@@ -26,7 +27,9 @@ int main (void)
         {
             other += tmp_other;
         }
-        
+
     }
+    sum = rigth_most + other;
+    
 
 }
