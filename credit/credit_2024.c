@@ -67,7 +67,16 @@ int main (void)
                 printf("VISA\n");
             }
         }
+        if (length == 13)
+        {
+             int test4 = number_copy / pow (10,12);
+             if (test4 == 4)
+             {
+                printf("VISA\n");
+             }
+        }
 
     }
+    
 
 }
