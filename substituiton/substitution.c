@@ -3,7 +3,6 @@
 #include <string.h>
 #include <ctype.h>
 
-
 int main(int argc, string argv[])
 {
     // validate input
@@ -47,7 +46,6 @@ int main(int argc, string argv[])
     // get the plaintext
     string text = get_string("plaintext: ");
 
-
     // replace plaintext with ciphertext
     for (int i = 0, length_p = strlen(text); i < length_p; i++ )
     {
@@ -64,8 +62,6 @@ int main(int argc, string argv[])
         }
     }
 
-
     printf("ciphertext: %s\n", text);
     return 0;
-
 }
