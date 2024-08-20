@@ -31,8 +31,10 @@ int main (void)
     //add 1 to words, as there is no blank space at the end of the string
     words++;
 
-    float avrg_letters = (float) letters / (float) words;
-    
+    float avrg_l = (float) letters / (float) words;
+    float avrg_s = (float) words / (float) sentences;
+
+    int grade = 
 
 }
 
