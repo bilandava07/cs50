@@ -20,5 +20,5 @@ int main(void)
     else if (p1_score < p2_score)
     {
         printf("Player 2 wins!\n");
-    }
+    }]]]]]]]]]]]]]]]]]]]]]]]]]]]
 }
