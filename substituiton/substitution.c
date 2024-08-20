@@ -18,7 +18,6 @@ int main(int argc, string argv[])
     }
 
     key_length = strlen(argv[1]);
-    string key = "";
 
     for (int i = 0; i < length; i++)
     {
@@ -33,10 +32,17 @@ int main(int argc, string argv[])
             return 1;
         }
 
+        // force the chars of the key to uppercase
+        argv[1][i] = toupper(argv[1][i]);
+
+        // check if the char is unique
         for (int y = i + 1; y < length; y++)
         {
-            if argv[1][i] == argv
+            if (argv[1][i] == argv[1][y])
+            {
+                printf("The key must contain each letter exactly once!\n");
+                return 1;
+            }
         }
-        key[i] = toupper(argv[1][i]);
     }
 }
