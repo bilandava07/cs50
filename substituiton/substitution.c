@@ -25,7 +25,7 @@ int main(int argc, string argv[])
     {
         if (isalpha(argv[1][i]) == 0)
         {
-            printf("The key may only contain alphabetic charachters\n");
+            printf("The key may only contain alphabetic characters\n");
             return 1;
         }
         // force the chars of the key to uppercase
@@ -39,7 +39,7 @@ int main(int argc, string argv[])
         {
             if (argv[1][i] == argv[1][y])
             {
-                printf("Key must not containe repeated charachters\n");
+                printf("Key must not contain repeated characters\n");
                 return 1;
             }
         }
@@ -55,11 +55,11 @@ int main(int argc, string argv[])
         {
             if (islower(text[i]))
             {
-                text[i] = tolower(argv[1][text[i] - 97]);
+                text[i] = tolower(argv[1][text[i] - 'a']);
             }
             else
             {
-                text[i] = argv[1][text[i] - 65];
+                text[i] = argv[1][text[i] - 'A'];
             }
         }
     }
