@@ -21,7 +21,7 @@ int main (void)
         {
             letters++;
         }
-        else if (isblank(text[i]))
+        else if (isspace(text[i]))
         {
             words++;
         }
