@@ -47,7 +47,7 @@ int main(int argc, string argv[])
 
 
     // replace plaintext with ciphertext
-    for (int i = 0, length_p = strlen(plain); i < length_p; i++ )
+    for (int i = 0, length_p = strlen(text); i < length_p; i++ )
     {
         if (isalpha(text[i]))
         {
@@ -59,10 +59,6 @@ int main(int argc, string argv[])
             {
                 text[i] = argv[1][text[i] - 65];
             }
-        }
-        else
-        {
-            text[i] = plain[i];
         }
     }
 
