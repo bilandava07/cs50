@@ -68,6 +68,6 @@ int main(int argc, string argv[])
     }
 
     printf("ciphertext: %s\n", cipher);
-
+    return 0;
 
 }
