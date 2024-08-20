@@ -31,7 +31,8 @@ int main (void)
     //add 1 to words, as there is no blank space at the end of the string
     words++;
 
-    int average
+    float avrg_letters = (float) letters / (float) words;
+    
 
 }
 
