@@ -22,13 +22,17 @@ int main (void)
 int count_letters(text)
 {
     int letters = 0;
-    int words
+    int words = 0;
     for (int i = 0, length = strlen(text); i < length; i++)
     {
         if (isalpha(text[i]))
         {
             letters++;
         }
-
+        else if (isblank(text[i]))
+        {
+            words++;
+        }
+        else if ()
     }
 }
