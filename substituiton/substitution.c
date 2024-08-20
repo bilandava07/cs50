@@ -6,6 +6,7 @@
 
 int main(int argc, string argv[])
 {
+    // validate input
     if (argc != 2)
     {
         printf("Usage: ./substitution key\n");
@@ -19,11 +20,8 @@ int main(int argc, string argv[])
 
     key_length = strlen(argv[1]);
 
-    for (int i = 0; i < length; i++)
-    {
-
-    }
-
+    // validate key
+    
     for (int i = 0; i < length; i++)
     {
         if (isalpha(argv[1][i]) == False)
@@ -40,9 +38,11 @@ int main(int argc, string argv[])
         {
             if (argv[1][i] == argv[1][y])
             {
-                printf("The key must contain each letter exactly once!\n");
+                printf("Key must not containe repeated charachters\n");
                 return 1;
             }
         }
+
+
     }
 }
