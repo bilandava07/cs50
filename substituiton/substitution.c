@@ -20,7 +20,7 @@ int main(int argc, string argv[])
 
     int key_length = strlen(argv[1]);
 
-    // validate key
+    // validate key for invalid chars
     for (int i = 0; i < key_length; i++)
     {
         if (isalpha(argv[1][i]) == 0)
@@ -28,10 +28,12 @@ int main(int argc, string argv[])
             printf("The key may only contain alphabetic charachters\n");
             return 1;
         }
-
         // force the chars of the key to uppercase
         argv[1][i] = toupper(argv[1][i]);
+    }
 
+    for (int i = 0; i < key_length; i++)
+    {
         // check if the char is unique
         for (int y = i + 1; y < key_length; y++)
         {
