@@ -2,9 +2,11 @@
 #include <ctype.h>
 #include <string.h>
 #include <math.h>
+#include <cs50.h>
 
 
 int main (void)
+
 {
     string text = get_string("Text: ");
 
@@ -35,7 +37,9 @@ int main (void)
     float avrg_l = (float) letters / (float) words;
     float avrg_s = (float) words / (float) sentences;
 
-    int grade = 
+    int grade = round(0.0588 * avrg_l - 0.296 * avrg_s - 15.8);
+
+    printf("Grade %i", grade);
 
 }
 
