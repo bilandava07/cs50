@@ -25,7 +25,7 @@ int main (void)
         {
             words++;
         }
-        else if (text[i] == '!' or text[i] == '.' or text[i] == '?')
+        else if (text[i] == '!' || text[i] == '.' || text[i] == '?')
         {
             sentences++;
         }
