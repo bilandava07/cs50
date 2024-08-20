@@ -17,6 +17,8 @@ int main(int argc, string argv[])
         return 1;
     }
 
+    string key[26];
+
     for (int i = 0, length = strlen(argv[1]); i < length; i++)
     {
         if (isalpah(argv[1][i]) == False)
@@ -24,5 +26,6 @@ int main(int argc, string argv[])
             printf("The key may only contain alphabetic charachters\n");
             return 1;
         }
+        key[i] = toupper(argv[1][i]);
     }
 }
