@@ -67,7 +67,7 @@ int main(int argc, string argv[])
         }
     }
 
-    cipher[i+1] = '\0';
+    cipher[strlen(plain)+1] = '\0';
 
     printf("ciphertext: %s\n", cipher);
     return 0;
