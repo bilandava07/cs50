@@ -19,6 +19,10 @@ int main(int argc, string argv[])
 
     for (int i = 0, length = strlen(argv[1]); i < length; i++)
     {
-        if (isalpah(argv[1][i])
+        if (isalpah(argv[1][i]) == False)
+        {
+            printf("The key may only contain alphabetic charachters\n");
+            return 1;
+        }
     }
 }
