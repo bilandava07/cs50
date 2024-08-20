@@ -36,7 +36,7 @@ int calculate_score(string word)
         //only consider alphabetical charachters!
         if (isalpha(word[i]))
         {
-            //toupper to make the function case-insensitive 
+            //using toupper to make the function case-insensitive
             int index = toupper(word[i]) - 65;
             sum +=  points[index];
         }
