@@ -21,4 +21,13 @@ int main(void)
     {
         printf("Player 2 wins!\n");
     }
+    else
+    {
+        printf("Tie!\n");
+    }
+}
+
+int calculate_score(string word)
+{
+    
 }
