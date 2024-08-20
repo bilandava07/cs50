@@ -19,7 +19,7 @@ int main(int argc, string argv[])
 
     int key_length = strlen(argv[1]);
 
-    // validate key for invalid chars
+    // check key for invalid chars
     for (int i = 0; i < key_length; i++)
     {
         if (isalpha(argv[1][i]) == 0)
@@ -31,9 +31,9 @@ int main(int argc, string argv[])
         argv[1][i] = toupper(argv[1][i]);
     }
 
+    // check key for repeated chars
     for (int i = 0; i < key_length; i++)
     {
-        // check if the char is unique
         for (int y = i + 1; y < key_length; y++)
         {
             if (argv[1][i] == argv[1][y])
