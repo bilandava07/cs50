@@ -33,7 +33,7 @@ int calculate_score(string word)
     int sum = 0;
     for (int i = 0, length = strlen(word); i < length; i++)
     {
-        sum += word[i] - 65 + points[i];
+        sum += toupper(word[i]) - 65 + points[i];
     }
     return sum;
 }
