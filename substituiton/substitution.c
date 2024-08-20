@@ -43,31 +43,31 @@ int main(int argc, string argv[])
         }
     }
     // get the plaintext
-    string plain = get_string("plaintext: ");
+    string text = get_string("plaintext: ");
 
 
-
+    // replace plaintext with ciphertext
     for (int i = 0, length_p = strlen(plain); i < length_p; i++ )
     {
-        if (isalpha(plain[i]))
+        if (isalpha(text[i]))
         {
-            if (islower(plain[i]))
+            if (islower(text[i]))
             {
-                plain[i] = tolower(argv[1][plain[i] - 97]);
+                text[i] = tolower(argv[1][text[i] - 97]);
             }
             else
             {
-                plain[i] = argv[1][plain[i] - 65];
+                text[i] = argv[1][text[i] - 65];
             }
         }
         else
         {
-            plain[i] = plain[i];
+            text[i] = plain[i];
         }
     }
 
 
-    printf("ciphertext: %s\n", plain);
+    printf("ciphertext: %s\n", text);
     return 0;
 
 }
