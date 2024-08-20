@@ -33,7 +33,13 @@ int calculate_score(string word)
     int sum = 0;
     for (int i = 0, length = strlen(word); i < length; i++)
     {
-        sum += toupper(word[i]) - 65 + points[i];
+        //only consider alphabetical charachters!
+        if (isalpha(word[i]))
+        {
+            //toupper to make the function case-insensitive 
+            int index = toupper(word[i]) - 65;
+            sum +=  points[index];
+        }
     }
     return sum;
 }
