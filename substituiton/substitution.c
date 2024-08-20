@@ -17,9 +17,15 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    string key[26];
+    key_length = strlen(argv[1]);
+    string key = "";
 
-    for (int i = 0, length = strlen(argv[1]); i < length; i++)
+    for (int i = 0; i < length; i++)
+    {
+
+    }
+
+    for (int i = 0; i < length; i++)
     {
         if (isalpha(argv[1][i]) == False)
         {
@@ -27,7 +33,10 @@ int main(int argc, string argv[])
             return 1;
         }
 
-        for (int y = 0; y < )
+        for (int y = i + 1; y < length; y++)
+        {
+            if argv[1][i] == argv
+        }
         key[i] = toupper(argv[1][i]);
     }
 }
