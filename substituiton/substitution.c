@@ -45,8 +45,7 @@ int main(int argc, string argv[])
     // get the plaintext
     string plain = get_string("plaintext: ");
 
-    // initialize the ciphertext
-    char cipher[strlen(plain) + 1];
+
 
     for (int i = 0, length_p = strlen(plain); i < length_p; i++ )
     {
@@ -54,22 +53,21 @@ int main(int argc, string argv[])
         {
             if (islower(plain[i]))
             {
-                cipher[i] = tolower(argv[1][plain[i] - 97]);
+                plain[i] = tolower(argv[1][plain[i] - 97]);
             }
             else
             {
-                cipher[i] = argv[1][plain[i] - 65];
+                plain[i] = argv[1][plain[i] - 65];
             }
         }
         else
         {
-            cipher[i] = plain[i];
+            plain[i] = plain[i];
         }
     }
 
-    cipher[strlen(plain)+1] = '\0';
 
-    printf("ciphertext: %s\n", cipher);
+    printf("ciphertext: %s\n", plain);
     return 0;
 
 }
