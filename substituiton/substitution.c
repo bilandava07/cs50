@@ -18,13 +18,12 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    key_length = strlen(argv[1]);
+    int key_length = strlen(argv[1]);
 
     // validate key
-    
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < key_length; i++)
     {
-        if (isalpha(argv[1][i]) == False)
+        if (isalpha(argv[1][i]) == 0)
         {
             printf("The key may only contain alphabetic charachters\n");
             return 1;
@@ -34,7 +33,7 @@ int main(int argc, string argv[])
         argv[1][i] = toupper(argv[1][i]);
 
         // check if the char is unique
-        for (int y = i + 1; y < length; y++)
+        for (int y = i + 1; y < key_length; y++)
         {
             if (argv[1][i] == argv[1][y])
             {
@@ -42,7 +41,33 @@ int main(int argc, string argv[])
                 return 1;
             }
         }
-
-
     }
+    // get the plaintext
+    string plain = get_string("plaintext: ");
+
+    // initialize the ciphertext
+    string cipher = "";
+
+    for (int i = 0, length_p = strlen(plain); i < length_p; i++ )
+    {
+        if (isalpha(plain[i]))
+        {
+            if (islower(plain[i]))
+            {
+                cipher[i] = tolower(argv[1][plain[i] - 97]);
+            }
+            else
+            {
+                cipher[i] = argv[1][plain[i] - 65];
+            }
+        }
+        else
+        {
+            cipher[i] = plain[i];
+        }
+    }
+
+    printf("ciphertext: %s\n", cipher);
+
+
 }
