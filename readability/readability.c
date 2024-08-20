@@ -33,6 +33,9 @@ int count_letters(text)
         {
             words++;
         }
-        else if ()
+        else if (text[i] == '!' or text[i] == '.' or text[i] == '?')
+        {
+            
+        }
     }
 }
