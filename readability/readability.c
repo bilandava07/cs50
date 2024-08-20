@@ -35,7 +35,7 @@ int main (void)
     words++;
 
     float avrg_l = (float) letters / (float) words;
-    float avrg_s = (float) words / (float) sentences;
+    float avrg_s = (float) sentences / (float) words;
 
     int grade = round(0.0588 * avrg_l - 0.296 * avrg_s - 15.8);
 
