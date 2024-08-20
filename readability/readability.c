@@ -23,6 +23,7 @@ int count_letters(text)
 {
     int letters = 0;
     int words = 0;
+    int sentences = 0;
     for (int i = 0, length = strlen(text); i < length; i++)
     {
         if (isalpha(text[i]))
@@ -35,7 +36,7 @@ int count_letters(text)
         }
         else if (text[i] == '!' or text[i] == '.' or text[i] == '?')
         {
-            
+            sentences
         }
     }
 }
