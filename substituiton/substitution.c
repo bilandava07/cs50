@@ -46,7 +46,7 @@ int main(int argc, string argv[])
     string plain = get_string("plaintext: ");
 
     // initialize the ciphertext
-    char cipher[strlen(plain)];
+    char cipher[100];
 
     for (int i = 0, length_p = strlen(plain); i < length_p; i++ )
     {
