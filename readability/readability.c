@@ -34,13 +34,23 @@ int main (void)
     //add 1 to words, as there is no blank space at the end of the string
     words++;
 
-    float avrg_l = (float) letters / (float) words;
-    float avrg_s = (float) sentences / (float) words;
+    float avrg_l = (float) letters / (float) words * 100;
+    float avrg_s = (float) sentences / (float) words * 100;
 
     int grade = round(0.0588 * avrg_l - 0.296 * avrg_s - 15.8);
 
-    printf("Grade %i", grade);
-
+    if (grade >= 16)
+    {
+        printf("Grade 16+\n");
+    }
+    else if (grade <= 1)
+    {
+        printf("Before Grade 1\n");
+    }
+    else
+    {
+        printf("Grade %i\n", grade);
+    }
 }
 
 
