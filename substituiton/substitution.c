@@ -21,11 +21,13 @@ int main(int argc, string argv[])
 
     for (int i = 0, length = strlen(argv[1]); i < length; i++)
     {
-        if (isalpah(argv[1][i]) == False)
+        if (isalpha(argv[1][i]) == False)
         {
             printf("The key may only contain alphabetic charachters\n");
             return 1;
         }
+
+        for (int y = 0; y < )
         key[i] = toupper(argv[1][i]);
     }
 }
