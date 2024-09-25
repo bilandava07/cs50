@@ -1,7 +1,7 @@
 sort1 uses: bubble sort
 
 How do you know?: sort1 is the only sorting algorithm that has different big O and big omega.
-Timing tests reflect exactly that, with the time needed to sort the reversed files being much bigger than the time needed to sort the already sorted files.
+                  Timing tests reflect exactly that, with the time needed to sort the reversed files being much bigger than the time needed to sort the already sorted files.
 
 sort2 uses: merge sort
 
@@ -11,4 +11,4 @@ How do you know?: the merge sort has the theta of n log n, making the worst-case
 sort3 uses: selection sort
 
 How do you know?: the selection sort has the theta of n^2. So the big O equals to the big omega, just like in sort2.
-                  Since it is much slower than the sort2, it must be the selection sort. 
+                  Since it is much slower than the sort2, it must be the selection sort.
