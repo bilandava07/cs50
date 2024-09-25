@@ -1,6 +1,6 @@
 sort1
 
-sorted5000 = 0.034
+sorted5000 = 0.03
 reversed5000 = 0.065
 random5000 = 0.055
 
