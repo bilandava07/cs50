@@ -1,20 +1,20 @@
 sort1
 
-sorted5000 = 0.001
-reversed5000 = 0.001
-random5000 =
+sorted5000 = 0.034
+reversed5000 = 0.065
+random5000 = 0.055
 
 
 sort2
 
-sorted5000 =
-reversed5000 =
-random5000 =
+sorted5000 = 0.025
+reversed5000 = 0.025
+random5000 = 0.025
 
 sort3
 
-sorted5000 =
-reversed5000 =
-random5000 =
+sorted5000 = 0.041
+reversed5000 = 0.041
+random5000 = 0.041
 
 
