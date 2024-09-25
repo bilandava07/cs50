@@ -3,9 +3,10 @@ sort1 uses: bubble sort
 How do you know?: sort1 is the only sorting algorithm that has different big O and big omega.
 Timing tests reflect exactly that, with the time needed to sort the reversed files being much bigger than the time needed to sort the already sorted files.
 
-sort2 uses: TODO
+sort2 uses: merge sort
 
-How do you know?: TODO
+How do you know?: the merge sort has the theta of n log n, making the worst-case scenario the same with the best-case scenario.
+                  Since it is also much faster than the sort3 it has to be the 
 
 sort3 uses: TODO
 
