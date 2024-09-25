@@ -1,7 +1,7 @@
 sort1
 
-sorted5000 =
-reversed5000 =
+sorted5000 = 0.001
+reversed5000 = 0.001
 random5000 =
 
 
