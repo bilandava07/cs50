@@ -1,25 +1,11 @@
-sort1 uses: Bubble Sort
+sort1 uses: TODO
 
-How do you know?:
+How do you know?: TODO
 
-The Bubble Sort is the only algorithm whose "big O" and "omega" differ.
-In the course of the timing and analysis I found the "sort1" to be the only one whose
-"big O" and "omega" indeed do not match.
+sort2 uses: TODO
 
-sort2 uses: Merge Sort
+How do you know?: TODO
 
-How do you know?:
+sort3 uses: TODO
 
-The Merge Sort is considered to be the fastest in random and worst scenarios. In the course of the timing and analysis I
-determined the "sort2" to be the fastest in those particular cases.
-
-sort3 uses: Selection Sort
-
-How do you know?:
-
-The Selection sort as well as the Merge Sort is supposed to have consistent runnning time in all of the possible cases.
-The "sort2" and the "sort3" have turned out to be the two which do indeed have the same results in all of three lists of numbers
-(reversed, sorted and random) after the running time tests. Therefore, knowing the Merge Sort is the fastest one, I have
-compared the two and hence chose the "sort3" to be the Selection Sort.
-
-Also, the exclusion a.k.a elimination method after solving the "sort1" and "sort2" came in handy.
+How do you know?: TODO
