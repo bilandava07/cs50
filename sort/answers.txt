@@ -6,8 +6,9 @@ Timing tests reflect exactly that, with the time needed to sort the reversed fil
 sort2 uses: merge sort
 
 How do you know?: the merge sort has the theta of n log n, making the worst-case scenario the same with the best-case scenario.
-                  Since it is also much faster than the sort3 it has to be the 
+                  Since it is much faster than the sort3, it must be the merge sort.
 
-sort3 uses: TODO
+sort3 uses: selection sort
 
-How do you know?: TODO
+How do you know?: the selection sort has the theta of n^2. So the big O equals to the big omega, just like in sort2.
+                  Since it is much slower than the sort2, it must be the selection sort. 
