@@ -1,0 +1,20 @@
+sort1
+
+sorted5000 =
+reversed5000 =
+random5000 =
+
+
+sort2
+
+sorted5000 =
+reversed5000 =
+random5000 =
+
+sort3
+
+sorted5000 =
+reversed5000 =
+random5000 =
+
+
