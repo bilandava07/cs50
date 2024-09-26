@@ -233,5 +233,10 @@ void print_winner(void)
                 found = true;
             }
         }
+
+        if (found == false)
+        {
+            printf("The winner is: %s\n", candidates[z]);
+        }
     }
 }
