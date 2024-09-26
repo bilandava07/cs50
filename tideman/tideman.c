@@ -206,6 +206,7 @@ void lock_pairs(void)
 void print_winner(void)
 {
     int losers[candidate_count];
+    losers_index = 0;
 
     for (int i = 0; i < candidate_count; i++)
         {
@@ -213,7 +214,8 @@ void print_winner(void)
             {
                 if (locked[i][j] == true)
                 {
-                    losers[j] = j;
+                    losers[losers_index] = j;
+                    losers_index++;
                 }
             }
         }
