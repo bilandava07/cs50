@@ -155,9 +155,19 @@ void sort_pairs(void)
 
     for (int i = 0; i < counter; i++)
     {
-        for(int z = 0; z < counter)
         swap_counter = 0;
-        if pairs[i].winner < pairs[i+1].winner
+        for(int z = 0; z < counter - 1; z++)
+        {
+            if (pairs[i].winner < pairs[i+1].winner)
+            {
+                tmp = pairs[i].winner;
+                pairs[i].winner = pairs[i+1].winner;
+                pairs[i+1].winner = tmp;
+
+                swap_counter++;
+            }
+        }
+
     }
 
     return;
