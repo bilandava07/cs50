@@ -222,8 +222,16 @@ void print_winner(void)
     }
 
 
-    for (int i = 0; i < ; i++)
+    for (int i = 0; i < losers_index+1; i++)
     {
-        if
+        bool found = false;
+
+        for (int z = 0; z < candidate_count; z++)
+        {
+            if (losers[i] == z)
+            {
+                found = true;
+            }
+        }
     }
 }
