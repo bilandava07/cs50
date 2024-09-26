@@ -192,7 +192,10 @@ void lock_pairs(void)
     {
         for (int z = 0; z < candidate_count -1; z++)
         {
-            if (locked[i].winner)
+            if (pairs[i].winner == pairs[z].winner)
+            {
+                locked[pairs[i].winner][pairs[i].loser] = true;
+            }
         }
     }
     return;
