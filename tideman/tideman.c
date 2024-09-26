@@ -152,10 +152,10 @@ void sort_pairs(void)
 {
     int counter = pair_count;
 
-    for (int i = 0; i < counter - 2; i++)
+    for (int i = 0; i < counter - 1; i++)
     {
         bool swapped = 0;
-        if pairs[i].winner
+        if pairs[i].winner < pairs[i+1].winner
     }
     // TODO
     return;
