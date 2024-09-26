@@ -242,4 +242,21 @@ void print_winner(void)
             printf("The winner is: %s\n", candidates[z]);
         }
     }
+
+
+
+
+    for (int z = 0; z < candidate_count; z++)
+    {
+        bool found = false;
+
+        for (int i = 0; i < losers_index+1; i++)
+        {
+            if (losers[z] == i)
+            {
+                found = true;
+            }
+        }
+    }
+
 }
