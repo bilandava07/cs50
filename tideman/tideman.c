@@ -190,7 +190,10 @@ void lock_pairs(void)
 
     for (int i = candidate_count - 1; i < pair_count; i++)
     {
-        for 
+        for (int z = 0; z < candidate_count -1; z++)
+        {
+            if (locked[i].winner)
+        }
     }
     return;
 }
