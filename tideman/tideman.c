@@ -208,15 +208,22 @@ void print_winner(void)
     int losers[candidate_count];
     losers_index = 0;
 
+    // fill the array losers with the indices of the candidates, whenever they are locked
     for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = 0; j < candidate_count; j++)
         {
-            for (int j = 0; j < candidate_count; j++)
+            if (locked[i][j] == true)
             {
-                if (locked[i][j] == true)
-                {
-                    losers[losers_index] = j;
-                    losers_index++;
-                }
+                losers[losers_index] = j;
+                losers_index++;
             }
         }
+    }
+
+
+    for (int i = 0; i < ; i++)
+    {
+        if
+    }
 }
