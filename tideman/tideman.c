@@ -133,14 +133,14 @@ void add_pairs(void)
              if (preferences[i][j+1] > preferences[j+1][i])
 
              {
-                 pairs[counter].winner = i;
-                 pairs[counter].loser = j+1;
+                 pairs[pair_count].winner = i;
+                 pairs[pair_count].loser = j+1;
                  pair_count++;
              }
              else if(preferences[i][j+1] < preferences[j+1][i])
              {
-                 pairs[counter].winner = j+1;
-                 pairs[counter].loser = i;
+                 pairs[pair_count].winner = j+1;
+                 pairs[pair_count].loser = i;
                  pair_count++;
              }
         }
@@ -153,6 +153,8 @@ void sort_pairs(void)
 {
     int counter = pair_count;
     int swap_counter = 1;
+    int tmp_winner;
+    int tmp_loser;
 
     for (int i = 0; i < counter -1; i++)
     {
@@ -161,13 +163,13 @@ void sort_pairs(void)
         {
             if (pairs[i].winner < pairs[i+1].winner)
             {
-                tmp.winner = pairs[i].winner;
+                tmp_winner = pairs[i].winner;
                 pairs[i].winner = pairs[i+1].winner;
-                pairs[i+1].winner = tmp.winner;
+                pairs[i+1].winner = tmp_winner;
 
-                tmp.loser = pairs[i].loser;
+                tmp_loser = pairs[i].loser;
                 pairs[i].loser = pairs[i+1].loser;
-                pairs[i+1].loser = tmp.loser;
+                pairs[i+1].loser = tmp_loser;
 
                 swap_counter++;
             }
@@ -207,7 +209,7 @@ void lock_pairs(void)
 void print_winner(void)
 {
     int losers[candidate_count];
-    losers_index = 0;
+    int losers_index = 0;
 
     // fill the array losers with the indices of the candidates, whenever they are locked
     for (int i = 0; i < candidate_count; i++)
