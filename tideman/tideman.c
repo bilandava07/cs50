@@ -167,7 +167,10 @@ void sort_pairs(void)
                 swap_counter++;
             }
         }
-
+        if (swap_counter == 0)
+        {
+            return;
+        }
     }
 
     return;
