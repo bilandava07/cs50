@@ -160,9 +160,13 @@ void sort_pairs(void)
         {
             if (pairs[i].winner < pairs[i+1].winner)
             {
-                tmp = pairs[i].winner;
+                tmp.winner = pairs[i].winner;
                 pairs[i].winner = pairs[i+1].winner;
-                pairs[i+1].winner = tmp;
+                pairs[i+1].winner = tmp.winner;
+
+                tmp.loser = pairs[i].loser;
+                pairs[i].loser = pairs[i+1].loser;
+                pairs[i+1].loser = tmp.loser;
 
                 swap_counter++;
             }
