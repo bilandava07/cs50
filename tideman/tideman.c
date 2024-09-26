@@ -150,9 +150,12 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    for (int i = 0; i < pair_count; i++)
+    int counter = pair_count;
+
+    for (int i = 0; i < counter - 2; i++)
     {
-        
+        bool swapped = 0;
+        if pairs[i].winner
     }
     // TODO
     return;
