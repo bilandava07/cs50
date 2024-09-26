@@ -151,13 +151,14 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     int counter = pair_count;
+    int swap_counter = 1;
 
     for (int i = 0; i < counter - 1; i++)
     {
-        bool swapped = 0;
+        swap_counter = 0;
         if pairs[i].winner < pairs[i+1].winner
     }
-    // TODO
+    
     return;
 }
 
