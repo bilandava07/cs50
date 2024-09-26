@@ -133,23 +133,15 @@ void add_pairs(void)
 
              {
                  pairs[counter].winner = i;
-                 pairs[counter].loser = i+1;
+                 pairs[counter].loser = j+1;
                  pair_count++;
              }
-        }
-
-
-        if (preferences[i][i+1] > preferences[i+1][i])
-        {
-            pairs[counter].winner = i;
-            pairs[counter].loser = i+1;
-            pair_count++;
-        }
-        else if (preferences[i][i+1] < preferences[i+1][i])
-        {
-            pairs[counter].winner = i+1;
-            pairs[counter].loser = i;
-            pair_count++;
+             else if(preferences[i][j+1] < preferences[j+1][i])
+             {
+                 pairs[counter].winner = j+1;
+                 pairs[counter].loser = i;
+                 pair_count++;
+             }
         }
     }
     return;
