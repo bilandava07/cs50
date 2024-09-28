@@ -202,8 +202,13 @@ void lock_pairs(void)
 {
     bool found;
     bool found_true;
-    //add a pair
-    for (int i = 0; i < pair_count; i++)
+    //add 3 pairs (minimum to create a cycle)
+    for (int o = 0; o < 3; o++)
+    {
+        locked[pairs[o].winner][pairs[o].loser] = true;
+    }
+
+    for (int i = 3; i < pair_count; i++)
     {
         locked[pairs[i].winner][pairs[i].loser] = true;
 
