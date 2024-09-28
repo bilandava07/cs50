@@ -30,7 +30,7 @@ int main(void)
         }
         if (swap_counter == 0)
         {
-            return 0;
+            break;
         }
     }
     for (int y = 0; y < 6; y++)
