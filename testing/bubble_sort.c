@@ -25,7 +25,6 @@ int main(void)
                 arr[z] = tmp;
 
                 swap_counter++;
-                counter--;
             }
         }
         if (swap_counter == 0)
@@ -38,6 +37,7 @@ int main(void)
             printf("%i ", arr[y]);
         }
         printf("\n");
+        counter--;
     }
 
 }
