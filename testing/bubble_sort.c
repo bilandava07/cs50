@@ -32,9 +32,12 @@ int main(void)
         {
             break;
         }
+
+        for (int y = 0; y < 6; y++)
+        {
+            printf("%i ", arr[y]);
+        }
+        printf("\n");
     }
-    for (int y = 0; y < 6; y++)
-    {
-        printf("%i ", arr[y]);
-    }
+
 }
