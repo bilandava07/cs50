@@ -1,3 +1,6 @@
+#include <stdio.h>
+
+
 int arr [6] = {2,3,6,8,1,9};
 
 int tmp;
