@@ -1,9 +1,8 @@
-int arr = [2,3,6,8,1,9]
-int length = 6;
+int arr [6] = {2,3,6,8,1,9};
 
 int tmp;
 int swap_counter;
-int counter = length;
+int counter = 6;
 
 for (int i = 0; i < lenght - 1; i++)
 {
