@@ -206,18 +206,16 @@ void lock_pairs(void)
     {
         locked[pairs[i].winner][pairs[i].loser] = true;
 
-        //check for a row with all falses
         found = false;
         for(int z = 0; z < candidate_count; z++)
         {
             for (int y = 0; y < candidate_count; y++)
             {
-                if (locked[z][y] == true)
+                if (locked[y][z] == true)
                 {
-                    break;
+                    
                 }
             }
-            found = true;
         }
         //delete ("skip the lock") if found a row with all false
         if (!found)
