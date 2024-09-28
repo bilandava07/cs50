@@ -170,7 +170,7 @@ bool print_winner(void)
     {
         if (candidates[i].votes > win_amount && candidates[i].eliminated == false)
         {
-            printf("%s", candidates[i].name);
+            printf("%s\n", candidates[i].name);
             return true;
         }
     }
