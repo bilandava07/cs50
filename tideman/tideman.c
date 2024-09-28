@@ -165,7 +165,7 @@ void sort_pairs(void)
     int tmp_winner;
     int tmp_loser;
 
-    counter = pair_count;
+    int counter = pair_count;
     for (int i = 0; i < counter; counter--)
     {
         swap_counter = 0;
@@ -176,7 +176,7 @@ void sort_pairs(void)
             tmp_loser = pairs[i+1].loser;
 
             pairs[i+1].winner = pairs[i].winner;
-            pairs[i+1].loser = paros[i].loser;
+            pairs[i+1].loser = pairs[i].loser;
 
             pairs[i].winner = tmp_winner;
             pairs[i].loser = tmp_loser;
