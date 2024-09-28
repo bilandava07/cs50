@@ -168,7 +168,7 @@ bool print_winner(void)
     int win_amount = voter_count / 2;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes > win_amount)
+        if (candidates[i].votes > win_amount && candidates[i].eliminated == false)
         {
             printf("%s", candidates[i].name);
             return true;
