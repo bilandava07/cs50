@@ -5,26 +5,32 @@ int arr [6] = {2,3,6,8,1,9};
 
 int tmp;
 int swap_counter;
+int length = 6;
 int counter = 6;
 
-for (int i = 0; i < lenght - 1; i++)
+
+int main(void)
 {
-    swap_counter = 0;
 
-    for (int z = 0; z < counter; z++)
+    for (int i = 0; i < length - 1; i++)
     {
-        if (arr[z] < arr[z+1])
+        swap_counter = 0;
+
+        for (int z = 0; z < counter; z++)
         {
-            tmp = arr[z+1];
-            arr[z+1] = arr[z];
-            arr[z] = tmp;
+            if (arr[z] < arr[z+1])
+            {
+                tmp = arr[z+1];
+                arr[z+1] = arr[z];
+                arr[z] = tmp;
 
-            swap_counter++;
-            counter--;
+                swap_counter++;
+                counter--;
+            }
         }
-    }
-    if (swap_counter == 0)
-    {
-        return;
+        if (swap_counter == 0)
+        {
+            return 0;
+        }
     }
 }
