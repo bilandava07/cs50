@@ -161,36 +161,11 @@ void add_pairs(void)
 // Sort pairs in decreasing order by strength of victory
 void sort_pairs(void)
 {
-    int counter = pair_count;
-    int swap_counter = 1;
-    int tmp_winner;
-    int tmp_loser;
-
-    for (int i = 0; i < counter -1; i++)
+    
+    for (int i = 0; i < pair_count; i++)
     {
-        swap_counter = 0;
-        for(int z = 0; z < counter - 1; z++)
-        {
-            if (pairs[i].winner < pairs[i+1].winner)
-            {
-                tmp_winner = pairs[i].winner;
-                pairs[i].winner = pairs[i+1].winner;
-                pairs[i+1].winner = tmp_winner;
 
-                tmp_loser = pairs[i].loser;
-                pairs[i].loser = pairs[i+1].loser;
-                pairs[i+1].loser = tmp_loser;
-
-                swap_counter++;
-            }
-        }
-        if (swap_counter == 0)
-        {
-            return;
-        }
     }
-
-    return;
 }
 
 // Lock pairs into the candidate graph in order, without creating cycles
