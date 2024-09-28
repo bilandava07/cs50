@@ -166,7 +166,7 @@ void sort_pairs(void)
     int tmp_loser;
 
     int counter = pair_count;
-    for (int i = 0; i < counter; counter--)
+    for (int i = 0; i < counter; i++)
     {
         swap_counter = 0;
         if (preferences[pairs[i].winner][pairs[i].loser] < preferences[pairs[i+1].winner][pairs[i+1].loser])
@@ -182,6 +182,7 @@ void sort_pairs(void)
             pairs[i].loser = tmp_loser;
 
             swap_counter++;
+            counter--;
         }
         if (swap_counter == 0)
         {
