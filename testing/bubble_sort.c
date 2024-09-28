@@ -33,4 +33,8 @@ int main(void)
             return 0;
         }
     }
+    for (int y = 0; y < 6; y++)
+    {
+        printf("%i ", arr[y]);
+    }
 }
