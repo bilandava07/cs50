@@ -201,26 +201,26 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     bool found;
+    bool found_true;
     //add a pair
     for (int i = 0; i < pair_count; i++)
     {
         locked[pairs[i].winner][pairs[i].loser] = true;
 
-        found = false;
         for(int z = 0; z < candidate_count; z++)
         {
+            found_true = false;
             for (int y = 0; y < candidate_count; y++)
             {
                 if (locked[y][z] == true)
                 {
-                    
+                    found_true = true;
                 }
             }
-        }
-        //delete ("skip the lock") if found a row with all false
-        if (!found)
-        {
-            locked[pairs[i].winner][pairs[i].loser] = false;
+            if (found_true == false)
+            {
+                locked[pairs[i].winner][pairs[i].loser] = false;
+            }
         }
     }
 
