@@ -16,7 +16,7 @@ int main(void)
     {
         swap_counter = 0;
 
-        for (int z = 0; z < counter; z++)
+        for (int z = 0; z < counter-1; z++)
         {
             if (arr[z] < arr[z+1])
             {
