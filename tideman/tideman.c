@@ -200,16 +200,23 @@ void sort_pairs(void)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
+    bool found;
     //add a pair
     for (int i = 0; i < pair_count; i++)
     {
         locked[pairs[i].winner][pairs[i].loser] = true;
-        for 
+
+        //check
+        found = false;
+        for(int z = 0; z < candidate_count; z++)
+        {
+            for (int y = 0; y < candidate_count; y++)
+            {
+                if 
+            }
+        }
+        for
     }
-
-    //check
-
-
     //delete if cycle
 
 }
