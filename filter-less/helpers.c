@@ -89,6 +89,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
     int inner_block = 3;
     int sum_inner;
+    int avg;
 
     for (int i = 1; i < height - 1; i++)
     {
@@ -100,11 +101,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             {
                 for(int c = 0; c < 3; c++)
                 {
-                    sum_inner += copy
+                    sum_inner += copy[z][c];
                 }
             }
+            avg = round(sum_inner / 9.0);
         }
     }
+
+    //
 
 
     return;
