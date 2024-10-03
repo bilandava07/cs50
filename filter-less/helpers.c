@@ -136,7 +136,7 @@ int lesser (int a, int b)
 
 }
 
-void set_all(int a, int b, value, image)
+void set_all(int a, int b, value, )
 {
     image
 }
