@@ -157,3 +157,5 @@ void set_all(int a, int b, value, RGBTRIPLE image[height][width])
     image[a][b].rgbtGreen = value;
     image[a][b].rgbtRed = value;
 }
+
+int avg_block(int block_height, int block_width,)
