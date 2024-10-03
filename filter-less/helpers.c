@@ -1,6 +1,10 @@
 #include "helpers.h"
 #include <math.h>
 
+
+int lesser (int a, int b);
+
+
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -30,20 +34,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             int green = round(.349 * image[i][y].rgbtRed + .686 * image[i][y].rgbtGreen + .168 * image[i][y].rgbtBlue);
             int blue = round(.272 * image[i][y].rgbtRed + .534 * image[i][y].rgbtGreen + .131 * image[i][y].rgbtBlue);
 
-            if (red > 255)
-                image[i][y].rgbtRed = 255
-            else
-                image[i][y].rgbtRed = red;
-
-            if (green > 255)
-                image[i][y].rgbtGreen = 255;
-            else
-                image[i][y].rgbtGreen = green;
-
-            if (blue > 255)
-                image[i][y].rgbtBlue = 255;
-            else
-                image[i][y].rgbtBlue = blue;
+            image[i][y].rgbtRed = lesser(red, 255);
+            image[i][y].rgbtGreen = lesser(green, 255);
+            image[i][y].rgbtBlue = lesser(blue, 255);
         }
 
     return;
@@ -52,7 +45,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
 // Reflect image horizontally
 void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
-    
+
     return;
 }
 
@@ -60,4 +53,17 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     return;
+}
+
+
+// returns lesser out of two integers
+int lesser (int a, int b)
+{
+    if (a < b)
+        return a;
+    else if (b < a)
+        return b;
+    else
+        return b;
+
 }
