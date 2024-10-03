@@ -111,13 +111,19 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             start = i - 1;
             end = y - 1;
-            void avg_set (height, width, i, y, start, end, block_height, block_width, image, copy);
-
+            avg_set (height, width, i, y, start, end, block_height, block_width, image, copy);
         }
 
     }
     // corner pixels 2x2 blocks
+    block_height = 2;
+    block_width = 2;
+    avg_set (height, width, 0, 0, 0, 0, block_height, block_width, image, copy);
+    avg_set (height, width, height-1, 0, height-2, 0, block_height, block_width, image, copy);
+    avg_set (height, width, 0, width-1, 0, width-2, block_height, block_width, image, copy);
+    avg_set (height, width, height-1, width-1, height-2, width-2, block_height, block_width, image, copy);
 
+    // edge pixels 3x2 blocks
 
 
 
