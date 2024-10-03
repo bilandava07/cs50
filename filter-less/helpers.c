@@ -50,10 +50,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     int tmp_green;
     int tmp_red;
 
-    if (width % 2 == 0)
-        n = (width / 2) - 1;
-    else
-        n = width / 2;
+    n = width / 2;
 
     for (int i = 0; i < height; i++)
     {
