@@ -111,26 +111,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             start = i - 1;
             end = y - 1;
-            void avg_set (height, width, i, y, start, end, block_height, block_width, RGBTRIPLE image[height][width], RGBTRIPLE copy[height][width])
-            //block loops
-            sum_blue = 0;
-            sum_green = 0;
-            sum_red = 0;
+            void avg_set (height, width, i, y, start, end, block_height, block_width, RGBTRIPLE image[height][width], RGBTRIPLE copy[height][width]);
 
-            for (int z = start; z < start + block_height; z++)
-            {
-                {
-                    for (int c = end; c < end + block_width; c++)
-                    {
-                        sum_blue += copy[z][c].rgbtBlue;
-                        sum_green += copy[z][c].rgbtGreen;
-                        sum_red += copy[z][c].rgbtRed;
-                    }
-                }
-            }
-            image[i][y].rgbtBlue = round(sum_blue / (block_height * block_width * 1.0));
-            image[i][y].rgbtGreen = round(sum_green / (block_height * block_width * 1.0));
-            image[i][y].rgbtRed = round(sum_red / (block_height * block_width * 1.0));
         }
 
     }
