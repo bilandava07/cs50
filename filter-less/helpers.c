@@ -3,7 +3,7 @@
 
 
 int lesser (int a, int b);
-void avg_set (int start, int end, int block_height, int block_width, int *arr);
+void avg_set (int start, int end, int block_height, int block_width, int *arr, int *copy);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
