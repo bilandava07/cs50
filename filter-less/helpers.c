@@ -134,6 +134,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
 
     // corner pixels 2x2 blocks
+
+    int corner_arr []  {}
     block_height = 2;
     block_width = 2;
 
