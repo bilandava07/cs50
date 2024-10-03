@@ -134,14 +134,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
 
     // corner pixels 2x2 blocks
+    block_height = 2;
+    block_width = 2;
 
     start = 0;
     end = 0;
 
-    for (int z = start; z < start + 2; z++)
+    for (int z = start; z < start + block_height; z++)
     {
         {
-            for (int c = end; c < end + 2; c++)
+            for (int c = end; c < end + block_width; c++)
             {
                 sum_blue += copy[z][c].rgbtBlue;
                 sum_green += copy[z][c].rgbtGreen;
@@ -149,9 +151,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
         }
     }
-    image[i][y].rgbtBlue = round(sum_blue / 9.0);
-    image[i][y].rgbtGreen = round(sum_green / 9.0);
-    image[i][y].rgbtRed = round(sum_red / 9.0);
+    image[0][0].rgbtBlue = round(sum_blue / 9.0);
+    image[0][0].rgbtGreen = round(sum_green / 9.0);
+    image[0][0].rgbtRed = round(sum_red / 9.0);
     }
     return;
 }
