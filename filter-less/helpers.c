@@ -88,7 +88,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
 
     int inner_block = 3;
-    int sum;
+    int sum_blue;
+    int sum_green;
+    int sum_red;
+
     int avg;
 
     int start;
@@ -110,7 +113,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for (int c = 0; c < 3; c++)
                     {
-                        sum += copy[start][end];
+                        sum_blue += copy[start][end].rgbtBlue;
+                        sum_green += copy[start][end].rgbtGreen;
+                        sum_red += copy[start][end].rgbtRed;
+                        
                         end++;
                     }
                     start++;
@@ -148,9 +154,9 @@ int lesser (int a, int b)
 }
 
 // sets Red, Green and Blue to the provided value
-void set_all(int a, int b, value, RGBTRIPLE image[height][width])
+void set_all(int a, int b, int blue, int green, int red, RGBTRIPLE image[height][width])
 {
-    image[a][b].rgbtBlue = value;
-    image[a][b].rgbtGreen = value;
-    image[a][b].rgbtRed = value;
+    image[a][b].rgbtBlue = blue;
+    image[a][b].rgbtGreen = green;
+    image[a][b].rgbtRed = red;
 }
