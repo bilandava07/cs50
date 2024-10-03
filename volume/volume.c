@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 
     while (fread(&tmp2, sizeof(TWO_BYTE), 1, input))
     {
-        tmp2 *= factor;
+        tmp2 = tmp2 * factor;
         fwrite(&tmp2, sizeof(TWO_BYTE), 1, output);
     }
 
