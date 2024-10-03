@@ -126,11 +126,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     start++;
                 }
             }
-            avg_blue = round(sum_blue / 9);
-            avg_green = round(sum_green / 9);
-            avg_red = round(sum_red / 9);
+            image[i][y].rgbtBlue = round(sum_blue / 9);
+            image[i][y].rgbtGreen = round(sum_green / 9);
+            image[i][y].rgbtRed = round(sum_red / 9);
 
-            set_all(i, y, avg_blue,avg_green, avg_red, image);
         }
     }
 
@@ -158,12 +157,4 @@ int lesser (int a, int b)
     else
         return b;
 
-}
-
-// sets Red, Green and Blue to the provided value
-void set_all(int a, int b, int blue, int green, int red, RGBTRIPLE image[height][width])
-{
-    image[a][b].rgbtBlue = blue;
-    image[a][b].rgbtGreen = green;
-    image[a][b].rgbtRed = red;
 }
