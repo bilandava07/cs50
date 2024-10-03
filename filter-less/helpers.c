@@ -85,40 +85,25 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
 
 
-    // the inner block (3x3)
+
 
     int inner_block = 3;
     int sum_inner;
     int avg;
 
+    // the inner block (3x3)
     for (int i = 1; i < height - 1; i++)
     {
         for (int y = 1; y < width - 1; y++)
         {
-            sum_inner = 0;
-
-            for(int z = 0; z < 3; z++)
-            {
-                for(int c = 0; c < 3; c++)
-                {
-                    sum_inner += copy[z][c];
-                }
-            }
-            avg = round(sum_inner / 9.0);
+            avg = avg_block(3,3, copy);
             set_all(i, y, avg, image);
         }
     }
 
     // corners (2x2)
     //top left
-
-    for (int i = 0; i < 2; i++)
-    {
-        for (int y = 0; y < 2; y++)
-        {
-            sum_inner
-        }
-    }
+    
 
     set_all(0, 0, avg, image)
 
@@ -151,6 +136,7 @@ int lesser (int a, int b)
 
 }
 
+// sets Red, Green and Blue to the provided value
 void set_all(int a, int b, value, RGBTRIPLE image[height][width])
 {
     image[a][b].rgbtBlue = value;
@@ -158,4 +144,17 @@ void set_all(int a, int b, value, RGBTRIPLE image[height][width])
     image[a][b].rgbtRed = value;
 }
 
-int avg_block(int block_height, int block_width,)
+
+// returns average of the block of variable size
+int avg_block(int block_height, int block_width, RGBTRIPLE copy[height][width])
+{
+    int sum = 0;
+    for(int z = 0; z < block_height; z++)
+    {
+        for(int c = 0; c < block_width; c++)
+        {
+            sum += copy[z][c];
+        }
+    }
+    return round(sum / (block_height * block_width));
+}
