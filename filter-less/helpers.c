@@ -76,11 +76,11 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE copy[height][width];
-    for (int i = 0; i < height; i++)
+    for (int c1 = 0; c1 < height; c1++)
     {
-        for (int j = 0; j < width; j++)
+        for (int c2 = 0; c2 < width; c2++)
         {
-            copy[i][j] = image[i][j];
+            copy[c1][c2] = image[c1][c2];
         }
 
 
@@ -88,7 +88,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
 
     int inner_block = 3;
-    int sum_inner;
+    int sum;
     int avg;
 
     int start;
