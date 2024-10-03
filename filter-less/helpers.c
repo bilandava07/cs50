@@ -3,7 +3,7 @@
 
 
 int lesser (int a, int b);
-void avg_set (int i, int y, int start, int end, int block_height, int block_width, int (*image[][]), int (*copy[][]));
+
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -130,13 +130,16 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[i][y].rgbtBlue = round(sum_blue / (block_height * block_width * 1.0));
             image[i][y].rgbtGreen = round(sum_green / (block_height * block_width * 1.0));
             image[i][y].rgbtRed = round(sum_red / (block_height * block_width * 1.0));
-
         }
 
 
     // corner pixels 2x2 blocks
     block_height = 2;
     block_width = 2;
+
+    sum_blue = 0;
+    sum_green = 0;
+    sum_red = 0;
 
     start = 0;
     end = 0;
@@ -152,11 +155,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
         }
     }
-    image[0][0].rgbtBlue = round(sum_blue / block_height * block_width);
-    image[0][0].rgbtGreen = round(sum_green / block_height * block_width);
-    image[0][0].rgbtRed = round(sum_red / block_height * block_width);
-    }
-    return;
+    image[0][0].rgbtBlue = round(sum_blue / (block_height * block_width * 1.0));
+    image[][y].rgbtGreen = round(sum_green / (block_height * block_width * 1.0));
+    image[i][y].rgbtRed = round(sum_red / (block_height * block_width * 1.0));
+}
 }
 
 
@@ -171,27 +173,3 @@ int lesser (int a, int b)
         return b;
 }
 
-void avg_set (int i, int y, int start, int end, int block_height, int block_width, RGBTRIPLE image[][], RGBTRIPLE int copy[][])
-{
-    int sum_blue = 0;
-    int sum_green = 0;
-    int sum_red = 0;
-
-    start = i - 1;
-    end = y - 1;
-
-    for (int z = start; z < start + block_height; z++)
-    {
-        {
-            for (int c = end; c < end + block_width; c++)
-            {
-                sum_blue += copy[z][c].rgbtBlue;
-                sum_green += copy[z][c].rgbtGreen;
-                sum_red += copy[z][c].rgbtRed;
-            }
-        }
-    }
-    image[i][y].rgbtBlue = round(sum_blue / (block_height * block_width * 1.0));
-    image[i][y].rgbtGreen = round(sum_green / (block_height * block_width * 1.0));
-    image[i][y].rgbtRed = round(sum_red / (block_height * block_width * 1.0));
-}
