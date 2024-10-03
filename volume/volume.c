@@ -40,8 +40,9 @@ int main(int argc, char *argv[])
     // TODO: Copy header from input file to output file
     for (int i = 0; i < HEADER_SIZE; i++)
     {
-        fread(&header, )
+        fread(&header, sizeof(BYTE), 1, input);
     }
+    for (int i = 0; i < HEADER)
 
     // TODO: Read samples from input file and write updated data to output file
 
