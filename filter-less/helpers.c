@@ -101,7 +101,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int y = 1; y < width - 1; y++)
         {
             //block loops
-            avg = 0;
+            sum = 0;
             start = i - 1;
             end = y + 1;
 
@@ -110,27 +110,19 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for (int c = 0; c < 3; c++)
                     {
-                        avg += copy[start][end];
+                        sum += copy[start][end];
                         end++;
                     }
                     start++;
                 }
             }
+            avg = round(sum / 9);
             set_all(i, y, avg, image);
         }
     }
 
     // corners (2x2)
     //top left
-
-
-    set_all(0, 0, avg_block(), image)
-
-
-
-    image[height-1][0]
-    image[0][width-1]
-    image[height-1][width]
 
 
 
