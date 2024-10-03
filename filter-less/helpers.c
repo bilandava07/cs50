@@ -154,20 +154,3 @@ void set_all(int a, int b, value, RGBTRIPLE image[height][width])
     image[a][b].rgbtGreen = value;
     image[a][b].rgbtRed = value;
 }
-
-
-// returns average of the block of variable size
-int avg_block(int block_height, int block_width, int start, int end, RGBTRIPLE copy[height][width])
-{
-    int sum = 0;
-    for(int z = 0; z < block_height; z++)
-    {
-        for(int c = 0; c < block_width; c++)
-        {
-            sum += copy[start][end];
-
-            end++;
-        }
-    }
-    return round(sum / (block_height * block_width));
-}
