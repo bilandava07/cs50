@@ -103,9 +103,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
     // corners (2x2)
     //top left
-    
 
-    set_all(0, 0, avg, image)
+
+    set_all(0, 0, avg_block(), image)
 
 
 
