@@ -97,7 +97,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
     int start;
     int end;
-    // the inner block (3x3)
+    // the inner block (3x3) // middle pixels
 
     //2 outer loops iterate through the inner block
     for (int i = 1; i < height - 1; i++)
