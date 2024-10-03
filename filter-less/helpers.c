@@ -63,7 +63,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             tmp_green = iamge[i][y].green;
             tmp_red = image[i][y].red;
 
-            
+            image[i][y].blue = image[i][width-(y+1)].blue;
+            image[i][y].green = image[i][width-(y+1)].green;
+            image[i][y].red = image[i][width-(y+1)].red;
+
+            image[i][width-(y+1)].blue = tmp_blue;
+            image[i][width-(y+1)].green = tmp_green;
+            image[i][width-(y+1)].red = tmp_red;
         }
     }
     return;
