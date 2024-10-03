@@ -3,7 +3,7 @@
 
 
 int lesser (int a, int b);
-
+void set_all(int a, int b, int blue, int green, int red, RGBTRIPLE image[height][width]);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -106,7 +106,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int y = 1; y < width - 1; y++)
         {
             //block loops
-            sum = 0;
+            sum_blue = 0;
+            sum_green = 0;
+            sum_red = 0;
+
             start = i - 1;
             end = y + 1;
 
