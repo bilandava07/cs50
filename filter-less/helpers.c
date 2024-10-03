@@ -81,7 +81,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             copy[c1][c2] = image[c1][c2];
         }
-
+    }
 
 
 
@@ -132,17 +132,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
         }
     }
-
-    // corners (2x2)
-    //top left
-
-
-
-    // edges (3x2)
-
-
-
-
     return;
 }
 
