@@ -92,7 +92,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     int sum_green;
     int sum_red;
 
-    int avg;
+    int avg_blue;
+    int avg_green;
+    int avg_red;
 
     int start;
     int end;
@@ -116,14 +118,17 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                         sum_blue += copy[start][end].rgbtBlue;
                         sum_green += copy[start][end].rgbtGreen;
                         sum_red += copy[start][end].rgbtRed;
-                        
+
                         end++;
                     }
                     start++;
                 }
             }
-            avg = round(sum / 9);
-            set_all(i, y, avg, image);
+            avg_blue = round(sum_blue / 9);
+            avg_green = round(sum_green / 9);
+            avg_red = round(sum_red / 9);
+
+            set_all(i, y, avg_blue,avg_green, avg_red, image);
         }
     }
 
