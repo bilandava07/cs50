@@ -35,8 +35,6 @@ int main(int argc, char *argv[])
 
     float factor = atof(argv[3]);
 
-
-
     // TODO: Copy header from input file to output file
     BYTE tmp;
     for (int i = 0; i < HEADER_SIZE; i++)
