@@ -12,4 +12,4 @@ void reflect(int height, int width, RGBTRIPLE image[height][width]);
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width]);
 
-
+void set_all(int a, int b, int blue, int green, int red, RGBTRIPLE image[height][width]);
