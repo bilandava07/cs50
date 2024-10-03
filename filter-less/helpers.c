@@ -3,6 +3,7 @@
 
 
 int lesser (int a, int b);
+void avg_set (int start, int end, int block_height, int block_width, int *arr);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -168,4 +169,22 @@ int lesser (int a, int b)
         return b;
     else
         return b;
+}
+
+void avg_set (int start, int end, int block_height, int block_width, int *image)
+{
+    for (int z = start; z < start + block_height; z++)
+    {
+        {
+            for (int c = end; c < end + block_width; c++)
+            {
+                sum_blue += copy[z][c].rgbtBlue;
+                sum_green += copy[z][c].rgbtGreen;
+                sum_red += copy[z][c].rgbtRed;
+            }
+        }
+    }
+    image[i][y].rgbtBlue = round(sum_blue / (block_height * block_width * 1.0));
+    image[i][y].rgbtGreen = round(sum_green / (block_height * block_width * 1.0));
+    image[i][y].rgbtRed = round(sum_red / (block_height * block_width * 1.0));
 }
