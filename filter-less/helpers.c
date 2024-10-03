@@ -38,7 +38,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             image[i][y].rgbtGreen = lesser(green, 255);
             image[i][y].rgbtBlue = lesser(blue, 255);
         }
-
+    }
     return;
 }
 
@@ -53,23 +53,23 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     if (width % 2 == 0)
         n = (width / 2) - 1;
     else
-        n = width / 2
+        n = width / 2;
 
     for (int i = 0; i < height; i++)
     {
         for (int y = 0; y < n; y++)
         {
-            tmp_blue = image[i][y].blue;
-            tmp_green = iamge[i][y].green;
-            tmp_red = image[i][y].red;
+            tmp_blue = image[i][y].rgbtBlue;
+            tmp_green = image[i][y].rgbtGreen;
+            tmp_red = image[i][y].rgbtRed;
 
-            image[i][y].blue = image[i][width-(y+1)].blue;
-            image[i][y].green = image[i][width-(y+1)].green;
-            image[i][y].red = image[i][width-(y+1)].red;
+            image[i][y].rgbtBlue = image[i][width-(y+1)].rgbtBlue;
+            image[i][y].rgbtGreen = image[i][width-(y+1)].rgbtGreen;
+            image[i][y].rgbtRed = image[i][width-(y+1)].rgbtRed;
 
-            image[i][width-(y+1)].blue = tmp_blue;
-            image[i][width-(y+1)].green = tmp_green;
-            image[i][width-(y+1)].red = tmp_red;
+            image[i][width-(y+1)].rgbtBlue = tmp_blue;
+            image[i][width-(y+1)].rgbtGreen = tmp_green;
+            image[i][width-(y+1)].rgbtRed = tmp_red;
         }
     }
     return;
