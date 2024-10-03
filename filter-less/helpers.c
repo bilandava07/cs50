@@ -171,7 +171,7 @@ int lesser (int a, int b)
         return b;
 }
 
-void avg_set (int start, int end, int block_height, int block_width, int *image)
+void avg_set (int start, int end, int block_height, int block_width, int *image, int *copy)
 {
     for (int z = start; z < start + block_height; z++)
     {
