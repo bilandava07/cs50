@@ -84,9 +84,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     }
 
 
+    int block_height;
+    int block_width;
 
-
-    int inner_block = 3;
     int sum_blue;
     int sum_green;
     int sum_red;
@@ -97,12 +97,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
     int start;
     int end;
+
     // the inner block (3x3) // middle pixels
+    block_height = 3;
+    block_width = 3;
 
     //2 outer loops iterate through the inner block
-    for (int i = 1; i < height - 1; i++)
+    for (int i = 1; i < height - block_height; i++)
     {
-        for (int y = 1; y < width - 1; y++)
+        for (int y = 1; y < width - block_width; y++)
         {
             //block loops
             sum_blue = 0;
@@ -128,6 +131,27 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[i][y].rgbtRed = round(sum_red / 9.0);
 
         }
+
+
+    // corner pixels 2x2 blocks
+
+    start = 0;
+    end = 0;
+
+    for (int z = start; z < start + 2; z++)
+    {
+        {
+            for (int c = end; c < end + 2; c++)
+            {
+                sum_blue += copy[z][c].rgbtBlue;
+                sum_green += copy[z][c].rgbtGreen;
+                sum_red += copy[z][c].rgbtRed;
+            }
+        }
+    }
+    image[i][y].rgbtBlue = round(sum_blue / 9.0);
+    image[i][y].rgbtGreen = round(sum_green / 9.0);
+    image[i][y].rgbtRed = round(sum_red / 9.0);
     }
     return;
 }
