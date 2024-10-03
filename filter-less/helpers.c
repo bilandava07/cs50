@@ -115,7 +115,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             for (int z = start; z < start + 3; z++)
             {
                 {
-                    for (int c = 0; c < 3; c++)
+                    for (int c = end; c < 3; c++)
                     {
                         sum_blue += copy[start][end].rgbtBlue;
                         sum_green += copy[start][end].rgbtGreen;
