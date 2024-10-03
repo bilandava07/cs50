@@ -101,11 +101,22 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int y = 1; y < width - 1; y++)
         {
             //block loops
-
+            avg = 0;
             start = i - 1;
             end = y + 1;
 
-            for (int z = start)
+            for (int z = 0; z < 3; z++)
+            {
+                {
+                    for (int c = 0; c < 3; c++)
+                    {
+                        avg += copy[start][end];
+                        end++;
+                    }
+                    start++;
+                }
+            }
+            set_all(i, y, avg, image);
         }
     }
 
