@@ -84,7 +84,29 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
 
 
-    
+
+    // the inner block (3x3)
+
+    int inner_block = 3;
+    int sum_inner;
+
+    for (int i = 1; i < height - 1; i++)
+    {
+        for (int y = 1; y < width - 1; y++)
+        {
+            sum_inner = 0;
+
+            for(int z = 0; z < 3; z++)
+            {
+                for(int c = 0; c < 3; c++)
+                {
+                    sum_inner += copy
+                }
+            }
+        }
+    }
+
+
     return;
 }
 
