@@ -39,9 +39,9 @@ int main(int argc, char *argv[])
 
     // TODO: Copy header from input file to output file
     BYTE tmp;
-
-    while (fread(&tmp, sizeof(BYTE), 1, input))
+    for (int i = 0; i < HEADER_SIZE; i++)
     {
+        fread(&tmp, sizeof(BYTE), 1, input);
         fwrite(&tmp, sizeof(BYTE), 1, output);
     }
 
