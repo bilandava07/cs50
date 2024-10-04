@@ -1,10 +1,9 @@
 #include "helpers.h"
 #include <math.h>
 
-
-int lesser (int a, int b);
-void avg_set (int height, int width, int i, int y, int start, int end, int block_height, int block_width, RGBTRIPLE image[height][width], RGBTRIPLE copy[height][width]);
-
+int lesser(int a, int b);
+void avg_set(int height, int width, int i, int y, int start, int end, int block_height,
+             int block_width, RGBTRIPLE image[height][width], RGBTRIPLE copy[height][width]);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -61,13 +60,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             tmp_green = image[i][y].rgbtGreen;
             tmp_red = image[i][y].rgbtRed;
 
-            image[i][y].rgbtBlue = image[i][width-(y+1)].rgbtBlue;
-            image[i][y].rgbtGreen = image[i][width-(y+1)].rgbtGreen;
-            image[i][y].rgbtRed = image[i][width-(y+1)].rgbtRed;
+            image[i][y].rgbtBlue = image[i][width - (y + 1)].rgbtBlue;
+            image[i][y].rgbtGreen = image[i][width - (y + 1)].rgbtGreen;
+            image[i][y].rgbtRed = image[i][width - (y + 1)].rgbtRed;
 
-            image[i][width-(y+1)].rgbtBlue = tmp_blue;
-            image[i][width-(y+1)].rgbtGreen = tmp_green;
-            image[i][width-(y+1)].rgbtRed = tmp_red;
+            image[i][width - (y + 1)].rgbtBlue = tmp_blue;
+            image[i][width - (y + 1)].rgbtGreen = tmp_green;
+            image[i][width - (y + 1)].rgbtRed = tmp_red;
         }
     }
     return;
@@ -84,7 +83,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             copy[c1][c2] = image[c1][c2];
         }
     }
-
 
     int block_height;
     int block_width;
@@ -104,24 +102,23 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     block_height = 3;
     block_width = 3;
 
-    //2 outer loops iterate through the inner block
+    // 2 outer loops iterate through the inner block
     for (int i = 1; i < height - 1; i++)
     {
         for (int y = 1; y < width - 1; y++)
         {
             start = i - 1;
             end = y - 1;
-            avg_set (height, width, i, y, start, end, block_height, block_width, image, copy);
+            avg_set(height, width, i, y, start, end, block_height, block_width, image, copy);
         }
-
     }
     // corner pixels 2x2 blocks
     block_height = 2;
     block_width = 2;
-    avg_set (height, width, 0, 0, 0, 0, block_height, block_width, image, copy);
-    avg_set (height, width, height-1, 0, height-2, 0, block_height, block_width, image, copy);
-    avg_set (height, width, 0, width-1, 0, width-2, block_height, block_width, image, copy);
-    avg_set (height, width, height-1, width-1, height-2, width-2, block_height, block_width, image, copy);
+    avg_set(height, width, 0, 0, 0, 0, block_height, block_width, image, copy);
+    avg_set(height, width, height-1, 0, height-2, 0, block_height, block_width, image, copy);
+    avg_set(height, width, 0, width-1, 0, width-2, block_height, block_width, image, copy);
+    avg_set(height, width, height-1, width-1, height-2, width-2, block_height, block_width, image, copy);
 
     // horizontal edge, 2x3 blocks
     block_height = 2;
@@ -129,8 +126,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
     for (int q = 1; q < width - 1; q++)
     {
-        avg_set (height, width, 0, q, 0, q - 1, block_height, block_width, image, copy);
-        avg_set (height, width, height-1, q, height - 2, q - 1, block_height, block_width, image, copy);
+        avg_set(height, width, 0, q, 0, q - 1, block_height, block_width, image, copy);
+        avg_set(height, width, height-1, q, height - 2, q - 1, block_height, block_width, image, copy);
     }
 
     // vertical edge, 3x2 blocks
@@ -139,16 +136,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
     for (int e = 1; e < height - 1; e++)
     {
-        avg_set (height, width, e, 0, height-1, 0, block_height, block_width, image, copy);
-        avg_set (height, width, e, width-1, height-1, width-2, block_height, block_width, image, copy);
+        avg_set(height, width, e, 0, e - 1, 0, block_height, block_width, image, copy);
+        avg_set(height, width, e, width - 1, e - 1, width - 2, block_height, block_width, image, copy);
     }
 
     return;
 }
 
-
 // returns lesser out of two integers
-int lesser (int a, int b)
+int lesser(int a, int b)
 {
     if (a < b)
         return a;
@@ -158,7 +154,7 @@ int lesser (int a, int b)
         return b;
 }
 
-void avg_set (int height, int width, int i, int y, int start, int end, int block_height, int block_width, RGBTRIPLE image[height][width], RGBTRIPLE copy[height][width])
+void avg_set(int height, int width, int i, int y, int start, int end, int block_height, int block_width, RGBTRIPLE image[height][width], RGBTRIPLE copy[height][width])
 {
     int sum_blue = 0;
     int sum_green = 0;
@@ -179,4 +175,3 @@ void avg_set (int height, int width, int i, int y, int start, int end, int block
     image[i][y].rgbtGreen = round(sum_green / (block_height * block_width * 1.0));
     image[i][y].rgbtRed = round(sum_red / (block_height * block_width * 1.0));
 }
-
