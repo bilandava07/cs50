@@ -130,9 +130,13 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     for (int q = 1; q < width - 1; q++)
     {
         avg_set (height, width, 0, q, 0, q - 1, block_height, block_width, image, copy);
-        avg_set (height, width, height-1, q, 0, q - 1, block_height, block_width, image, copy);
+        avg_set (height, width, height-1, q, height - 2, q - 1, block_height, block_width, image, copy);
     }
-    avg_set (height, width, 0, 1, 0, 0, block_height, block_width, image, copy);
+
+    for (int e = 1; e < height - 1; h++)
+    {
+        avg_set (height, width, i, y, start, end, block_height, block_width, image, copy);
+    }
 
 
 
