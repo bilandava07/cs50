@@ -46,20 +46,20 @@ int main(int argc, char *argv[])
             {
                 sprintf(filename, "%03i.jpg", jpeg_counter);
                 FILE *img = fopen(filename, "w");
-                fwrite(buffer, 1, sizeof(BLOCK_SIZE), filename);
+                fwrite(buffer, 1, sizeof(BLOCK_SIZE), img);
             }
 
             // Then next JPEG have been found
             else
             {
                 // Close previous JPEG
-                fclose(filename);
+                fclose(img);
                 jpeg_counter++;
 
                 // Open a new JPEG and start writing to it
                 sprintf(filename, "%03i.jpg", jpeg_counter);
                 FILE *img = fopen(filename, "w");
-                fwrite(buffer, 1, sizeof(BLOCK_SIZE), filename);
+                fwrite(buffer, 1, sizeof(BLOCK_SIZE), img);
             }
         }
         // If not start of a new JPEG
@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
             // If already found a JPEG
             if (jpeg_counter > 0)
             {
-                fwrite(buffer, 1, sizeof(BLOCK_SIZE), filename);
+                fwrite(buffer, 1, sizeof(BLOCK_SIZE), img);
             }
         }
     }
