@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
     long position = ftell(card);
     printf("File pointer position before fread: %ld\n", position);
 
-    size_t bytesRead = fread(buffer, BLOCK_SIZE, 1, card);
+    size_t bytesRead = fread(buffer, 1, BLOCK_SIZE, card);
     printf("Bytes read: %zu\n", bytesRead);
 
     while (fread(buffer, BLOCK_SIZE, 1, card) == 1)
