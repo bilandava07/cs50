@@ -39,6 +39,12 @@ int main(int argc, char *argv[])
     FILE *img;
 
     // Read from the card file
+    fseek(card, 0, SEEK_END);
+    long fileSize = ftell(card);
+    fseek(card, 0, SEEK_SET);
+    printf("File size: %ld bytes\n", fileSize);
+
+    
     while (fread(buffer, BLOCK_SIZE, 1, card) == 1)
     {
         // If start of new jpg
