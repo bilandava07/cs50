@@ -5,7 +5,6 @@ int main(int argc, char *argv[])
 {
     if (argc != 2)
     {
-        printf("Usage: ./recover [name of the file]");
-        return 1;
+        printf("Usage: ./recover [name of the forensic image]");
     }
 }
