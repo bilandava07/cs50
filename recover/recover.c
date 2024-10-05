@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
 
     int jpg_counter = 0;
-    char *filename[7];
+    char *filename[8];
 
     // Read from the card file
     while (fread(buffer, sizeof(BLOCK_SIZE), 1, card) == 1)
