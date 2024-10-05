@@ -31,13 +31,24 @@ int main(int argc, char *argv[])
     }
 
     // Read from the card file
+    int jpg_found = 0;
 
     while (fread(buffer, sizeof(BLOCK_SIZE), 1, card) == 1)
     {
         // if start of new jpg
         if ((buffer[0] == 0xff) & (buffer[1] == 0xd8) & (buffer[2] == 0xff) & ((buffer[3] & 0xf0) & 0xe0))
         {
-            
+            // If it is the first jpg found 
+            if (jpg_found == 0)
+            {
+
+
+            }
+            else
+            {
+
+
+            }
         }
     }
 
