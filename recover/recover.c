@@ -10,12 +10,12 @@ int main(int argc, char *argv[])
     // Accept a single command-line argument
     if (argc != 2)
     {
-        printf("Usage: ./recover [name of the forensic image]\n");
+        printf("Usage: ./recover FILE\n");
     }
 
     // Open the memory card file for reading
 
-    FILE *card = fopen("card.raw", "r");
+    FILE *card = fopen(argv[1], "r");
     if (card == NULL)
     {
         printf("Could not open the file!\n");
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
         // if start of new jpg
         if ((buffer[0] == 0xff) & (buffer[1] == 0xd8) & (buffer[2] == 0xff) & ((buffer[3] & 0xf0) & 0xe0))
         {
-            
+
         }
     }
 
