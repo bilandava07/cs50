@@ -36,6 +36,10 @@ int main(int argc, char *argv[])
     char filename[8];
 
     FILE *img;
+    if (img == NULL)
+    {
+        return 3;
+    }
 
     // Read from the card file
     while (fread(buffer, 1, sizeof(BLOCK_SIZE), card) == 1)
