@@ -39,17 +39,6 @@ int main(int argc, char *argv[])
     FILE *img;
 
     // Read from the card file
-    fseek(card, 0, SEEK_END);
-    long fileSize = ftell(card);
-    fseek(card, 0, SEEK_SET);
-    printf("File size: %ld bytes\n", fileSize);
-
-    long position = ftell(card);
-    printf("File pointer position before fread: %ld\n", position);
-
-    size_t bytesRead = fread(buffer, 1, BLOCK_SIZE, card);
-    printf("Bytes read: %zu\n", bytesRead);
-
     while (fread(buffer, BLOCK_SIZE, 1, card) == 1)
     {
         if ((buffer[0] == 0xff) & (buffer[1] == 0xd8) & (buffer[2] == 0xff) & ((buffer[3] & 0xf0) == 0xe0))
