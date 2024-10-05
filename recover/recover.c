@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
     if (argc != 2)
     {
         printf("Usage: ./recover FILE\n");
+        return 1;
     }
 
     // Open the memory card file for reading
@@ -52,7 +53,7 @@ int main(int argc, char *argv[])
                 {
                 return 3;
                 }
-                fwrite(buffer, 1, sizeof(BLOCK_SIZE), img);
+                fwrite(buffer, 1, BLOCK_SIZE, img);
                 jpeg_counter++;
 
             }
@@ -71,7 +72,7 @@ int main(int argc, char *argv[])
                 return 3;
                 }
 
-                fwrite(buffer, 1, sizeof(BLOCK_SIZE), img);
+                fwrite(buffer, 1, BLOCK_SIZE, img);
                 jpeg_counter++;
             }
         }
@@ -81,7 +82,7 @@ int main(int argc, char *argv[])
             // If already found a JPEG
             if (jpeg_counter > 0)
             {
-                fwrite(buffer, 1, sizeof(BLOCK_SIZE), img);
+                fwrite(buffer, 1, BLOCK_SIZE, img);
             }
         }
     }
