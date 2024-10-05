@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 
 
     int jpeg_counter = 0;
-    char *filename[8];
+    char *filename = malloc(sizeof(char) * 8);
 
     // Read from the card file
     while (fread(buffer, 1, sizeof(BLOCK_SIZE), card) == 1)
