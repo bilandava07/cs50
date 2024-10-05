@@ -19,5 +19,6 @@ int main(int argc, char *argv[])
         printf("Could not open the file!\n");
         return 2;
     }
+
     
 }
