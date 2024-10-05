@@ -65,6 +65,11 @@ int main(int argc, char *argv[])
                 // Open a new JPEG and start writing to it
                 sprintf(filename, "%03i.jpg", jpeg_counter);
                 img = fopen(filename, "w");
+                if (img == NULL)
+                {
+                return 3;
+                }
+
                 fwrite(buffer, 1, sizeof(BLOCK_SIZE), img);
             }
         }
