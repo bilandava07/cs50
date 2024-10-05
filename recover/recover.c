@@ -31,25 +31,35 @@ int main(int argc, char *argv[])
     }
 
 
-    int jpg_counter = 0;
+    int jpeg_counter = 0;
     char *filename[8];
 
     // Read from the card file
     while (fread(buffer, sizeof(BLOCK_SIZE), 1, card) == 1)
     {
-        // if start of new jpg
+        // If start of new jpg
         if ((buffer[0] == 0xff) & (buffer[1] == 0xd8) & (buffer[2] == 0xff) & ((buffer[3] & 0xf0) & 0xe0))
         {
-            // If it is the first jpg found
-            if (jpg_counter == 0)
+            // If it is the first JPEG found
+            if (jpeg_counter == 0)
             {
-                sprintf(filename, "%03i.jpg", jpg_counter);
-                FILE *img = fopen(filename, "w"); 
+                sprintf(filename, "%03i.jpg", jpeg_counter);
+                FILE *img = fopen(filename, "w");
             }
             else
             {
 
 
+            }
+        }
+
+        // If not start of a new JPEG
+        else
+        {
+            // If already found a JPEG
+            if ( jpeg_counter > 0)
+            {
+                
             }
         }
     }
