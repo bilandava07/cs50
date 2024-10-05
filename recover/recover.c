@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
             if (jpg_counter == 0)
             {
                 sprintf(filename, "%03i.jpg", jpg_counter);
-
+                FILE *img = fopen(filename, "w"); 
             }
             else
             {
