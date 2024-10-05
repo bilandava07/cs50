@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define BLOCK 512
+#define BLOCK_SIZE 512
+
+typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
@@ -13,12 +15,19 @@ int main(int argc, char *argv[])
 
     // Open the memory card file for reading
 
-    FILE *card = fopen( "card.raw", "r");
+    FILE *card = fopen("card.raw", "r");
     if (card == NULL)
     {
         printf("Could not open the file!\n");
         return 2;
     }
 
-    
+    // Create buffer
+
+    BYTE *buffer = malloc(sizeof(BYTE) * BLOCK_SIZE);
+    if (buffer == NULL)
+    {
+        return 3;
+    }
+
 }
