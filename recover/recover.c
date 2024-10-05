@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 
     // Create buffer
 
-    BYTE *buffer = malloc(sizeof(BYTE) * BLOCK_SIZE);
+    BYTE *buffer = malloc(BLOCK_SIZE);
     if (buffer == NULL)
     {
         return 3;
@@ -50,7 +50,6 @@ int main(int argc, char *argv[])
 
     while (fread(buffer, BLOCK_SIZE, 1, card) == 1)
     {
-        printf("works");
         // If start of new jpg
         if ((buffer[0] == 0xff) & (buffer[1] == 0xd8) & (buffer[2] == 0xff) & ((buffer[3] & 0xf0) & 0xe0))
         {
