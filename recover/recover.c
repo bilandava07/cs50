@@ -53,6 +53,8 @@ int main(int argc, char *argv[])
                 return 3;
                 }
                 fwrite(buffer, 1, sizeof(BLOCK_SIZE), img);
+                jpeg_counter++;
+
             }
 
             // Then next JPEG have been found
@@ -60,7 +62,6 @@ int main(int argc, char *argv[])
             {
                 // Close previous JPEG
                 fclose(img);
-                jpeg_counter++;
 
                 // Open a new JPEG and start writing to it
                 sprintf(filename, "%03i.jpg", jpeg_counter);
@@ -71,6 +72,7 @@ int main(int argc, char *argv[])
                 }
 
                 fwrite(buffer, 1, sizeof(BLOCK_SIZE), img);
+                jpeg_counter++;
             }
         }
         // If not start of a new JPEG
