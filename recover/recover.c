@@ -30,4 +30,11 @@ int main(int argc, char *argv[])
         return 3;
     }
 
+    // Read from the card file
+
+    while (fread(buffer, sizeof(BLOCK_SIZE), 1, card) == 1)
+    {
+        
+    }
+
 }
