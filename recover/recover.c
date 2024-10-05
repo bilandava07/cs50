@@ -44,7 +44,10 @@ int main(int argc, char *argv[])
     fseek(card, 0, SEEK_SET);
     printf("File size: %ld bytes\n", fileSize);
 
-    
+    long position = ftell(card);
+    printf("File pointer position before fread: %ld\n", position);
+
+
     while (fread(buffer, BLOCK_SIZE, 1, card) == 1)
     {
         // If start of new jpg
