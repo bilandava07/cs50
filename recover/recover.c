@@ -34,6 +34,11 @@ int main(int argc, char *argv[])
 
     int jpeg_counter = 0;
     char *filename = malloc(sizeof(char) * 8);
+    if (filename == NULL)
+    {
+        return 3;
+    }
+    FILE *img;
 
     // Read from the card file
     while (fread(buffer, 1, sizeof(BLOCK_SIZE), card) == 1)
@@ -45,7 +50,7 @@ int main(int argc, char *argv[])
             if (jpeg_counter == 0)
             {
                 sprintf(filename, "%03i.jpg", jpeg_counter);
-                FILE *img = fopen(filename, "w");
+                img = fopen(filename, "w");
                 fwrite(buffer, 1, sizeof(BLOCK_SIZE), img);
             }
 
@@ -58,7 +63,7 @@ int main(int argc, char *argv[])
 
                 // Open a new JPEG and start writing to it
                 sprintf(filename, "%03i.jpg", jpeg_counter);
-                FILE *img = fopen(filename, "w");
+                img = fopen(filename, "w");
                 fwrite(buffer, 1, sizeof(BLOCK_SIZE), img);
             }
         }
@@ -72,6 +77,8 @@ int main(int argc, char *argv[])
             }
         }
     }
-    fclose(filename);
+    fclose(img);
+    free(filename);
+    free(buffer);
 
 }
