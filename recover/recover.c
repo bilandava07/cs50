@@ -52,12 +52,7 @@ int main(int argc, char *argv[])
 
     while (fread(buffer, BLOCK_SIZE, 1, card) == 1)
     {
-        // If start of new jpg
-        if ((buffer[0] == 0xff) & (buffer[1] == 0xd8) & (buffer[2] == 0xff))
-        {
-            printf("found\n");
-        }
-        if ((buffer[0] == 0xff) & (buffer[1] == 0xd8) & (buffer[2] == 0xff) & ((buffer[3] & 0xf0) & 0xe0))
+        if ((buffer[0] == 0xff) & (buffer[1] == 0xd8) & (buffer[2] == 0xff) & ((buffer[3] & 0xf0) == 0xe0))
         {
             // If it is the first JPEG found
             if (jpeg_counter == 0)
