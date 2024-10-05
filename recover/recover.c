@@ -36,10 +36,6 @@ int main(int argc, char *argv[])
     char filename[8];
 
     FILE *img;
-    if (img == NULL)
-    {
-        return 3;
-    }
 
     // Read from the card file
     while (fread(buffer, 1, sizeof(BLOCK_SIZE), card) == 1)
@@ -52,6 +48,10 @@ int main(int argc, char *argv[])
             {
                 sprintf(filename, "%03i.jpg", jpeg_counter);
                 img = fopen(filename, "w");
+                if (img == NULL)
+                {
+                return 3;
+                }
                 fwrite(buffer, 1, sizeof(BLOCK_SIZE), img);
             }
 
