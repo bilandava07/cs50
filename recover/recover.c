@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     char *filename[8];
 
     // Read from the card file
-    while (fread(buffer, sizeof(BLOCK_SIZE), 1, card) == 1)
+    while (fread(buffer, 1, sizeof(BLOCK_SIZE), card) == 1)
     {
         // If start of new jpg
         if ((buffer[0] == 0xff) & (buffer[1] == 0xd8) & (buffer[2] == 0xff) & ((buffer[3] & 0xf0) & 0xe0))
@@ -45,6 +45,7 @@ int main(int argc, char *argv[])
             {
                 sprintf(filename, "%03i.jpg", jpeg_counter);
                 FILE *img = fopen(filename, "w");
+                fwrite(buffer, 1, sizeof(BLOCK_SIZE), filename);
             }
             else
             {
@@ -59,7 +60,7 @@ int main(int argc, char *argv[])
             // If already found a JPEG
             if ( jpeg_counter > 0)
             {
-                
+
             }
         }
     }
