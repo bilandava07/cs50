@@ -59,8 +59,6 @@ int main(int argc, char *argv[])
                 sprintf(filename, "%03i.jpg", jpeg_counter);
                 FILE *img = fopen(filename, "w");
                 fwrite(buffer, 1, sizeof(BLOCK_SIZE), filename);
-
-
             }
         }
         // If not start of a new JPEG
