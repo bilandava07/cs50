@@ -30,18 +30,20 @@ int main(int argc, char *argv[])
         return 3;
     }
 
-    // Read from the card file
-    int jpg_found = 0;
 
+    int jpg_counter = 0;
+    char *filename[7];
+
+    // Read from the card file
     while (fread(buffer, sizeof(BLOCK_SIZE), 1, card) == 1)
     {
         // if start of new jpg
         if ((buffer[0] == 0xff) & (buffer[1] == 0xd8) & (buffer[2] == 0xff) & ((buffer[3] & 0xf0) & 0xe0))
         {
-            // If it is the first jpg found 
-            if (jpg_found == 0)
+            // If it is the first jpg found
+            if (jpg_counter == 0)
             {
-
+                sprintf(filename, "%03i.jpg", jpg_counter);
 
             }
             else
