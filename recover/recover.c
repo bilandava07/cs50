@@ -65,11 +65,12 @@ int main(int argc, char *argv[])
         else
         {
             // If already found a JPEG
-            if ( jpeg_counter > 0)
+            if (jpeg_counter > 0)
             {
                 fwrite(buffer, 1, sizeof(BLOCK_SIZE), filename);
             }
         }
     }
+    fclose(filename);
 
 }
