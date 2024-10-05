@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
     FILE *img;
 
     // Read from the card file
-    while (fread(buffer, 1, sizeof(BLOCK_SIZE), card) == 1)
+    while (fread(buffer, 1, sizeof(BLOCK_SIZE), card) == BLOCK_SIZE)
     {
         // If start of new jpg
         if ((buffer[0] == 0xff) & (buffer[1] == 0xd8) & (buffer[2] == 0xff) & ((buffer[3] & 0xf0) & 0xe0))
