@@ -88,6 +88,4 @@ int main(int argc, char *argv[])
     fclose(img);
     fclose(card);
     free(buffer);
-
-
 }
