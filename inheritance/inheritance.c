@@ -87,6 +87,7 @@ void free_family(person *p)
     if (p->parents[0] == NULLL && p->parents[1] == NULL)
     {
         free(p);
+        return;
     }
 
     free_family(p->parents[0])
