@@ -169,8 +169,19 @@ bool unload(void)
     free(new_node);
     for (int i = 0; i < N; i++)
     {
-        table[i].
+        destroy_list[i];
     }
     return false;
+}
+
+void destroy_list(node* head)
+{
+    if (head->next == NULL)
+    {
+        return;
+    }
+
+    destroy_list(head->next);
+    free()
 }
 

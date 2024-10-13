@@ -16,4 +16,6 @@ bool load(const char *dictionary);
 unsigned int size(void);
 bool unload(void);
 
+void destroy_list(node* head);
+
 #endif // DICTIONARY_H
