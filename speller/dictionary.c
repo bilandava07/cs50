@@ -68,6 +68,21 @@ bool load(const char *dictionary)
 
         index = hash(word);
 
+        // if the linked list is empty, set the head of the list to be pointing to the new_node
+        if (table[index] == NULL)
+        {
+            table[index] = new_node;
+            free(new_node);
+
+        }
+        // the list is not empty -> insert the new_node at the beginning of the linked list
+        else
+        {
+            new_node->next = table[index]->next;
+            table[index]->next = new_node;
+            free(new_node);
+        }
+
 
     }
 
