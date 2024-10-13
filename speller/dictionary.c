@@ -42,13 +42,18 @@ unsigned int hash(const char *word)
         }
         else
         {
-            sum += (word[i]) - 'a';
+            sum += (word[i]);
         }
         counter++;
     }
+
     if (sum > 999)
     {
-        index = sum % 999;
+        do
+        {
+            sum -= 1000;
+        }
+        while
     }
     else
     {
