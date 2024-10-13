@@ -34,7 +34,7 @@ unsigned int hash(const char *word)
     int i = 0;
     while (word[i] != '\0')
     {
-        toupper(word[i]);
+        word[i] = toupper(word[i]);
         sum += word[i];
     }
 }
