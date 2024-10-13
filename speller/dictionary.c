@@ -4,7 +4,9 @@
 #include <stdbool.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 #include "dictionary.h"
+
 
 // Represents a node in a hash table
 typedef struct node
@@ -110,7 +112,7 @@ bool load(const char *dictionary)
         table[i] = NULL;
     }
     // open the file and check the pointer
-    FILE *file = fopen(dictionary, 'r');
+    FILE *file = fopen(dictionary, "r");
     if (file == NULL)
     {
         printf("Could not open the file!");
@@ -124,7 +126,7 @@ bool load(const char *dictionary)
     // create a buffer for the index returned by the hash function
     int index;
     // read one word at a time until reached the EOF
-    while (fscanf(file, "%s", words) != EOF)
+    while (fscanf(file, "%s", word) != EOF)
     {
         new_node = malloc(sizeof(node));
         if (new_node == NULL)
