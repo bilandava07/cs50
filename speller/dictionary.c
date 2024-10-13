@@ -2,7 +2,7 @@
 
 #include <ctype.h>
 #include <stdbool.h>
-
+#include <string.h>
 // #include "dictionary.h"
 
 // Represents a node in a hash table
@@ -58,7 +58,7 @@ bool load(const char *dictionary)
             printf("Could not allocate space for a new node!");
             return false;
         }
-        
+        strcpy(new_node->word, word);
 
     }
 
