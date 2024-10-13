@@ -40,7 +40,7 @@ bool check(const char *word)
     }
     word_copy[counter] = '\0';
 
-    index = hash(word_copy);
+    index = hash(tolower(word_copy));
 
     if (table[index] == NULL)
     {
