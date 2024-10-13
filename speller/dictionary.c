@@ -53,16 +53,12 @@ unsigned int hash(const char *word)
         {
             sum -= 1000;
         }
-        while
+        while (sum > 999);
     }
-    else
-    {
-        index = sum;
-    }
+
+    index = sum;
 
     return index;
-
-
 }
 
 // Loads dictionary into memory, returning true if successful, else false
