@@ -27,14 +27,19 @@ int word_count = 0;
 bool check(const char *word)
 {
     // make the function case-insensitive
+    int index;
+    char* word_copy[LENGTH+1];
+
     int counter = 0;
     while (word[counter] != '\0')
     {
-        word[counter] = tolower(word[i]);
+        word_copy[counter] = tolower(word[i]);
         counter++;
     }
 
-    char *word_copy[counter];
+    index = hash(word_copy);
+
+    do 
 }
 
 // Hashes word to a number
