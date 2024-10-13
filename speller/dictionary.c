@@ -45,10 +45,10 @@ bool load(const char *dictionary)
 
     // create a buffer to store the words
     char word[LENGTH + 1];
-    
-    while (fscanf(file, "%s", words) != EOF)
-    {
 
+    while ()
+    {
+        fscanf(file, "%s", words)
     }
 
     return false;
