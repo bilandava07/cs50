@@ -2,6 +2,6 @@
 
 int main(void)
 {
-    printf("%i\n", 450 % 4);
+    printf("%i\n", 450 % 14);
 
 }
