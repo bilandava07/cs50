@@ -45,10 +45,10 @@ bool load(const char *dictionary)
 
     // create a buffer to store a word
     char word[LENGTH + 1];
-
     // create a buffer for new node
     node *new_node;
-
+    // create a buffer for the index returned by the hash function
+    int index;
     // read one word at a time until reached the EOF
     while (fscanf(file, "%s", words) != EOF)
     {
@@ -60,6 +60,9 @@ bool load(const char *dictionary)
         }
         strcpy(new_node->word, word);
         new_node->next = NULL;
+
+        index = hash(word);
+
 
     }
 
