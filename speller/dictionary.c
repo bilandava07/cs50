@@ -36,19 +36,20 @@ unsigned int hash(const char *word)
     int counter = 0;
     while (word[counter] != '\0')
     {
-        if (word[i] == "'")
+        if (word[i] == '\'')
         {
-            sum += "'";
+            sum += '\'';
         }
         else
         {
             sum += toupper(word[i]) - 'A';
         }
-
-            counter++;
+        counter++;
     }
-
-    index =
+    if (sum > 999)
+    {
+        
+    }
 
 
 }
