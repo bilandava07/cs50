@@ -1,5 +1,5 @@
 // Implements a dictionary's functionality
-
+#include <stdio.h>
 #include <ctype.h>
 #include <stdbool.h>
 #include <string.h>
@@ -28,7 +28,7 @@ bool check(const char *word)
 {
     // force to lower case
     int index;
-    char* word_copy[LENGTH+1];
+    char word_copy[LENGTH+1];
 
     int counter = 0;
     while (word[counter] != '\0')
@@ -76,13 +76,13 @@ unsigned int hash(const char *word)
     int counter = 0;
     while (word[counter] != '\0')
     {
-        if (word[i] == '\'')
+        if (word[counter] == '\'')
         {
             sum += '\'';
         }
         else
         {
-            sum += (word[i]);
+            sum += (word[counter]);
         }
         counter++;
     }
@@ -110,7 +110,7 @@ bool load(const char *dictionary)
         table[i] = NULL;
     }
     // open the file and check the pointer
-    FILE file = fopen(dictionary, 'r');
+    FILE *file = fopen(dictionary, 'r');
     if (file == NULL)
     {
         printf("Could not open the file!");
