@@ -169,12 +169,11 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    free(new_node);
     for (int i = 0; i < N; i++)
     {
-        destroy_list[i];
+        destroy_list(table[i]);
     }
-    return false;
+    return true;
 }
 
 void destroy_list(node* head)
