@@ -39,7 +39,13 @@ bool check(const char *word)
 
     index = hash(word_copy);
 
-    do 
+    if (table[index] == NULL)
+    {
+        printf("Error! Could not dereference a NULL pointer!\n");
+        return false;
+    }
+
+    while (table[index]->)
 }
 
 // Hashes word to a number
