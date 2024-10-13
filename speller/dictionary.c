@@ -36,11 +36,11 @@ unsigned int hash(const char *word)
     int counter = 0;
     while (word[counter] != '\0')
     {
-        sum += toupper(word[i]);
+        sum += toupper(word[i]) - 'A';
         counter++;
     }
 
-    index = 
+    index =
 
 
 }
