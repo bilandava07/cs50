@@ -40,7 +40,7 @@ bool check(const char *word)
     }
     word_copy[counter] = '\0';
 
-    index = hash(tolower(word_copy));
+    index = hash(word_copy);
 
     if (table[index] == NULL)
     {
@@ -159,7 +159,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    return 0;
+    return word_count;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
