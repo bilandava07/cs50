@@ -36,12 +36,13 @@ bool check(const char *word)
         word_copy[counter] = tolower(word[i]);
         counter++;
     }
+    word_copy[counter] = '\0';
 
     index = hash(word_copy);
 
     if (table[index] == NULL)
     {
-        printf("Error! Could not dereference a NULL pointer!\n");
+        printf("Error! Can not dereference a NULL pointer!\n");
         return false;
     }
 
