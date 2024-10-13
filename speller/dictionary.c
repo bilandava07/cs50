@@ -45,7 +45,15 @@ bool check(const char *word)
         return false;
     }
 
+
     while(true)
+    {
+        if (strcmp(table[index]->word, word_copy))
+        {
+            return true;
+        }
+        else
+    }
 }
 
 // Hashes word to a number
