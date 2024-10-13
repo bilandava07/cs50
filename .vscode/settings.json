@@ -7,6 +7,7 @@
         "type_traits": "c",
         "utility": "c",
         "math.h": "c",
-        "initializer_list": "c"
+        "initializer_list": "c",
+        "stdbool.h": "c"
     }
 }

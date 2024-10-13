@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 
-#include "dictionary.h"
+// #include "dictionary.h"
 
 // Represents a node in a hash table
 typedef struct node
