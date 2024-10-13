@@ -26,7 +26,7 @@ int word_count = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // make the function case-insensitive
+    // force to lower case
     int index;
     char* word_copy[LENGTH+1];
 
@@ -45,18 +45,22 @@ bool check(const char *word)
         return false;
     }
 
+    // ptr to traverse through the list is set to the head of the list
     node *ptr = table[index];
 
     while(true)
     {
-        if (strcmp(ptr->word, word_copy))
+        // if found
+        if (strcmp(ptr->word, word_copy) == 0)
         {
             return true;
         }
+        // if end of the list
         if (ptr->next == NULL)
         {
             return false;
         }
+        // go to the next node
         ptr = ptr->next;
     }
 }
