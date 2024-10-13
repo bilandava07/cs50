@@ -34,7 +34,7 @@ bool check(const char *word)
         counter++;
     }
 
-    char *
+    char *word_copy[counter];
 }
 
 // Hashes word to a number
