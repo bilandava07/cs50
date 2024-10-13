@@ -108,10 +108,9 @@ bool load(const char *dictionary)
             new_node->next = table[index]->next;
             table[index]->next = new_node;
         }
-
-
+        
     }
-    return false;
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
