@@ -42,7 +42,7 @@ unsigned int hash(const char *word)
         }
         else
         {
-            sum += toupper(word[i]) - 'A';
+            sum += (word[i]) - 'a';
         }
         counter++;
     }
