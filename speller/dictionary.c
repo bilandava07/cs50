@@ -30,12 +30,17 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
+    int index = 0;
+
     int sum = 0;
-    int i = 0;
-    while (word[i] != '\0')
+    int counter = 0;
+    while (word[counter] != '\0')
     {
         sum += toupper(word[i]);
+        counter++;
     }
+
+    index = 
 
 
 }
