@@ -45,14 +45,19 @@ bool check(const char *word)
         return false;
     }
 
+    node *ptr = table[index];
 
     while(true)
     {
-        if (strcmp(table[index]->word, word_copy))
+        if (strcmp(ptr->word, word_copy))
         {
             return true;
         }
-        else
+        if (ptr->next == NULL)
+        {
+            return false;
+        }
+        ptr = ptr->next;
     }
 }
 
