@@ -43,13 +43,21 @@ bool load(const char *dictionary)
         return false;
     }
 
-    // create a buffer to store the words
+    // create a buffer to store a word
     char word[LENGTH + 1];
+
+    // create a buffer for new node
+    node *n;
 
     // read one word at a time until reached the EOF
     while (fscanf(file, "%s", words) != EOF)
     {
-        
+        n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            printf("Could not allocate space for a new node!");
+            return false;
+        }
     }
 
     return false;
