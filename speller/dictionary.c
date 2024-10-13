@@ -167,5 +167,10 @@ bool unload(void)
 {
     // TODO
     free(new_node);
+    for (int i = 0; i < N; i++)
+    {
+        table[i].
+    }
     return false;
 }
+
