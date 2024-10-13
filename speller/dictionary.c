@@ -34,9 +34,10 @@ unsigned int hash(const char *word)
     int i = 0;
     while (word[i] != '\0')
     {
-        word[i] = toupper(word[i]);
-        sum += word[i];
+        sum += toupper(word[i]);
     }
+
+
 }
 
 // Loads dictionary into memory, returning true if successful, else false
