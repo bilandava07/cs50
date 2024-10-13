@@ -35,13 +35,19 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
-    // TODO
+    // open the file and check the pointer
     FILE file = fopen(dictionary, 'r');
     if (file == NULL)
     {
         printf("Could not open the file!");
         return false;
     }
+
+    // create a buffer to store the words
+    char word[LENGTH + 1];
+
+    while (fscanf(file, "%s", words) != EOF)
+
     return false;
 }
 
