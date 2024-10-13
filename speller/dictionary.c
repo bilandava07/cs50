@@ -19,6 +19,10 @@ const unsigned int N = 26;
 // Hash table
 node *table[N];
 
+// global variable to keep track of the words added
+
+int word_count = 0;
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -108,7 +112,7 @@ bool load(const char *dictionary)
             new_node->next = table[index]->next;
             table[index]->next = new_node;
         }
-        
+    word_count++;
     }
     return true;
 }
