@@ -48,8 +48,14 @@ unsigned int hash(const char *word)
     }
     if (sum > 999)
     {
-        
+        index = sum % 999;
     }
+    else
+    {
+        index = sum;
+    }
+
+    return index;
 
 
 }
