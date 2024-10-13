@@ -26,8 +26,15 @@ int word_count = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
-    return false;
+    // make the function case-insensitive
+    int counter = 0;
+    while (word[counter] != '\0')
+    {
+        word[counter] = tolower(word[i]);
+        counter++;
+    }
+
+    char *
 }
 
 // Hashes word to a number
