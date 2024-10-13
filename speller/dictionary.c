@@ -33,7 +33,7 @@ bool check(const char *word)
     int counter = 0;
     while (word[counter] != '\0')
     {
-        word_copy[counter] = tolower(word[i]);
+        word_copy[counter] = tolower(word[counter]);
         counter++;
     }
     word_copy[counter] = '\0';
