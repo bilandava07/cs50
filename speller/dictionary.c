@@ -48,7 +48,6 @@ bool check(const char *word)
 
     if (table[index] == NULL)
     {
-        printf("Error! Can not dereference a NULL pointer!\n");
         return false;
     }
 
