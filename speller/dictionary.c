@@ -153,6 +153,7 @@ bool load(const char *dictionary)
         }
     word_count++;
     }
+    fclose()
     return true;
 }
 
@@ -171,6 +172,7 @@ bool unload(void)
     {
         destroy_list(table[i]);
     }
+
     return true;
 }
 
