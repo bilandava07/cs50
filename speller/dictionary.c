@@ -16,9 +16,6 @@ typedef struct node
 
 void destroy_list(node* head);
 
-// create a buffer for new node
-node *new_node;
-
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 999;
 
@@ -109,6 +106,8 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
+    // create a buffer for new node
+    node *new_node;
     // preset the whole hash table to NULL
     for (int i = 0; i < N; i++)
     {
