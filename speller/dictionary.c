@@ -177,6 +177,10 @@ bool unload(void)
 
 void destroy_list(node* head)
 {
+    if (head == NULL)
+    {
+        return;
+    }
     if (head->next == NULL)
     {
         return;
