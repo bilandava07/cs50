@@ -150,7 +150,7 @@ bool load(const char *dictionary)
         else
         {
             new_node->next = table[index];
-            table[index]->next = new_node;
+            table[index] = new_node;
         }
     word_count++;
     }
@@ -170,7 +170,7 @@ bool unload(void)
     // TODO
     for (int i = 0; i < N; i++)
     {
-            if (head != NULL)
+            if (table[i] != NULL)
             {
                 destroy_list(table[i]);
             }
