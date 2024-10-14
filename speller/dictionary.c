@@ -170,17 +170,16 @@ bool unload(void)
     // TODO
     for (int i = 0; i < N; i++)
     {
-        destroy_list(table[i]);
+            if (head != NULL)
+            {
+                destroy_list(table[i]);
+            }
     }
     return true;
 }
 
 void destroy_list(node* head)
 {
-    if (head == NULL)
-    {
-        return;
-    }
     if (head->next == NULL)
     {
         return;
