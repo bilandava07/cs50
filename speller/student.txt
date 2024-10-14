@@ -173,7 +173,6 @@ Mia
 Carlo's
 Mia
 MIA
-polyester
 y'all
 MIA
 Mia
@@ -958,7 +957,7 @@ Mia
 Sebastian's
 L
 
-WORDS MISSPELLED:     956
+WORDS MISSPELLED:     955
 WORDS IN DICTIONARY:  143091
 WORDS IN TEXT:        17756
 TIME IN load:         12910723178.00
