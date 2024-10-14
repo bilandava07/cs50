@@ -149,7 +149,7 @@ bool load(const char *dictionary)
         // the list is not empty -> insert the new_node at the beginning of the linked list
         else
         {
-            new_node->next = table[index]->next;
+            new_node->next = table[index];
             table[index]->next = new_node;
         }
     word_count++;
