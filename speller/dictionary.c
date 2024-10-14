@@ -169,10 +169,7 @@ bool unload(void)
     // TODO
     for (int i = 0; i < N; i++)
     {
-            if (table[i] != NULL)
-            {
-                destroy_list(table[i]);
-            }
+        destroy_list(table[i]);
     }
     return true;
 }
