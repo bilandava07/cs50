@@ -86,10 +86,6 @@ unsigned int hash(const char *word)
             sum += 300;
         }
 
-        if (word[counter] > 'u' && word[counter] < 'z')
-        {
-            sum -= 100;
-        }
         sum += (word[counter]);
         counter++;
     }
