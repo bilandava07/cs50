@@ -88,12 +88,13 @@ unsigned int hash(const char *word)
         counter++;
     }
 
-    sum -= counter
+    sum -= (counter * 97);
+
     if (sum > 999)
     {
         do
         {
-            sum -= 700;
+            sum %= 999;
         }
         while (sum > 999);
     }
