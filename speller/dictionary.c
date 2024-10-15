@@ -83,15 +83,15 @@ unsigned int hash(const char *word)
     {
         if (word[counter] > 'd' && word[counter] < 'i')
         {
-            sum += 600;
+            sum += 300;
         }
-        else
+
+        if (word[counter] > 'u' && word[counter] < 'z')
+        {
+            sum -= 100;
+        }
         sum += (word[counter]);
         counter++;
-    }
-    if(sum < 999)
-    {
-        sum
     }
 
     if (sum > 999)
@@ -108,8 +108,7 @@ unsigned int hash(const char *word)
     }
 
     index = sum;
-    //printf("Calls of hash: %i\n", tmp);
-    tmp++;
+
     return index;
 }
 
