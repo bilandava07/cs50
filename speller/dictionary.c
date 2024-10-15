@@ -1,11 +1,10 @@
 // Implements a dictionary's functionality
-#include <stdio.h>
+#include "dictionary.h"
 #include <ctype.h>
 #include <stdbool.h>
-#include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
-#include "dictionary.h"
-
+#include <string.h>
 
 // Represents a node in a hash table
 typedef struct node
@@ -14,7 +13,7 @@ typedef struct node
     struct node *next;
 } node;
 
-void destroy_list(node* head);
+void destroy_list(node *head);
 
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 999;
@@ -31,7 +30,7 @@ bool check(const char *word)
 {
     // force to lower case
     int index;
-    char word_copy[LENGTH+1];
+    char word_copy[LENGTH + 1];
 
     int counter = 0;
     while (word[counter] != '\0')
@@ -51,7 +50,7 @@ bool check(const char *word)
     // ptr to traverse through the list is set to the head of the list
     node *ptr = table[index];
 
-    while(true)
+    while (true)
     {
         // if found
         if (strcmp(ptr->word, word_copy) == 0)
@@ -150,7 +149,7 @@ bool load(const char *dictionary)
             new_node->next = table[index];
             table[index] = new_node;
         }
-    word_count++;
+        word_count++;
     }
     fclose(file);
     return true;
@@ -175,7 +174,7 @@ bool unload(void)
     return true;
 }
 
-void destroy_list(node* head)
+void destroy_list(node *head)
 {
     if (head == NULL)
     {
@@ -185,4 +184,3 @@ void destroy_list(node* head)
     destroy_list(head->next);
     free(head);
 }
-
