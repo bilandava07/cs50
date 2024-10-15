@@ -89,6 +89,10 @@ unsigned int hash(const char *word)
         sum += (word[counter]);
         counter++;
     }
+    if(sum < 999)
+    {
+        sum
+    }
 
     if (sum > 999)
     {
