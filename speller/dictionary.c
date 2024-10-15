@@ -89,6 +89,12 @@ unsigned int hash(const char *word)
     {
         do
         {
+            sum /= 2;
+            if (sum > 500)
+            {
+                sum -= 500;
+            }
+            else
             sum -= 700;
         }
         while (sum > 999);
