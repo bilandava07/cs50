@@ -76,9 +76,9 @@ unsigned int hash(const char *word)
     int counter = 0;
     while (word[counter] != '\0')
     {
-        if (word[counter] == "a")
+        if (word[counter] == 'z')
         {
-            sum += 150;
+            sum += 400;
         }
         sum += (word[counter]);
         counter++;
