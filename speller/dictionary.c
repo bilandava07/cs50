@@ -13,11 +13,6 @@ typedef struct node
     struct node *next;
 } node;
 
-// TEMPORARY VALUABLE REMOVE AFTER USE
-
-int tmp = 0;
-
-// TEMPORARY VALUABLE REMOVE AFTER USE
 void destroy_list(node *head);
 
 // TODO: Choose number of buckets in hash table
@@ -95,10 +90,7 @@ unsigned int hash(const char *word)
         do
         {
             sum /= 2;
-
             sum -= 500;
-
-            // sum -= 700;
         }
         while (sum > 999);
     }
