@@ -70,7 +70,6 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-    // TODO: Improve this hash function
     int index = 0;
 
     int sum = 0;
@@ -79,23 +78,16 @@ unsigned int hash(const char *word)
     {
         if (word[counter] == '\'')
         {
-            sum += 97;
-        }
-        else
-        {
             sum += (word[counter]);
         }
         counter++;
     }
 
-    sum = sum - (counter * 97);
-    sum *= 1.5;
-
     if (sum > 999)
     {
         do
         {
-            sum -= 700;
+            sum -= 1000;
         }
         while (sum > 999);
     }
