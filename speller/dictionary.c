@@ -87,7 +87,7 @@ unsigned int hash(const char *word)
         }
         counter++;
     }
-
+    
     if (sum > 999)
     {
         do
