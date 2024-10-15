@@ -94,7 +94,6 @@ unsigned int hash(const char *word)
     {
         do
         {
-            tmp++;
             sum /= 2;
 
             sum -= 500;
@@ -105,7 +104,8 @@ unsigned int hash(const char *word)
     }
 
     index = sum;
-    printf("words with values over 100: %i\n", tmp);
+    printf("Calls of hash: %i\n", tmp);
+    tmp++;
     return index;
 }
 
