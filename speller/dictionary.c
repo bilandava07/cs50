@@ -79,7 +79,7 @@ unsigned int hash(const char *word)
     {
         if (word[counter] == '\'')
         {
-            sum += '\'';
+            sum += 97;
         }
         else
         {
@@ -88,7 +88,7 @@ unsigned int hash(const char *word)
         counter++;
     }
 
-    sum -= (counter * 97);
+    sum = sum - (counter * 97);
 
     if (sum > 999)
     {
