@@ -1,6 +1,6 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
 
 #define BLOCK_SIZE 512
 
@@ -32,7 +32,6 @@ int main(int argc, char *argv[])
         return 3;
     }
 
-
     int jpeg_counter = 0;
     char filename[8];
 
@@ -41,7 +40,8 @@ int main(int argc, char *argv[])
     // Read from the card file
     while (fread(buffer, BLOCK_SIZE, 1, card) == 1)
     {
-        if ((buffer[0] == 0xff) & (buffer[1] == 0xd8) & (buffer[2] == 0xff) & ((buffer[3] & 0xf0) == 0xe0))
+        if ((buffer[0] == 0xff) & (buffer[1] == 0xd8) & (buffer[2] == 0xff) &
+            ((buffer[3] & 0xf0) == 0xe0))
         {
             // If it is the first JPEG found
             if (jpeg_counter == 0)
@@ -50,11 +50,10 @@ int main(int argc, char *argv[])
                 img = fopen(filename, "w");
                 if (img == NULL)
                 {
-                return 3;
+                    return 3;
                 }
                 fwrite(buffer, 1, BLOCK_SIZE, img);
                 jpeg_counter++;
-
             }
 
             // Then next JPEG have been found
@@ -68,7 +67,7 @@ int main(int argc, char *argv[])
                 img = fopen(filename, "w");
                 if (img == NULL)
                 {
-                return 3;
+                    return 3;
                 }
 
                 fwrite(buffer, 1, BLOCK_SIZE, img);
