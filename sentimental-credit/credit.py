@@ -8,15 +8,14 @@ def main():
     master_regex = re.compile('^5[1-5][0-9]{14}$')
     visa_regex = re.compile('^4([0-9]{13}|[0-9]{16})$')
 
-    while(True):
-        card_number = input("Number: ")
+    card_number = input("Number: ")
 
-        match = amex_regex.match(card_number)
-        if match:
-            break
-        match = master_regex.match(card_number)
-        if match:
-            break
+    match = amex_regex.match(card_number)
+    if match:
+        break
+    match = master_regex.match(card_number)
+    if match:
+        break
 
 
 
