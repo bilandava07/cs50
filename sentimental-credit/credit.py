@@ -3,20 +3,27 @@ import re
 def checksum(card_number):
     sum_mult2 = 0
     sum_other = 0
-    total_sum = 0
     length = len(card_number)
+
     # if the card number is even start with the first element to iterate through (every other number from the end )
+
     if length % 2 == 0:
         for i in range(0,length,2):
             sum_mult2 += card_number[i] * 2
         for y in range(1,length,2):
             sum_other += card_number[y]
 
-        total_sum = sum_mult2 + sum_other
-
-
+    # else -> other way around
     else:
+        for i in range(0,length,2):
+            sum_other += card_number[y]
+        for y in range(1,length,2):
+            sum_mult2 += card_number[i] * 2
 
+    if (sum_mult2 + sum_other) % 2 == 0:
+        return True
+    else:
+        return False
 
 
 def main():
