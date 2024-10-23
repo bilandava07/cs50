@@ -29,7 +29,7 @@ def checksum(card_number):
             else:
                 sum_mult2 += tmp
 
-    if (sum_mult2 + sum_other) % 2 == 0:
+    if (sum_mult2 + sum_other) % 10 == 0:
         return True
     else:
         return False
