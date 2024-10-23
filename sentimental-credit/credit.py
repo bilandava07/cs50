@@ -1,12 +1,11 @@
 import re
 
 def checksum(card_number):
+    
     pass
 
 
 def main():
-
-    possibly_valid = False
 
     amex_regex = re.compile('^3[47][0-9]{13}$')
     master_regex = re.compile('^5[1-5][0-9]{14}$')
