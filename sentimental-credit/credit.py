@@ -11,7 +11,12 @@ def main():
     while(True):
         card_number = input("Number: ")
 
-        if 
+        match = amex_regex.match(card_number)
+        if match:
+            break
+        match = master_regex.match(card_number)
+        if match:
+            break
 
 
 
