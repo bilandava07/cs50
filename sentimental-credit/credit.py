@@ -1,10 +1,14 @@
 import re
 
 def checksum(card_number):
+    sum_mult2 = 0
+    sum_other = 0
     length = len(card_number)
-    # if the card number is even
+    # if the card number is even start with the first element to iterate through (every other number from the end )
     if length % 2 == 0:
-        for i in range(length)
+        for i in range(0,length,2):
+            sum_mult2 += card_number[i] * 2
+            
 
     else:
 
