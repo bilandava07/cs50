@@ -1,8 +1,12 @@
 import re
 
 def checksum(card_number):
-    if len(card_number) 
-    pass
+    length = len(card_number)
+    if length % 2 == 0:
+        for i in range(length)
+
+    else:
+
 
 
 def main():
