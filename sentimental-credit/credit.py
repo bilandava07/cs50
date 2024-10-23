@@ -24,7 +24,7 @@ def checksum(card_number):
         for i in range(0, length, 2):
             sum_other += int(card_number[i])
         for y in range(1, length, 2):
-            tmp = int(card_number[i]) * 2
+            tmp = int(card_number[y]) * 2
             if tmp > 9:
                 sum_mult2 += 1 + (tmp % 10)
             else:
