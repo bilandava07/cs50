@@ -9,16 +9,16 @@ def checksum(card_number):
 
     if length % 2 == 0:
         for i in range(0,length,2):
-            sum_mult2 += card_number[i] * 2
+            sum_mult2 += int(card_number[i]) * 2
         for y in range(1,length,2):
-            sum_other += card_number[y]
+            sum_other += int(card_number[y])
 
     # else -> other way around
     else:
         for i in range(0,length,2):
-            sum_other += card_number[y]
+            sum_other += int(card_number[i])
         for y in range(1,length,2):
-            sum_mult2 += card_number[i] * 2
+            sum_mult2 += int(card_number[y]) * 2
 
     if (sum_mult2 + sum_other) % 2 == 0:
         return True
