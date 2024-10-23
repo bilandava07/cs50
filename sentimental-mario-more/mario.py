@@ -7,5 +7,6 @@ def get_int(prompt):
 def main():
 
     height = get_int("Height: ")
-    
+
+    for _ in range
 
