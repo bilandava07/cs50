@@ -1,5 +1,7 @@
 import re
 
+def checksum(card_number):
+    pass
 
 
 def main():
@@ -14,11 +16,27 @@ def main():
 
     match = amex_regex.match(card_number)
     if match:
-        possibly_valid = True
+        if checksum(card_number):
+            print("AMEX")
+            return
+
     match = master_regex.match(card_number)
     if match:
-        break
+        if checksum(card_number):
+            print("MASTERCARD")
+            return
+
+    match = visa_regex.match(card_number)
+    if match:
+        if checksum(card_number):
+            print("VISA")
+            return
 
 
+    # if no matches -> the card is invalid
+    print("INVALID")
+    return
+
+main()
 
 
