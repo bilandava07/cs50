@@ -13,10 +13,22 @@ def main():
     hashes = 1
 
     for _ in range(height):
+
+        # print the left half
+
         for blank in range(blanks):
             print(" ", end='')
         for hash in range(hashes):
             print("#", end ='')
+
+        #print the gap
+        print("  ", end='')
+
+        # print the right half
+
+        for hash in range(hashes):
+            print("#", end ='')
+
         blanks -= 1
         hashes += 1
         print()
