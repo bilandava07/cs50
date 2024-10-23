@@ -2,7 +2,7 @@ import re
 
 def checksum(card_number):
     sum_mult2 = 0
-    sum_other = 0'
+    sum_other = 0
     tmp = 0
     length = len(card_number)
 
@@ -12,17 +12,22 @@ def checksum(card_number):
         for i in range(0,length,2):
             tmp = int(card_number[i]) * 2
             if tmp > 9:
-                sum_mult2+= 1 + (tmp-10)
-            sum_mult2 +=
+                sum_mult2+= (tmp/10) + (tmp % 10)
+            else:
+                sum_mult2 += tmp
             for y in range(1,length,2):
-            sum_other += int(card_number[y])
+                sum_other += int(card_number[y])
 
     # else -> other way around
     else:
         for i in range(0,length,2):
             sum_other += int(card_number[i])
         for y in range(1,length,2):
-            sum_mult2 += int(card_number[y]) * 2
+            tmp = int(card_number[i]) * 2
+            if tmp > 9:
+                sum_mult2+= (tmp/10) + (tmp % 10)
+            else:
+                sum_mult2 += tmp
 
     if (sum_mult2 + sum_other) % 2 == 0:
         return True
