@@ -1,7 +1,7 @@
 import re
 
 def checksum(card_number):
-    if len(card_number)
+    if len(card_number) 
     pass
 
 
