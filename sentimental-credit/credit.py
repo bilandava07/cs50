@@ -2,6 +2,7 @@ import re
 
 def checksum(card_number):
     length = len(card_number)
+    # if the card number is even
     if length % 2 == 0:
         for i in range(length)
 
