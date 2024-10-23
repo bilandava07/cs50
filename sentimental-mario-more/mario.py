@@ -9,7 +9,7 @@ def main():
 
     while(True):
         height = get_int("Height: ")
-        if height >= 1:
+        if height >= 1 and height < 9:
             break
 
 
