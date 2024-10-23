@@ -10,7 +10,7 @@ def checksum(card_number):
     if length % 2 == 0:
         for i in range(0,length,2):
             sum_mult2 += int(card_number[i]) * 2
-        for y in range(1,length,2):
+            for y in range(1,length,2):
             sum_other += int(card_number[y])
 
     # else -> other way around
