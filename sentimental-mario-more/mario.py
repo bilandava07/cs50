@@ -7,7 +7,11 @@ def get_int(prompt):
 
 def main():
 
-    height = get_int("Height: ")
+    while(True):
+        height = get_int("Height: ")
+        if height >= 1:
+            break
+
 
     blanks = height - 1
     hashes = 1
