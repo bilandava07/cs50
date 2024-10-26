@@ -24,3 +24,8 @@ def main ():
 
     words += 1
 
+    l = (letters / words) * 100
+    s = (sentences / words) * 100
+
+    index = 
+
