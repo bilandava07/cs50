@@ -1,7 +1,3 @@
-
-
-
-
 def main ():
 
     punctuation = ['.','?','!']
@@ -27,6 +23,7 @@ def main ():
     l = (letters / words) * 100
     s = (sentences / words) * 100
 
+    # Calculate the index Coleman-Liau index
     index = round(0.0588 * l - 0.296 * s - 15.8)
 
     if index < 1:
