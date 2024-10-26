@@ -34,7 +34,7 @@ def main ():
     elif index > 16:
         print("Grade 16+")
     else:
-        print(f"Grade {index}")
+    print(f"Grade {index}")
 
 
 
