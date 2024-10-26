@@ -1,6 +1,6 @@
-def main ():
+def main():
 
-    punctuation = ['.','?','!']
+    punctuation = ['.', '?', '!']
 
     # Initialize the counter variables
 
@@ -20,6 +20,7 @@ def main ():
 
     words += 1
 
+    
     l = (letters / words) * 100
     s = (sentences / words) * 100
 
@@ -33,5 +34,5 @@ def main ():
     else:
         print(f"Grade {index}")
 
-main()
 
+main()
