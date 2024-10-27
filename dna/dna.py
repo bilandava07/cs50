@@ -41,6 +41,7 @@ def main():
             if key in str_matches.keys():
                 if value == str_matches[key]:
                     counter += 1
+        # if reached the targe amoutn of matches i.e. if all STR ins str_matches are present in person's DNA exact number of times
         if counter == target_amount:
             print(entry["name"])
             return
