@@ -24,13 +24,13 @@ def main():
 
     # Find longest match of each STR in DNA sequence
 
-    # pop the key "name" from the fieldnames to get a list of the STRs 
-    fieldnames.pop("name")
+    # pop the key "name" from the fieldnames to get a list of the STRs
+    fieldnames.pop(0)
 
     str_matches = {}
     for i in fieldnames:
         str_matches[i] = str(longest_match(dna_file, i))
-
+    print(str_matches)
     # Check database for matching profiles
 
     # set the amount of matches needed
