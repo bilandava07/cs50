@@ -29,7 +29,7 @@ def main():
         str_matches[i] = str(longest_match(dna_file, i))
 
 
-    # TODO: Check database for matching profiles
+    # Check database for matching profiles
 
     # set the amount of matches needed
 
