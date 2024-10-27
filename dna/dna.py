@@ -29,8 +29,7 @@ def main():
     for str in fieldnames:
         str_matches[str] = longest_match(dna_file, str)
 
-    for row in str_matches:
-        print (row)
+    print(str_matches)
 
 
     # TODO: Check database for matching profiles
