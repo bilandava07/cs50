@@ -8,14 +8,16 @@ def main():
     if len(sys.argv) != 3:
         print("Error! Usage: python dna.py [database] [dna-file]")
 
-    # TODO: Read database file into a variable
-
+    # Read database file into a variable
+    database = []
     with open (sys.argv[1], "r") as file:
-        database = csv.DictReader(file)
-        #for entry in database:
-        print (database.fieldnames)
-    # TODO: Read DNA sequence file into a variable
+        reader = csv.DictReader(file)
+        for row in reader:
+            database.append(row)
 
+    # : Read DNA sequence file into a variable
+    dna_file = sys.argv[2]
+    print(dna_file)
     # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles
