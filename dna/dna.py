@@ -35,6 +35,8 @@ def main():
     for entry in database:
         for key, value in entry.items():
             if key in fieldnames:
+                print(value)
+                print(str_matches[key])
                 if value == str_matches[key]:
                     print("FOUND!")
 
