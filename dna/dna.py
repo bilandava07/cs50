@@ -30,7 +30,7 @@ def main():
     str_matches = {}
     for i in fieldnames:
         str_matches[i] = str(longest_match(dna_file, i))
-    print(str_matches)
+
     # Check database for matching profiles
 
     # set the amount of matches needed
