@@ -23,7 +23,9 @@ def main():
         dna_file = file.read().strip("\n")
 
     # Find longest match of each STR in DNA sequence
-    fieldnames.pop(0)
+
+    # pop the key "name" from the fieldnames to get a list of the STRs 
+    fieldnames.pop("name")
 
     str_matches = {}
     for i in fieldnames:
@@ -33,7 +35,7 @@ def main():
 
     # set the amount of matches needed
 
-    target_amount = len(fieldnames)
+    target_amount = len(str_matches.keys())
 
     for entry in database:
         counter = 0
