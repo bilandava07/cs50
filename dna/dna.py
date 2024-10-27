@@ -33,9 +33,9 @@ def main():
     # TODO: Check database for matching profiles
 
     for entry in database:
-        for key, v in entry:
-            if k not in fieldnames:
-                entry.pop()
+        for key, value in entry.items():
+            if key in fieldnames:
+                if value =
 
     return
 
