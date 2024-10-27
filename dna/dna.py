@@ -26,8 +26,8 @@ def main():
     print(fieldnames)
 
     str_matches = {}
-    for str in fieldnames:
-        str_matches[str] = str(longest_match(dna_file, str))
+    for i in fieldnames:
+        str_matches[i] = str(longest_match(dna_file, i))
 
 
     # TODO: Check database for matching profiles
@@ -35,8 +35,6 @@ def main():
     for entry in database:
         for key, value in entry.items():
             if key in fieldnames:
-                print(value)
-                print(str_matches[key])
                 if value == str_matches[key]:
                     print("FOUND!")
 
