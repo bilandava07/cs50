@@ -24,8 +24,8 @@ def main():
 
     # Find longest match of each STR in DNA sequence
 
-    # pop the first element "name" from the fieldnames to get a list of the STRs only
-    fieldnames.pop(0)
+    # remove the "name" field from the list and leave the STRs only
+    fieldnames.remove("name")
 
     str_matches = {}
     for i in fieldnames:
