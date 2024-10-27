@@ -32,15 +32,20 @@ def main():
 
     # TODO: Check database for matching profiles
 
+    # set the amount of matches needed
+
+    target_amount = len(fieldnames)
+
     for entry in database:
+        counter = 0
         for key, value in entry.items():
             if key in fieldnames:
                 if value == str_matches[key]:
-                    print("FOUND!")
-                else:
-                    break
+                    counter += 1
+        if counter == target_amount:
+            print(entry["name"])
+            return
     return
-
 
 def longest_match(sequence, subsequence):
     """Returns length of longest run of subsequence in sequence."""
