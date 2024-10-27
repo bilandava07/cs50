@@ -23,7 +23,6 @@ def main():
 
     # Find longest match of each STR in DNA sequence
     fieldnames.pop(0)
-    print(fieldnames)
 
     str_matches = {}
     for i in fieldnames:
@@ -45,6 +44,7 @@ def main():
         if counter == target_amount:
             print(entry["name"])
             return
+    print("No match")
     return
 
 def longest_match(sequence, subsequence):
