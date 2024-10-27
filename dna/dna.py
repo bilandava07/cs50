@@ -35,10 +35,10 @@ def main():
     for entry in database:
         for key, value in entry.items():
             if key in fieldnames:
-                if value != str_matches[key]:
-                    break
-    
-            print("FOUND!")
+                if value == str_matches[key]:
+                    print("FOUND!")
+
+
 
     return
 
