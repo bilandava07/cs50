@@ -4,11 +4,16 @@ import sys
 
 def main():
 
-    # TODO: Check for command-line usage
+    # Check for command-line usage
     if len(sys.argv) != 3:
-        
+        print("Error! Usage: python dna.py [database] [dna-file]")
+
     # TODO: Read database file into a variable
 
+    with open (sys.argv[1], "r") as file:
+        database = csv.DictReader(file)
+        for entry in database:
+            print (entry)
     # TODO: Read DNA sequence file into a variable
 
     # TODO: Find longest match of each STR in DNA sequence
