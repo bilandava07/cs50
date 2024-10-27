@@ -38,7 +38,7 @@ def main():
     for entry in database:
         counter = 0
         for key, value in entry.items():
-            if key in fieldnames:
+            if key in str_matches.keys():
                 if value == str_matches[key]:
                     counter += 1
         if counter == target_amount:
