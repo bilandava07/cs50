@@ -37,8 +37,8 @@ def main():
             if key in fieldnames:
                 if value == str_matches[key]:
                     print("FOUND!")
-
-
+                else:
+                    break
 
     return
 
